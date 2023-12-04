@@ -3,7 +3,7 @@
     <title>plastilinn</title>
     <link href="https://plastilinn.com/feed.xml" rel="self" />
     <link href="https://plastilinn.com" />
-    <updated>2023-12-04T17:30:57+01:00</updated>
+    <updated>2023-12-04T17:34:45+01:00</updated>
     <author>
         <name>Lucas Cervera</name>
     </author>
@@ -39,7 +39,7 @@ blah blah</p>
         <link href="https://plastilinn.com/plastilinn/"/>
         <id>https://plastilinn.com/plastilinn/</id>
 
-        <updated>2023-12-04T17:30:57+01:00</updated>
+        <updated>2023-12-04T17:34:45+01:00</updated>
             <summary>
                 <![CDATA[
                     Evolving business models Preview comming soon! I want to be notified plastilinn’s innCoPilot is a custom GPT chatbot that helps you generate creative product or service ideas, exploring various angles and perspectives. It offers guidance on completing your business model, including market analysis, marketing strategies,&hellip;
@@ -61,8 +61,6 @@ blah blah</p>
 <p>Our platform facilitates the management of tasks related to your business model, <strong>helping you prioritize work and experiments</strong> efficiently. Focus on the tasks that most contribute to maximizing the chances of success for your business.</p>
 <h2 id="based-on-logseq-and-open-source">Based on LogSeq and open source</h2>
 <p><a href="https://logseq.com">LogSeq</a> is a note-taking and knowledge management tool that provides a <strong>structured and interconnected</strong> approach to organizing information and creating a network of linked notes. LogSeq allows users to create and link together blocks of text, create bi-directional links between related ideas, and navigate their notes in a non-linear manner. It uses <strong>Markdown</strong>, a lightweight markup language that allows users to format their notes using plain text syntax. LogSeq is designed to be a local-first application, which means that users have full control over their data, and their notes are <strong>stored locally on their devices</strong>. As an open-source project, LogSeq is actively developed and maintained by a community of contributors.</p>
-<h2 id="exportable-and-expandable">Exportable and expandable</h2>
-<p>Use plastilinn’s content to communicate your business model to employees, investors, and other stakeholders. Easily export your model in web, PDF, or image format.</p>
 <h2 id="plastilinn-features">plastilinn Features</h2>
 <h3 id="business-model-management">Business Model Management:</h3>
 <p>Descriptive information for each business model element.
@@ -85,9 +83,6 @@ Step-by-step guides for business model generation.</p>
 User-defined storage location.
 Easy version control and backup.
 Independence from server access.</p>
-<h3 id="guidance--methodology">Guidance &amp; Methodology:</h3>
-<p>Task lists and precise instructions.
-Integration with the innovation body of knowledge (innBoK).</p>
 <h3 id="business-model-analysis">Business Model Analysis:</h3>
 <p>Priority actions based on business maturity.
 Importance and uncertainty markers.
