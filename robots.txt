@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://plastilinn.com/sitemap.xml

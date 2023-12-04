@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+    <title>plastilinn</title>
+    <link href="https://plastilinn.com/feed.xml" rel="self" />
+    <link href="https://plastilinn.com" />
+    <updated>2023-12-04T14:58:47+01:00</updated>
+    <author>
+        <name>Lucas Cervera</name>
+    </author>
+    <id>https://plastilinn.com</id>
+
+    <entry>
+        <title>Plastilinn</title>
+        <author>
+            <name>Lucas Cervera</name>
+        </author>
+        <link href="https://plastilinn.com/plastilinn/"/>
+        <id>https://plastilinn.com/plastilinn/</id>
+
+        <updated>2023-11-10T21:35:37+01:00</updated>
+            <summary>
+                <![CDATA[
+                    Business Modeling Done Right The problem The solution
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                
+    <h2 id="business-modeling-done-right">
+      Business Modeling Done Right
+    </h2>
+
+    <h2 id="the-problem">
+      The problem
+    </h2>
+
+    <figure class="post__image post__image--center">
+      <img loading="lazy" src="https://plastilinn.com/media/posts/11/DALLE-2023-11-02-09.40.03-Photo-of-a-chaotic-wider-clay-made-isometric-diorama-depicting-a-startups-business-model-in-disarray.-The-figures-are-now-disorganized-with-blue-r.png" height="1024" width="1792" alt=""  sizes="100vw" srcset="https://plastilinn.com/media/posts/11/responsive/DALLE-2023-11-02-09.40.03-Photo-of-a-chaotic-wider-clay-made-isometric-diorama-depicting-a-startups-business-model-in-disarray.-The-figures-are-now-disorganized-with-blue-r-xs.png 300w ,https://plastilinn.com/media/posts/11/responsive/DALLE-2023-11-02-09.40.03-Photo-of-a-chaotic-wider-clay-made-isometric-diorama-depicting-a-startups-business-model-in-disarray.-The-figures-are-now-disorganized-with-blue-r-sm.png 480w ,https://plastilinn.com/media/posts/11/responsive/DALLE-2023-11-02-09.40.03-Photo-of-a-chaotic-wider-clay-made-isometric-diorama-depicting-a-startups-business-model-in-disarray.-The-figures-are-now-disorganized-with-blue-r-md.png 768w ,https://plastilinn.com/media/posts/11/responsive/DALLE-2023-11-02-09.40.03-Photo-of-a-chaotic-wider-clay-made-isometric-diorama-depicting-a-startups-business-model-in-disarray.-The-figures-are-now-disorganized-with-blue-r-lg.png 1024w ,https://plastilinn.com/media/posts/11/responsive/DALLE-2023-11-02-09.40.03-Photo-of-a-chaotic-wider-clay-made-isometric-diorama-depicting-a-startups-business-model-in-disarray.-The-figures-are-now-disorganized-with-blue-r-xl.png 1360w ,https://plastilinn.com/media/posts/11/responsive/DALLE-2023-11-02-09.40.03-Photo-of-a-chaotic-wider-clay-made-isometric-diorama-depicting-a-startups-business-model-in-disarray.-The-figures-are-now-disorganized-with-blue-r-2xl.png 1600w">
+      
+    </figure>
+
+    <h2 id="the-solution">
+      The solution
+    </h2>
+
+    <figure class="post__image post__image--center">
+      <img loading="lazy" src="https://plastilinn.com/media/posts/11/DALLE-2023-11-02-09.41.41-Photo-of-a-well-organized-wider-clay-made-isometric-diorama-depicting-a-startups-business-model-with-an-emphasis-on-order-and-excellent-management..png" height="1024" width="1792" alt=""  sizes="100vw" srcset="https://plastilinn.com/media/posts/11/responsive/DALLE-2023-11-02-09.41.41-Photo-of-a-well-organized-wider-clay-made-isometric-diorama-depicting-a-startups-business-model-with-an-emphasis-on-order-and-excellent-management.-xs.png 300w ,https://plastilinn.com/media/posts/11/responsive/DALLE-2023-11-02-09.41.41-Photo-of-a-well-organized-wider-clay-made-isometric-diorama-depicting-a-startups-business-model-with-an-emphasis-on-order-and-excellent-management.-sm.png 480w ,https://plastilinn.com/media/posts/11/responsive/DALLE-2023-11-02-09.41.41-Photo-of-a-well-organized-wider-clay-made-isometric-diorama-depicting-a-startups-business-model-with-an-emphasis-on-order-and-excellent-management.-md.png 768w ,https://plastilinn.com/media/posts/11/responsive/DALLE-2023-11-02-09.41.41-Photo-of-a-well-organized-wider-clay-made-isometric-diorama-depicting-a-startups-business-model-with-an-emphasis-on-order-and-excellent-management.-lg.png 1024w ,https://plastilinn.com/media/posts/11/responsive/DALLE-2023-11-02-09.41.41-Photo-of-a-well-organized-wider-clay-made-isometric-diorama-depicting-a-startups-business-model-with-an-emphasis-on-order-and-excellent-management.-xl.png 1360w ,https://plastilinn.com/media/posts/11/responsive/DALLE-2023-11-02-09.41.41-Photo-of-a-well-organized-wider-clay-made-isometric-diorama-depicting-a-startups-business-model-with-an-emphasis-on-order-and-excellent-management.-2xl.png 1600w">
+      
+    </figure>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>test markdown</title>
+        <author>
+            <name>Lucas Cervera</name>
+        </author>
+        <link href="https://plastilinn.com/test-markdown/"/>
+        <id>https://plastilinn.com/test-markdown/</id>
+
+        <updated>2023-11-10T13:13:07+01:00</updated>
+            <summary>
+                <![CDATA[
+                    blah blah blah
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>blah
+blah blah</p>
+
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>plastilinn</title>
+        <author>
+            <name>Lucas Cervera</name>
+        </author>
+        <link href="https://plastilinn.com/innbok-modeler/"/>
+        <id>https://plastilinn.com/innbok-modeler/</id>
+        <media:content url="https://plastilinn.com/media/posts/9/DALLE-2023-11-02-10.32.16-Photo-of-business-strategy-clay-models-such-as-the-Business-Model-Canvas-Value-Proposition-Canvas-Empathy-Map-and-Customer-Journey-Map-placed-on-a.png" medium="image" />
+
+        <updated>2023-12-04T14:58:47+01:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://plastilinn.com/media/posts/9/DALLE-2023-11-02-10.32.16-Photo-of-business-strategy-clay-models-such-as-the-Business-Model-Canvas-Value-Proposition-Canvas-Empathy-Map-and-Customer-Journey-Map-placed-on-a.png" alt="" />
+                    Evolving business models plastilinn centralizes your business model information in one place, avoiding data dispersion across multiple files on your hard drive (a PowerPoint with your Business Model Canvas, a PDF with your Value Proposition Canvas, an Excel file with your competitive analysis). This facilitates&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://plastilinn.com/media/posts/9/DALLE-2023-11-02-10.32.16-Photo-of-business-strategy-clay-models-such-as-the-Business-Model-Canvas-Value-Proposition-Canvas-Empathy-Map-and-Customer-Journey-Map-placed-on-a.png" class="type:primaryImage" alt="" /></p>
+                <h1 id="evolving-business-models">Evolving business models</h1>
+<p><figure class="post__image"><img loading="lazy" src="https://plastilinn.com/media/posts/9/turn-this.png" alt="Image description" width="1920" height="1080"  sizes="100vw" srcset="https://plastilinn.com/media/posts/9/responsive/turn-this-xs.png 300w ,https://plastilinn.com/media/posts/9/responsive/turn-this-sm.png 480w ,https://plastilinn.com/media/posts/9/responsive/turn-this-md.png 768w ,https://plastilinn.com/media/posts/9/responsive/turn-this-lg.png 1024w ,https://plastilinn.com/media/posts/9/responsive/turn-this-xl.png 1360w ,https://plastilinn.com/media/posts/9/responsive/turn-this-2xl.png 1600w"></figure></p>
+<table>
+<thead>
+<tr>
+<th>Preview comming soon!</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://docs.google.com/forms/d/e/1FAIpQLSfZG1IyMVIij1vmt0Ovm2uTYghkHU6pwbc2v7x8kCB9NNIF5g/viewform?usp=sf_link">I want to be notified</a></td>
+</tr>
+</tbody></table>
+<h2 id="your-business-model-info-in-one-place">Your business model info in one place</h2>
+<p>plastilinn centralizes your business model information in one place, avoiding data dispersion across multiple files on your hard drive (a PowerPoint with your Business Model Canvas, a PDF with your Value Proposition Canvas, an Excel file with your competitive analysis). This facilitates the update, maintenance, and visualization of the components of the business model in different contexts. Work with the tools you know, such as the Business Model Canvas, to input information and adapt it to your business needs.</p>
+<h2 id="methodology-and-documentation">Methodology and documentation</h2>
+<p>plastilinn is based on popular innovation methodologies, such as Lean Startup, Customer Development, and Design Thinking, integrating them and avoiding overlaps. Additionally, it provides the information you need at each moment to follow the process of creating your business model. It is fully integrated with the InnBoK methodology, which explains step by step who should do what, how, and when.</p>
+<p>It facilitates the complete cycle of design, analysis, and validation of your business model systematically and dynamically.</p>
+<h2 id="task-prioritization-and-experimentation">Task prioritization and experimentation</h2>
+<p>plastilinn offers templates that fit your project. If your project, for example, is an e-commerce, you don’t have to start from a blank canvas. Instead, you can use a template and customize it.</p>
+<p>It also provides preloaded content. For example, when identifying the channels you will use to reach your customers, it provides an extensive list for you to incorporate into your business model without starting from scratch.</p>
+<p>Our platform facilitates the management of tasks related to your business model, helping you prioritize work and experiments efficiently. Focus on the tasks that most contribute to maximizing the chances of success for your business.</p>
+<h2 id="exportable-and-expandable">Exportable and expandable</h2>
+<p>Use plastilinn’s content to communicate your business model to employees, investors, and other stakeholders. Easily export your model in web, PDF, or image format.</p>
+<h2 id="based-on-logseq-and-open-source">Based on LogSeq and open source</h2>
+<p><a href="https://logseq.com">LogSeq</a> is a note-taking and knowledge management tool that provides a structured and interconnected approach to organizing information and creating a network of linked notes. LogSeq allows users to create and link together blocks of text, create bi-directional links between related ideas, and navigate their notes in a non-linear manner. It uses Markdown, a lightweight markup language that allows users to format their notes using plain text syntax. LogSeq is designed to be a local-first application, which means that users have full control over their data, and their notes are stored locally on their devices. As an open-source project, LogSeq is actively developed and maintained by a community of contributors. InnBoK applies this approach to business modeling.</p>
+<h2 id="plastilinn-features">plastilinn Features</h2>
+<h3 id="business-model-management">Business Model Management:</h3>
+<p>Descriptive information for each business model element.
+List of examples for each business model element.
+Suggested lists of possible elements for the business model.
+AI-powered suggestions for business model elements.
+Step-by-step guides for completing the business model.
+Integration with familiar methodologies and tools (e.g., Lean Startup, Business Model Canvas).</p>
+<h3 id="single-data-architecture">Single Data Architecture:</h3>
+<p>Single point of truth for data entry.
+Ensures up-to-date business model data.
+Avoids data scattering and repetition.</p>
+<h3 id="navigation--visualization">Navigation &amp; Visualization:</h3>
+<p>Content tree navigation.
+Relationship visualization between business model elements.
+Pop-up windows for content details.
+Step-by-step guides for business model generation.</p>
+<h3 id="data-storage">Data Storage:</h3>
+<p>Data stored in plain text MarkDown format files.
+User-defined storage location.
+Easy version control and backup.
+Independence from server access.</p>
+<h3 id="guidance--methodology">Guidance &amp; Methodology:</h3>
+<p>Task lists and precise instructions.
+Integration with the innovation body of knowledge (innBoK).</p>
+<h3 id="business-model-analysis">Business Model Analysis:</h3>
+<p>Priority actions based on business maturity.
+Importance and uncertainty markers.
+Business key evaluation for strengths and weaknesses.
+Commenting feature.
+Risk visibility and mitigation paths.
+Review facilitation for advisors and mentors.</p>
+<h3 id="business-model-validation">Business Model Validation:</h3>
+<p>Guidance on experiments for validation.
+Business model improvement proposals.
+Conclusions recording after experiment execution.</p>
+<h3 id="document-generation">Document Generation:</h3>
+<p>Generate various documents like business plans, pitch decks, and employee guides using plastilinn data.</p>
+
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Lucas Rodriguez Cervera Privacy Policy</title>
+        <author>
+            <name>Lucas Cervera</name>
+        </author>
+        <link href="https://plastilinn.com/lucas-rodriguez-cervera-privacy-policy/"/>
+        <id>https://plastilinn.com/lucas-rodriguez-cervera-privacy-policy/</id>
+
+        <updated>2023-01-15T11:29:15+01:00</updated>
+            <summary>
+                <![CDATA[
+                    Lucas Rodriguez Cervera Privacy Policy This privacy policy will explain how Lucas Rodriguez Cervera uses the personal data we collect from you when you use our website. What data do we collect? Lucas Rodriguez Cervera collects the following data: Personal identification information (Name, email address,&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>Lucas Rodriguez Cervera Privacy Policy</p>
+<p>This privacy policy will explain how Lucas Rodriguez Cervera uses the personal data we collect from you when you use our website.</p>
+<p>What data do we collect?
+Lucas Rodriguez Cervera collects the following data:</p>
+<p>Personal identification information (Name, email address, phone number, etc.)</p>
+<p>How do we collect your data?
+You directly provide Lucas Rodriguez Cervera with most of the data we collect. We collect data and process data when you:</p>
+<p>Register online or place an order for any of our products or services.</p>
+<p>Voluntarily complete a customer survey or provide feedback on any of our message boards or via email.</p>
+<p>Use or view our website via your browser’s cookies.</p>
+<p>Lucas Rodriguez Cervera may also receive your data indirectly from the following sources:</p>
+<p>How will we use your data?
+Lucas Rodriguez Cervera collects your data so that we can:</p>
+<p>Process your order and manage your account.</p>
+<p>Email you with special offers on other products and services we think you might like.</p>
+<p>Email you asking for feedback.</p>
+<p>When Lucas Rodriguez Cervera processes your order, it may send your data to, and also use the resulting information from, credit reference agencies to prevent fraudulent purchases.</p>
+<p>How do we store your data?
+Lucas Rodriguez Cervera securely stores your data with Google Drive.</p>
+<p>Lucas Rodriguez Cervera will keep your personal identification data for 100 years. Once this time period has expired, we will delete your data by removing it from our database.</p>
+<p>Marketing
+Lucas Rodriguez Cervera would like to send you information about products and services of ours that we think you might like.</p>
+<p>Lucas Rodriguez Cervera would like to contact you to gather feedback about our products and services.</p>
+<p>If you have agreed to receive marketing, you may always opt out at a later date.</p>
+<p>You have the right at any time to stop Lucas Rodriguez Cervera from contacting you for marketing purposes or giving your data to other members of the Lucas Rodriguez Cervera Group.</p>
+<p>If you no longer wish to be contacted for marketing purposes, please send an email to lucas📧lucascervera.com.</p>
+<p>What are your data protection rights?
+Lucas Rodriguez Cervera would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:</p>
+<p>The right to access – You have the right to request Lucas Rodriguez Cervera for copies of your personal data. We may charge you a small fee for this service.</p>
+<p>The right to rectification – You have the right to request that Lucas Rodriguez Cervera correct any information you believe is inaccurate. You also have the right to request Lucas Rodriguez Cervera to complete the information you believe is incomplete.</p>
+<p>The right to erasure – You have the right to request that Lucas Rodriguez Cervera erase your personal data, under certain conditions.</p>
+<p>The right to restrict processing – You have the right to request that Lucas Rodriguez Cervera restrict the processing of your personal data, under certain conditions.</p>
+<p>The right to object to processing – You have the right to object to Lucas Rodriguez Cervera’s processing of your personal data, under certain conditions.</p>
+<p>The right to data portability – You have the right to request that Lucas Rodriguez Cervera transfer the data that we have collected to another organization, or directly to you, under certain conditions.</p>
+<p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us at our email:</p>
+<p>Write to us: lucas📧lucascervera.com</p>
+<p>Privacy policies of other websites
+The Lucas Rodriguez Cervera website contains links to other websites. Our privacy policy applies only to our website, so if you click on a link to another website, you should read their privacy policy.</p>
+<p>Changes to our privacy policy
+Lucas Rodriguez Cervera keeps its privacy policy under regular review and places any updates on this web page. This contract is managed with github. You can see all its versions in github.com.</p>
+<p>How to contact us
+If you have any questions about Lucas Rodriguez Cervera’s privacy policy, the data we hold on you, or you would like to exercise one of your data protection rights, please do not hesitate to contact us.</p>
+<p>Email us at: lucas📧lucascervera.com</p>
+<p>How to contact the appropriate authority
+Should you wish to report a complaint or if you feel that Lucas Rodriguez Cervera has not addressed your concern in a satisfactory manner, you may contact the Information Commissioner’s Office.</p>
+<p>Email: lucas📧lucascervera.com</p>
+
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Contact</title>
+        <author>
+            <name>Lucas Cervera</name>
+        </author>
+        <link href="https://plastilinn.com/contacto/"/>
+        <id>https://plastilinn.com/contacto/</id>
+
+        <updated>2023-01-15T11:33:54+01:00</updated>
+            <summary>
+                <![CDATA[
+                    Loading…
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <div class="post__iframe"><iframe loading="lazy" width="709" height="2022" style="width: 709px; height: 1800px;" src="https://docs.google.com/forms/d/e/1FAIpQLSfZG1IyMVIij1vmt0Ovm2uTYghkHU6pwbc2v7x8kCB9NNIF5g/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div><a href="https://plastilinn.com/lucas-rodriguez-cervera-privacy-policy/" target="_blank" rel="noopener noreferrer"></a></p>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>InnBoK</title>
+        <author>
+            <name>Lucas Cervera</name>
+        </author>
+        <link href="https://plastilinn.com/innbok/"/>
+        <id>https://plastilinn.com/innbok/</id>
+        <media:content url="https://plastilinn.com/media/posts/6/InnBoK-Business-Modeler.png" medium="image" />
+
+        <updated>2023-04-01T12:54:04+02:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://plastilinn.com/media/posts/6/InnBoK-Business-Modeler.png" alt="" />
+                    Smart Business Modeling. Build better business models faster Contact us! Join waitlist InnBoK InnBoK2 InnBoK InnBoK2 InnBoK InnBoK2 test
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://plastilinn.com/media/posts/6/InnBoK-Business-Modeler.png" class="type:primaryImage" alt="" /></p>
+                <h1 id="smart-business-modeling">Smart Business Modeling. Build better business models faster</h1>
+<h2 class="msg msg--info align-center"><a href="https://plastilinn.com/contacto/">Contact us!</a></h2>
+<div><div class="post__iframe"><iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/QziRd7GtE4k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen"></iframe></div></div>
+<p class="msg--highlight  align-center msg--success msg--info msg"><a href="https://plastilinn.com/contacto/">Join waitlist</a></p>
+<h1 id="design-analyze-and-validate-your-business-model">Design, analyze and validate your Business Model</h1>
+<ul>
+<li>Integrated framework that includes most used Business Modeling tools</li>
+<li>Save time with pre-filled Business Model components</li>
+<li>Your Business Model is dynamic.</li>
+</ul>
+<figure class="post__image"><img loading="lazy"  src="https://plastilinn.com/media/posts/6/Brainn.org.png" alt="" width="471" height="314" sizes="100vw" srcset="https://plastilinn.com/media/posts/6/responsive/Brainn.org-xs.png 300w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-sm.png 480w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-md.png 768w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-lg.png 1024w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-xl.png 1360w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-2xl.png 1600w"></figure>
+<h1 id="your-business-model-in-a-single-file">Your Business Model in a single file</h1>
+<ul>
+<li>Information is not dispersed among multiple files and folders</li>
+<li>Automatic backup and version control</li>
+<li>Your Business Model information is yours forever for free (it’s powered by <a href="https://www.google.com/url?q=https%3A%2F%2Ftiddlywiki.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AOvVaw2MopqTBrGJ7I2uubaQRAc3">TiddlyWiki</a>, not SaaS)</li>
+</ul>
+<figure class="post__image"><img loading="lazy"  src="https://plastilinn.com/media/posts/6/Brainn.org-1.png" alt="" width="471" height="261" sizes="100vw" srcset="https://plastilinn.com/media/posts/6/responsive/Brainn.org-1-xs.png 300w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-1-sm.png 480w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-1-md.png 768w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-1-lg.png 1024w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-1-xl.png 1360w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-1-2xl.png 1600w"></figure>
+<h1 id="unique-data-architecture">Unique data architecture</h1>
+<ul>
+<li>Build a coherent Business Model</li>
+<li>BusinessBusiness model components are reused (not repeated)</li>
+<li>Changes made to Business Model components are updated everywhere</li>
+</ul>
+<figure class="post__image"><img loading="lazy"  src="https://plastilinn.com/media/posts/6/Brainn.org-2.png" alt="" width="478" height="241" sizes="100vw" srcset="https://plastilinn.com/media/posts/6/responsive/Brainn.org-2-xs.png 300w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-2-sm.png 480w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-2-md.png 768w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-2-lg.png 1024w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-2-xl.png 1360w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-2-2xl.png 1600w"></figure>
+<h1 id="integrated-step-by-step-methodology">Integrated step by step methodology</h1>
+<ul>
+<li>Clear process guides help you know what to do at any time</li>
+<li>It doesn’t reinvent the wheel. It uses content already available in the internet</li>
+<li>How-to information is integrated</li>
+</ul>
+<figure class="post__image"><img loading="lazy"  src="https://plastilinn.com/media/posts/6/Brainn.org-3.png" alt="" width="474" height="261" sizes="100vw" srcset="https://plastilinn.com/media/posts/6/responsive/Brainn.org-3-xs.png 300w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-3-sm.png 480w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-3-md.png 768w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-3-lg.png 1024w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-3-xl.png 1360w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-3-2xl.png 1600w"></figure>
+<h1 id="easy-to-understand-and-communicate">Easy to understand and communicate</h1>
+<ul>
+<li>Includes visualizations (charts, tables, etc…) that make it easy to understand your</li>
+<li>Business Model and explain it clearly to investors, employees, etc…</li>
+<li>It’s easy to export your Business Model information and use it anywhere.</li>
+</ul>
+<figure class="post__image"><img loading="lazy"  src="https://plastilinn.com/media/posts/6/Brainn.org-4.png" alt="" width="470" height="267" sizes="100vw" srcset="https://plastilinn.com/media/posts/6/responsive/Brainn.org-4-xs.png 300w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-4-sm.png 480w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-4-md.png 768w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-4-lg.png 1024w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-4-xl.png 1360w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-4-2xl.png 1600w"></figure>
+<h1 id="easy-to-create-and-maintain">Easy to create and maintain</h1>
+<ul>
+<li>Pre-filled component lists save you save tons of time</li>
+<li>Keep your Business Model up-to-date with minimal effort</li>
+</ul>
+<figure class="post__image"><img loading="lazy"  src="https://plastilinn.com/media/posts/6/Brainn.org-5.png" alt="" width="466" height="260" sizes="100vw" srcset="https://plastilinn.com/media/posts/6/responsive/Brainn.org-5-xs.png 300w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-5-sm.png 480w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-5-md.png 768w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-5-lg.png 1024w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-5-xl.png 1360w ,https://plastilinn.com/media/posts/6/responsive/Brainn.org-5-2xl.png 1600w"></figure>
+<p><a href="https://plastilinn.com/null" target="_blank" rel="noopener noreferrer">InnBoK</a></p>
+<p><a href="/md/index.html" target="_blank" rel="noopener noreferrer">InnBoK</a>2</p>
+<p><a href="https://plastilinn.com/null" target="_blank" rel="noopener noreferrer">InnBoK</a></p>
+<p><a href="./md/index.html" target="_blank" rel="noopener">InnBoK</a>2</p>
+<p><a href="https://plastilinn.com/null" target="_blank" rel="noopener noreferrer">InnBoK</a></p>
+<p><a href="../md/index.html" target="_blank" rel="noopener noreferrer">InnBoK</a>2</p>
+<p><a href="https://plastilinn.com/test" target="_blank" rel="noopener noreferrer"></a><a href="https://plastilinn.com/test" target="_blank" rel="noopener noreferrer">test</a></p>
+            ]]>
+        </content>
+    </entry>
+</feed>
