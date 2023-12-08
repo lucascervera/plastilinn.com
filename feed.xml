@@ -3,31 +3,29 @@
     <title>plastilinn</title>
     <link href="https://plastilinn.com/feed.xml" rel="self" />
     <link href="https://plastilinn.com" />
-    <updated>2023-12-04T17:34:45+01:00</updated>
+    <updated>2023-12-08T11:06:02+01:00</updated>
     <author>
         <name>Lucas Cervera</name>
     </author>
     <id>https://plastilinn.com</id>
 
     <entry>
-        <title>test markdown</title>
+        <title>Use plastilinn</title>
         <author>
             <name>Lucas Cervera</name>
         </author>
-        <link href="https://plastilinn.com/test-markdown/"/>
-        <id>https://plastilinn.com/test-markdown/</id>
+        <link href="https://plastilinn.com/use-plastilinn/"/>
+        <id>https://plastilinn.com/use-plastilinn/</id>
 
-        <updated>2023-11-10T13:13:07+01:00</updated>
+        <updated>2023-12-05T18:34:48+01:00</updated>
             <summary>
                 <![CDATA[
-                    blah blah blah
+                    Follow the plastilinn user guide
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <p>blah
-blah blah</p>
-
+                <p>Follow the <a href="https://go.plastilinn.com/#/page/Contents" target="_blank" rel="noopener noreferrer">plastilinn user guide</a></p>
             ]]>
         </content>
     </entry>
@@ -39,10 +37,10 @@ blah blah</p>
         <link href="https://plastilinn.com/plastilinn/"/>
         <id>https://plastilinn.com/plastilinn/</id>
 
-        <updated>2023-12-04T17:34:45+01:00</updated>
+        <updated>2023-12-08T11:06:02+01:00</updated>
             <summary>
                 <![CDATA[
-                    Evolving business models Preview comming soon! I want to be notified plastilinn’s innCoPilot is a custom GPT chatbot that helps you generate creative product or service ideas, exploring various angles and perspectives. It offers guidance on completing your business model, including market analysis, marketing strategies,&hellip;
+                    Evolving business models Preview comming soon! I want to be notified plastilinn’s innCoPilot is a custom GPT chatbot that helps you generate creative product or service ideas, exploring various angles and perspectives. It offers guidance on completing your business model, including aspects such as market&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -50,11 +48,11 @@ blah blah</p>
                 <h1 id="evolving-business-models">Evolving business models</h1>
 <p>Preview comming soon!  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZG1IyMVIij1vmt0Ovm2uTYghkHU6pwbc2v7x8kCB9NNIF5g/viewform?usp=sf_link">I want to be notified</a> </p>
 <h2 id="business-modeling-powered-by-artificial-intelligence">Business modeling powered by Artificial Intelligence</h2>
-<p>plastilinn’s innCoPilot is a custom <strong>GPT chatbot</strong> that helps you generate creative product or service ideas, exploring various angles and perspectives. It <strong>offers guidance on completing your business model</strong>, including market analysis, marketing strategies, financial planning, and organizational structure, market trends, customer demographics, and competitor behavior. It can <strong>help you make informed choices</strong> by evaluating different strategic options, and provides continuous support and instant feedback, crucial for iterative business development and improvement.</p>
+<p>plastilinn’s innCoPilot is a custom <strong>GPT chatbot</strong> that helps you generate creative product or service ideas, exploring various angles and perspectives. It offers <strong>guidance on completing your business model</strong>, including aspects such as market analysis, marketing strategies, financial planning, organizational structure, understanding market trends, analyzing customer demographics, and evaluating competitor behavior. It can <strong>help you make informed choices</strong> by evaluating different strategic options, and provides continuous support and instant feedback, crucial for iterative business development and improvement.</p>
 <h2 id="your-business-model-info-in-one-place">Your business model info in one place</h2>
 <p>plastilinn <strong>centralizes your business model information</strong> in a single place, avoiding data dispersion across multiple files on your hard drive (a PowerPoint with your Business Model Canvas, a PDF with your Value Proposition Canvas, an Excel file with your competitive analysis). This makes it easy to <strong>update, maintain, and visualize</strong> the components of the business model from different angles. Use the tools you know, such as the Business Model Canvas, to input information and adapt it to your business needs.</p>
 <h2 id="methodology-and-tools">Methodology and tools</h2>
-<p>plastilinn is <strong>based on popular innovation methodologies and tools</strong>, such as Lean Startup, Customer Development, and Design Thinking, integrating them and avoiding overlaps. Additionally, <strong>it provides the information you need</strong> at each moment to follow the process of creating your business model. Our methodology makes it clear who should do what, how, and when. It facilitates the <strong>complete cycle of design, analysis, and validation</strong> of your business model systematically and dynamically.</p>
+<p>plastilinn is <strong>based on popular innovation methodologies and tools</strong>, such as Lean Startup, Customer Development, and Design Thinking, integrating them and avoiding overlaps. Additionally, <strong>it provides the information you need</strong> at each moment to follow the process of creating your business model. Our methodology clearly defines who should do what, how they should do it, and when. It facilitates the <strong>complete cycle of design, analysis, and validation</strong> of your business model systematically and dynamically.</p>
 <h2 id="task-prioritization-and-experimentation">Task prioritization and experimentation</h2>
 <p>plastilinn offers <strong>templates</strong> that fit your project. If your project, for example, is an e-commerce site, you don’t have to start from a blank canvas. Instead, you can use a template and customize it.</p>
 <p>It also provides <strong>reference content</strong>. For example, when you need to identify the channels that you will use to reach your customers, it provides an <strong>extensive list</strong> for you to incorporate into your business model without starting from scratch.</p>
