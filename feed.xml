@@ -3,12 +3,33 @@
     <title>plastilinn</title>
     <link href="https://plastilinn.com/feed.xml" rel="self" />
     <link href="https://plastilinn.com" />
-    <updated>2024-01-06T11:31:05+01:00</updated>
+    <updated>2024-01-10T12:52:47+01:00</updated>
     <author>
         <name>Lucas Cervera</name>
     </author>
     <id>https://plastilinn.com</id>
 
+    <entry>
+        <title>Downloads</title>
+        <author>
+            <name>Lucas Cervera</name>
+        </author>
+        <link href="https://plastilinn.com/downloads/"/>
+        <id>https://plastilinn.com/downloads/</id>
+
+        <updated>2024-01-10T12:52:47+01:00</updated>
+            <summary>
+                <![CDATA[
+                    Download the latest release of plastilinn Plastilinn latest release
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>Download the latest release of plastilinn</p>
+<p><a href="https://drive.google.com/drive/folders/1ug7t9jt-BV45a_AC5nsdi1Tg8CX7AUnu?usp=sharing" target="_blank" rel="noopener noreferrer">Plastilinn latest release</a></p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Use plastilinn</title>
         <author>

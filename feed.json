@@ -10,6 +10,20 @@
     },
     "items": [
         {
+            "id": "https://plastilinn.com/downloads/",
+            "url": "https://plastilinn.com/downloads/",
+            "title": "Downloads",
+            "summary": "Download the latest release of plastilinn Plastilinn latest release",
+            "content_html": "<p>Download the latest release of plastilinn</p>\n<p><a href=\"https://drive.google.com/drive/folders/1ug7t9jt-BV45a_AC5nsdi1Tg8CX7AUnu?usp=sharing\" target=\"_blank\" rel=\"noopener noreferrer\">Plastilinn latest release</a></p>",
+            "author": {
+                "name": "Lucas Cervera"
+            },
+            "tags": [
+            ],
+            "date_published": "2024-01-10T12:52:47+01:00",
+            "date_modified": "2024-01-10T12:52:47+01:00"
+        },
+        {
             "id": "https://plastilinn.com/use-plastilinn/",
             "url": "https://plastilinn.com/use-plastilinn/",
             "title": "Use plastilinn",
