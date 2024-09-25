@@ -16,7 +16,7 @@
 ---
 
 <button style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZG1IyMVIij1vmt0Ovm2uTYghkHU6pwbc2v7x8kCB9NNIF5g/viewform?usp=sf_link" target="_blank" style="color: white;"><i class="fa-solid fa-file-arrow-down"></i> Create a new business plan</a>
+    <a href="/#/pages/registration" target="_blank" style="color: white;"><i class="fa-solid fa-file-arrow-down"></i> Create a new business plan</a>
 </button>
 
 <button style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
