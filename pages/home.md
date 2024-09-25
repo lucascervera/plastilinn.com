@@ -6,12 +6,24 @@
           <h1 class="home max-w-4xl text-2xl font-bold leading-none tracking-tighter text-neutral-600 md:text-5xl lg:text-6xl lg:max-w-7xl">
             Evolving business models with AI
           </h1>
-Preview comming soon! I want to be notified
-          <div class="iframe-container">
-            <div class="iframe-wrapper">
-              <iframe src="https://www.youtube.com/embed/jjGVMoZhgCU" title="¿Qué es interesante?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-          </div>
+
+<div class="iframe-container">
+  <div class="iframe-wrapper">
+    <iframe src="https://www.youtube.com/embed/jjGVMoZhgCU" title="¿Qué es interesante?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</div>
+
+---
+
+<button style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZG1IyMVIij1vmt0Ovm2uTYghkHU6pwbc2v7x8kCB9NNIF5g/viewform?usp=sf_link" target="_blank" style="color: white;"><i class="fa-solid fa-file-arrow-down"></i> Create a new business plan</a>
+</button>
+
+<button style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+    <a href="/app.html" target="_blank" style="color: white"><i class="fab fa-youtube"> </i> I already have a plastilinn doc</a>
+</button>
+
+---
 
 ## Business modeling powered by Artificial Intelligence
 
