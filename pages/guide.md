@@ -16,6 +16,43 @@ In case you have not jet downloaded the plastilinn zip:
 - Open the <a href="https://plastilinn.com/app.html" target="_blank">Plastilinn application and click on the "CHOOSE FILE" button</a>
 - Navigate to your plastilinn folder (IE "C:\plastilinn") and load your plastilinn doc (or the sample doc "plastilinn_doc_SpaceX.md" if you just want to play around with an example completed document)
 - Now you have a Plastilinn document loaded. Explore the different options the app offers.
+## Editing Your Plastilinn Doc
+
+[Editing Your Plastilinn Doc](#editing-your-plastilinn-doc)
+[Document block editor](#document-block-editor)
+[Using Markers](#using-markers)
+[Export Content](#export-content)
+
+In Plastilinn, everything revolves around your Plastilinn Business Plan Document (Plastilinn doc for short), which is a single document containing your entire business plan. That is, your business plan is captured in your Plastilinn doc, which is a document that gathers all relevant information about your business. It includes information about who your customers are, what problems you help them solve, what channels you will use for them to get to know you, etc.. A Plastilinn doc is simply a plain text file in Markdown format.
+
+Your Plastilinn Doc is divided into blocks. Each block is a section of the business plan. Any line starting with a "#" symbol is considered a block start, wheter it is a Markdown heading or a tag. You can view all the blocks and easily navigate to any of them from the index tab in the menu.
+
+### Document block editor
+
+You can edit a block by clicking on the icon to the right of the block. This will open a pop-up window, the block editor. In the block editor, you can write directly or use the function to suggest content with artificial intelligence. To do this:
+
+- Press the button. This will automatically open a window with the AI tool to use (it will usually be ChatGPT). If it’s your first time using this tool, you’ll need to sign up.
+- The prompt with all the necessary information will be automatically copied to the clipboard.
+- Paste the prompt into the AI window that opened in the pop-up.
+- Interact with the AI tool as you wish.
+- Copy the responses you find useful and paste them into the block editor.
+
+You can also edit your Plastilinn doc directly in the application <a href="https://stackedit.io/app#" target="_blank">Stackedit</a>
+
+### Using Markers
+
+| marker | low | high |
+| --- | --- | --- |
+| weight | <span data-tag='*'>*</span><kbd class='kbd kbd-xs'>#*</kbd> | <kbd class='kbd kbd-xs'>#*****</kbd> <span data-tag='*****'>*****</span> |
+| completion | <span data-tag='>'>></span><kbd class='kbd kbd-xs'>#></kbd> | <kbd class='kbd kbd-xs'>#>>>>></kbd> <span data-tag='>>>>>'>>>>>></span> |
+| priority | <span data-tag='!'>!</span><kbd class='kbd kbd-xs'>#!</kbd> | <kbd class='kbd kbd-xs'>#!!!!!</kbd> <span data-tag='!!!!!'>!!!!!</span> |
+| uncertainty | <span data-tag='?'>?</span><kbd class='kbd kbd-xs'>#?</kbd> | <kbd class='kbd kbd-xs'>#?????</kbd> <span data-tag='?????'>?????</span> |
+| risk | <span data-tag='¡'>¡</span><kbd class='kbd kbd-xs'>#¡</kbd> | <kbd class='kbd kbd-xs'>#¡¡¡¡¡</kbd> <span data-tag='¡¡¡¡¡'>¡¡¡¡¡</span> |
+| validation | <span data-tag='='>=</span><kbd class='kbd kbd-xs'>#=</kbd> | <kbd class='kbd kbd-xs'>#=====</kbd> <span data-tag='====='>=====</span> |
+
+### Export Content
+
+At any time, you can export your document as HTML by clicking the "export" button in the upper right corner. Your document will be exported as clean HTML that you can open, import, or copy and paste into your favorite document editor (MS Word, Google Docs, etc.). The following <a href="https://drive.google.com/drive/folders/1IbMu1j6hqWG0BLllePYftHpzubjxCEQy?usp=sharing" target="_blank">link opens a Google Drive folder where you can view a sample of all these documents</a>.
 
 ##### Create a new business from scratch
 
@@ -23,9 +60,7 @@ In case you have not jet downloaded the plastilinn zip:
 
 ##### Open the idea definition guide
 
-Click on the [Idea Definition Guide](#idea-definition-guide) guide and follow the instructions.
-
-In Plastilinn, everything revolves around your Plastilinn Business Plan Document (Plastilinn doc for short), which is a single document containing your entire business plan. That is, your business plan is captured in your Plastilinn doc, which is a document that gathers all relevant information about your business. It includes information about who your customers are, what problems you help them solve, what channels you will use for them to get to know you, etc.. A Plastilinn doc is simply a plain text file in Markdown format.
+Open the "Lean Canvas" guide in the "Guides" menu.
 
 ### Features
 
@@ -56,33 +91,6 @@ A Plastilinn doc allows you to describe your business model in a structured mann
 | **Marker** Indicators or notes that help evaluate, classify, or prioritize components of the business model. | **Weight:** Importance of components. (Reusable rocket technology has a weight of "*****")<br>**Priority:** Urgency of development. (Starship development has a priority of "!!!!!")<br>**Certainty:** Reliability of the component. (Feasibility of reusable rockets is marked with "=")|
 
 [Plastilinn documentation](https://xbokmd.github.io/plastilinn/index.html#/)
-
-## Editing Your Plastilinn Doc
-
-[Editing Your Plastilinn Doc](#editing-your-plastilinn-doc)
-[Document block editor](#document-block-editor)
-[Using Markers](#using-markers)
-[Export Content](#export-content)
-
-You can edit your Plastilinn doc directly in the application <a href="https://stackedit.io/app#" target="_blank">Stackedit</a>
-
-### Document block editor
-Any line starting with a "#" symbol is considered a block start, wheter it is a Markdown heading or a tag.
-
-### Using Markers
-
-| marker | low | high |
-| --- | --- | --- |
-| weight | <span data-tag='*'>*</span><kbd class='kbd kbd-xs'>#*</kbd> | <kbd class='kbd kbd-xs'>#*****</kbd> <span data-tag='*****'>*****</span> |
-| completion | <span data-tag='>'>></span><kbd class='kbd kbd-xs'>#></kbd> | <kbd class='kbd kbd-xs'>#>>>>></kbd> <span data-tag='>>>>>'>>>>>></span> |
-| priority | <span data-tag='!'>!</span><kbd class='kbd kbd-xs'>#!</kbd> | <kbd class='kbd kbd-xs'>#!!!!!</kbd> <span data-tag='!!!!!'>!!!!!</span> |
-| uncertainty | <span data-tag='?'>?</span><kbd class='kbd kbd-xs'>#?</kbd> | <kbd class='kbd kbd-xs'>#?????</kbd> <span data-tag='?????'>?????</span> |
-| risk | <span data-tag='¡'>¡</span><kbd class='kbd kbd-xs'>#¡</kbd> | <kbd class='kbd kbd-xs'>#¡¡¡¡¡</kbd> <span data-tag='¡¡¡¡¡'>¡¡¡¡¡</span> |
-| validation | <span data-tag='='>=</span><kbd class='kbd kbd-xs'>#=</kbd> | <kbd class='kbd kbd-xs'>#=====</kbd> <span data-tag='====='>=====</span> |
-
-### Export Content
-
-At any time, you can export your document as HTML by clicking the "export" button in the upper right corner. Your document will be exported as clean HTML that you can open, import, or copy and paste into your favorite document editor (MS Word, Google Docs, etc.). The following <a href="https://drive.google.com/drive/folders/1IbMu1j6hqWG0BLllePYftHpzubjxCEQy?usp=sharing" target="_blank">link opens a Google Drive folder where you can view a sample of all these documents</a>.
 
 ### xBoK
 
