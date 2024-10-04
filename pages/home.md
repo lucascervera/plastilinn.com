@@ -73,13 +73,3 @@ Guidance on experiments for validation. Business model improvement proposals. Co
 ### Document Generation
 
 Generate various documents like business plans, pitch decks, and employee guides using plastilinn data.
-
-## Download
-
-plastilinn’s innCoPilot
-
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
