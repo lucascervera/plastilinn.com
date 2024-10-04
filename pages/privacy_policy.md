@@ -1,5 +1,5 @@
 
-# Lucas Rodriguez Cervera Privacy Policy
+# Privacy Policy
 
 This privacy policy explains how Lucas Rodriguez Cervera collects, uses, and protects your personal data when you use our website.
 
