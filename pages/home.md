@@ -4,7 +4,7 @@
       <div class="relative inline-flex items-center mx-auto align-middle">
         <div class="text-center">
           <h1 class="home max-w-4xl text-2xl font-bold leading-none tracking-tighter text-neutral-600 md:text-5xl lg:text-6xl lg:max-w-7xl">
-            Evolving business models with AI
+             AI-assisted business plan
           </h1>
 
 <div class="iframe-container">
