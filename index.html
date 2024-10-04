@@ -33,6 +33,35 @@
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" />
+
+  <!-- Cookie Consent -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js"></script>
+  <script>
+    window.addEventListener("load", function () {
+      window.cookieconsent.initialise({
+        "palette": {
+          "popup": {
+            "background": "#000"
+          },
+          "button": {
+            "background": "#f1d600"
+          }
+        },
+        "theme": "classic",
+        "position": "bottom-right",
+        "content": {
+          "message": "This website uses cookies to ensure you get the best experience on our website.",
+          "dismiss": "Got it!",
+          "link": "Learn more",
+          "href": "/privacy_policy"
+        }
+      });
+    });
+  </script>
+
 </head>
 
 <body>
@@ -54,7 +83,6 @@
       relativePath: false,
       // load from _footer.md
       loadFooter: true,
-
       // Or load from _footer.md
       loadFooter: '_footer.md'
     }
