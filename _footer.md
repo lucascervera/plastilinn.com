@@ -1,0 +1,1 @@
+[privacy policy](https://plastilinn.com/#/pages/privacy_policy)
