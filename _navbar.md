@@ -1,2 +1,3 @@
 - [home](/)
-- [contents](pages/contents.md)
+- [docs](/pages/guide)
+- [contact](https://lucascervera.com/#/?id=contacto)

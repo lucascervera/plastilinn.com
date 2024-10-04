@@ -1,27 +1,45 @@
-## Quick start
+<div role="alert" class="alert alert-error">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="h-6 w-6 shrink-0 stroke-current"
+    fill="none"
+    viewBox="0 0 24 24">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+  </svg>
+  <span>Disclaimer: Early Days Ahead! 🚧
 
-[Download the Plastilinn doc template](#download-the-plastilinn-doc-template)
-[Try plastilinn](#try-plastilinn)
-[Load your Plastilinn doc](#load-your-plastilinn-doc)
-[Open the idea definition guide](#open-the-idea-definition-guide)
+Hey there, brave explorer! You’re about to dive into the preview version of our app. It's still a bit like a baby giraffe—wobbly on its feet, but full of potential! 🦒 Expect some bumps, bugs, and quirky moments along the way. We're hard at work ironing out the kinks, and your feedback will help us grow strong and steady. Thanks for being part of the adventure!
 
-In case you have not jet downloaded the plastilinn zip:
+Enjoy the ride, and keep the bug spray handy! 🐛✨</span></br>
+</div>
+
+## Before you start
+
+This guide assumes that you have the plastilinn.zip and unzipped it in a directory of your choice (your Plastilinn folder, e.g., "C:\plastilinn"). If you haven't done so yet, click on the button below:
 
 <button style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
     <a href="https://tally.so/r/mZYMey" target="_blank" style="color: white;"><i class="fa-solid fa-file-arrow-down"></i> Create a new business plan</a>
 </button>
 
+## Your plastilinn doc
+
+En tu Plastilinn folder Encontrarás una serie de documentos. De momento, nos focalizamos en los siguientes 3: 
+
+- plastilinn_doc.txt: Your Plastilinn Business Plan Document (Plastilinn doc for short). Es la plantilla del documento que irás Añadiendo contenido para crear tu Business plan.
+- plastilinn_doc_spacex.txt: Un ejemplo de un plastilinn doc ya generado Basado en la empresa Space X.
+- plastilinn app (free): Es simplemente un enlace a la aplicación En la que podrás trabajar con tu documento. (https://plastilinn.com/app.html)
+
 ## Using plastilinn
 
 - Open the <a href="https://plastilinn.com/app.html" target="_blank">Plastilinn application and click on the "CHOOSE FILE" button</a>
-- Navigate to your plastilinn folder (IE "C:\plastilinn") and load your plastilinn doc (or the sample doc "plastilinn_doc_SpaceX.md" if you just want to play around with an example completed document)
+- Navigate to your plastilinn folder (IE "C:\plastilinn") and load your plastilinn doc (or the sample doc "plastilinn_doc_spacex.txt" if you just want to play around with an example completed document)
 - Now you have a Plastilinn document loaded. Explore the different options the app offers.
-## Editing Your Plastilinn Doc
 
-[Editing Your Plastilinn Doc](#editing-your-plastilinn-doc)
-[Document block editor](#document-block-editor)
-[Using Markers](#using-markers)
-[Export Content](#export-content)
+## Editing Your Plastilinn Docs
 
 In Plastilinn, everything revolves around your Plastilinn Business Plan Document (Plastilinn doc for short), which is a single document containing your entire business plan. That is, your business plan is captured in your Plastilinn doc, which is a document that gathers all relevant information about your business. It includes information about who your customers are, what problems you help them solve, what channels you will use for them to get to know you, etc.. A Plastilinn doc is simply a plain text file in Markdown format.
 
