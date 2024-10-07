@@ -89,30 +89,27 @@
                         </div>
 
                         <div class="navbar-end">
-                            <div class="join">
-                                <button id="downloadBtn" @click="downloadMarkdown"
-                                    class="btn join-item btn-primary btn-outline no-animation">
-                                    <span class="material-symbols-outlined" translate="no">
-                                        download_for_offline
-                                    </span>
-                                    Download
-                                </button>
-                                <button id="exportBtn" @click="downloadHTML"
-                                    class="btn join-item btn-primary btn-outline no-animation">
-                                    <span class="material-symbols-outlined" translate="no">
-                                        download_for_offline
-                                    </span>
-                                    Export
-                                </button>
-                                <button @click="toggleAutoDownload"
-                                    :class="{'bg-green-500': autoDownloadEnabled, 'bg-gray-500': !autoDownloadEnabled}"
-                                    class="btn join-item btn-primary btn-outline no-animation">
-                                    <span class="material-symbols-outlined" translate="no">
-                                        toggle_on
-                                    </span>
-                                    Auto Download {{ autoDownloadEnabled ? 'ON' : 'OFF' }}
-                                </button>
-                            </div>
+                            <button id="downloadBtn" @click="downloadMarkdown"
+                                class="btn join-item btn-primary btn-outline no-animation">
+                                <span class="material-symbols-outlined" translate="no">
+                                    download_for_offline
+                                </span>
+                                Download
+                            </button>
+                            <button id="exportBtn" @click="downloadHTML"
+                                class="btn join-item btn-primary btn-outline no-animation">
+                                <span class="material-symbols-outlined" translate="no">
+                                    download_for_offline
+                                </span>
+                                Export
+                            </button>
+                            <button @click="toggleAutoDownload"
+                                :class="{'bg-green-500': autoDownloadEnabled, 'bg-gray-500': !autoDownloadEnabled}"
+                                class="btn join-item btn-primary btn-outline no-animation">
+                                <span class="material-symbols-outlined" translate="no">
+                                    toggle_on
+                                </span>
+                                Auto Download {{ autoDownloadEnabled ? 'ON' : 'OFF' }}
                         </div>
                     </div>
                 </div>
