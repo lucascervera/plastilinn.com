@@ -39,11 +39,15 @@
         #show-selected {
             animation: blinkRed 1s infinite;
             background-color: transparent;
-            /* Establecer color inicial transparente */
         }
 
         #show-selected:empty {
             display: none;
+        }
+
+        .selected {
+            background-color: lightgrey;
+            border: blue;
         }
     </style>
 
@@ -64,27 +68,36 @@
                             <kbd class="kbd kbd-xs">Plastilinn V0.3.0
                                 {{ license }} <span v-if="detectedLanguage"> ({{ detectedLanguage }})</span>
                             </kbd>
-                            <div class="flex flex-row justify-between gap-2">
+                            <div class="flex flex-row justify-between gap-2" id="plastilinn-menu">
                                 <button @click="changeSidebar('guides')"
+                                    :class="{'selected': selectedButton === 'guides'}"
                                     class="collapse-filter-button btn btn-primary btn-outline btn-sm">
                                     <span class="material-symbols-outlined" translate="no">
                                         fact_check
-                                    </span>Guides</button>
+                                    </span>Guides
+                                </button>
                                 <button @click="changeSidebar('index')"
+                                    :class="{'selected': selectedButton === 'index'}"
                                     class="collapse-filter-button btn btn-primary btn-outline btn-sm">
                                     <span class="material-symbols-outlined" translate="no">
                                         list_alt
-                                    </span>Index</button>
+                                    </span>Index
+                                </button>
                                 <button @click="changeSidebar('filter')"
+                                    :class="{'selected': selectedButton === 'filter'}"
                                     class="collapse-filter-button btn btn-primary btn-outline btn-sm">
                                     <span class="material-symbols-outlined" translate="no">
                                         filter_alt
-                                    </span>Filter</button>
+                                    </span>Filter
+                                </button>
                                 <button @click="changeSidebar('search')"
+                                    :class="{'selected': selectedButton === 'search'}"
                                     class="collapse-filter-button btn btn-primary btn-outline btn-sm">
                                     <span class="material-symbols-outlined" translate="no">
                                         search
-                                    </span>Search</button>
+                                    </span>Search
+                                </button>
+
                             </div>
                         </div>
 
@@ -189,7 +202,8 @@
                                             <div class="flex flex-col mt-4">
                                                 <div class="tag-group mb-4 px-2 py-3 bg-gray-200 rounded-md shadow-lg">
                                                     <div class="tag-name text-center font-semibold text-blue-600 mb-2">
-                                                        Tags
+                                                        Tags <a href="https://plastilinn.com/#/pages/guide?id=tags"
+                                                            target="_blank">ℹ️</a>
                                                     </div>
                                                     <ul class="flex justify-center items-center flex-wrap gap-2">
                                                         <li v-for="tag in tags" :key="`tag-${tag}`"
@@ -205,24 +219,29 @@
                                                     </ul>
                                                 </div>
                                             </div>
-
-                                            <div v-for="(values, markerName) in prepareMarkers()" :key="markerName"
-                                                class="marker-group bg-gray-200 rounded-md shadow-lg">
-                                                <ul class="flex flex-wrap gap-2">
-                                                    <li>
-                                                        <div class="badge badge-neutral">{{ markerName }}</div>
-                                                    </li>
-                                                    <li v-for="value in values" :key="`marker-${markerName}-${value}`"
-                                                        class="filter-switch-item">
-                                                        <input class="checkbox checkbox-primary sr-only"
-                                                            :id="`marker-${markerName}-${value}`"
-                                                            :value="`${markerName}:${value}`" type="checkbox"
-                                                            @change="toggleMarkerSelection(`${value}`)">
-                                                        <label :for="`marker-${markerName}-${value}`"
-                                                            class="cursor-pointer inline-block text-sm text-gray-600 hover:text-gray-800 bg-white rounded shadow p-1">{{
-                                                            value }}</label>
-                                                    </li>
-                                                </ul>
+                                            <div class="marker-group mb-4 px-2 py-3 bg-gray-200 rounded-md shadow-lg">
+                                                <div class="tag-name text-center font-semibold text-blue-600 mb-2">
+                                                    Markers <a href="https://plastilinn.com/#/pages/guide?id=markers"
+                                                        target="_blank">ℹ️</a>
+                                                </div>
+                                                <div v-for="(values, markerName) in prepareMarkers()" :key="markerName">
+                                                    <ul class="flex flex-wrap gap-2">
+                                                        <li>
+                                                            <div class="badge badge-neutral">{{ markerName }}</div>
+                                                        </li>
+                                                        <li v-for="value in values"
+                                                            :key="`marker-${markerName}-${value}`"
+                                                            class="filter-switch-item">
+                                                            <input class="checkbox checkbox-primary sr-only"
+                                                                :id="`marker-${markerName}-${value}`"
+                                                                :value="`${markerName}:${value}`" type="checkbox"
+                                                                @change="toggleMarkerSelection(`${value}`)">
+                                                            <label :for="`marker-${markerName}-${value}`"
+                                                                class="cursor-pointer inline-block text-sm text-gray-600 hover:text-gray-800 bg-white rounded shadow p-1">{{
+                                                                value }}</label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -490,6 +509,7 @@
                     replaceText: '',
                     isFullScreenEditorOpen: false, // Estado para controlar el modal del editor en pantalla completa
                     selectedPrompt: null,
+                    selectedButton: null, // Para almacenar el botón seleccionado
                 };
             },
             computed: {
@@ -629,6 +649,8 @@
 
                 changeSidebar(section) {
                     this.currentSidebarSection = section;
+                    this.selectedButton = section; // Actualiza el botón seleccionado
+                    this.resetSelectedTagsAndMarkers(); // Llama al método de reset
                     // Si la sección no es 'filter', resetea el input de búsqueda y los tags de filtro
                     if (section !== 'filter') {
                         this.searchQuery = ''; // Resetea el input de búsqueda
@@ -1719,55 +1741,63 @@
                 },
 
                 downloadHTML() {
-                    // Convierte el Markdown a HTML
+                    // Configurar un renderer personalizado para agregar IDs a los encabezados
+                    const renderer = new marked.Renderer();
+
+                    // Sobrescribir la función heading para agregar los IDs automáticamente
+                    renderer.heading = function (text, level) {
+                        const slug = marked.slugger().slug(text); // Crear un slug basado en el texto del encabezado
+                        return `<h${level} id="${slug}">${text}</h${level}>\n`;
+                    };
+
+                    // Establecer el renderer personalizado en Marked
+                    marked.setOptions({ renderer });
+
+                    // Convierte el Markdown a HTML usando el renderer con IDs en los headings
                     this.updateModelMarkdown();
-                    // eslint-disable-next-line no-undef
                     const htmlContent = marked.parse(this.modelMarkdown);
+
                     const { modelName } = this; // Obtiene el nombre actual del modelo
                     const timestamp = new Date().toISOString().replace(/[:-]|\.\d{3}/g, ''); // Genera un timestamp en el formato deseado
                     const fileName = `${modelName} - saved ${timestamp}.html`; // Construye el nombre del archivo
 
                     // Opcional: Si quieres incluir un estilo básico en tu HTML exportado, puedes agregarlo aquí
                     const htmlWithStyle = `
-                                <!DOCTYPE html>
-                                <html lang="en">
-                                    <head>
-                                        <meta charset="UTF-8">
-                                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                                        <title>Plastilinn</title>
-                                        <link rel="stylesheet" href="https://stackedit.io/style.css" />
-                                        <link rel="stylesheet" href="https://xbokmd.github.io/plastilinn/css.css">
-                                        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-                                    </head>
-                                    <body>
-                                    <script>
-                                        // Esto se ejecuta automáticamente cuando se carga la página
-                                        window.onload = function() {
-                                            alert("Copy the page content and paste it on your text editor");
-                                        };
-                                    <\/script>
-                                    <style>
-                                        h1,
-                                        h2,
-                                        h3,
-                                        h4,
-                                        h5,
-                                        h6 {
-                                            all: unset;
-                                            font-size: 2rem !important;
-                                            /* Ajusta el tamaño según tus necesidades */
-                                            font-weight: 700 !important;
-                                            /* 700 es bold */
-                                            margin-bottom: 16px !important;
-                                            /* Añadir espacio entre los encabezados */
-                                            display: block !important;
-                                            /* Asegurar que los encabezados sigan siendo bloque */
-                                        }
-                                    </style>
-                                    ${htmlContent}
-                                    </body>
-                                </html>
-                                                    `;
+        <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Plastilinn</title>
+                <link rel="stylesheet" href="https://stackedit.io/style.css" />
+                <link rel="stylesheet" href="https://xbokmd.github.io/plastilinn/css.css">
+                <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+            </head>
+            <body>
+            <script>
+                // Esto se ejecuta automáticamente cuando se carga la página
+                window.onload = function() {
+                    alert("Copy the page content and paste it on your text editor");
+                };
+            <\/script>
+            <style>
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6 {
+                    all: unset;
+                    font-size: 2rem !important;
+                    font-weight: 700 !important;
+                    margin-bottom: 16px !important;
+                    display: block !important;
+                }
+            </style>
+            ${htmlContent}
+            </body>
+        </html>
+    `;
 
                     // Crea un Blob con el contenido HTML
                     const blob = new Blob([htmlWithStyle], { type: 'text/html' });
