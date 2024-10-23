@@ -1,11 +1,1 @@
-1, You don't need to install anything on your computer, just download the Plastilinn zip
-
-<button style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
-    <a href="https://xbokmd.github.io/plastilinn/public/plastilinn.zip" style="color: white;"><i class="fa-solid fa-file-arrow-down"></i> Download plastilinn zip</a>
-</button>
-
-2, Unzip it in a directory of your choice (e.g., "C:\plastilinn"). From now on, we will refer to this folder as your "Plastilinn folder".
-
-<button style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
-    <a href="https://plastilinn.com/#/pages/guide" style="color: white;"><i class="fa-solid fa-file-arrow-down"></i> Start creating your business plan</a>
-</button>
+<h1><a href="https://docs.google.com/document/d/1nzI56e0zItq3vWeOoPsbe_dOVMU2dCZ5H40Mb1xoso4/copy" target="_blank">👉 Click here to make your own copy of the Plastilinn Business Plan template and follow the instructions within the document</a></h1>
