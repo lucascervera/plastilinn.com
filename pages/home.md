@@ -28,6 +28,35 @@
 
 ---
 
+<div class="
+    container 
+    mx-auto 
+    px-6 
+    py-8 
+    bg-gray-50 
+    border-2 
+    border-gray-200 
+    rounded-xl 
+    shadow-lg
+    [&_*]:font-sans 
+    [&_*]:text-gray-800 
+    [&_h1]:text-3xl 
+    [&_h1]:font-bold 
+    [&_h1]:text-blue-700 
+    [&_h1]:text-center
+    [&_h2]:text-2xl 
+    [&_h2]:font-semibold 
+    [&_h2]:text-blue-600 
+    [&_p]:leading-relaxed 
+    [&_p]:mb-4 
+    [&_img]:rounded-lg 
+    [&_img]:shadow-md 
+    [&_img]:max-w-full 
+    [&_img]:object-cover
+    [&_img]:mx-auto 
+    [&_img]:block
+">
+
 ### **Why you need a Business Model**
 
 A business model is a simplified representation of how an organization achieves its objectives (for example, how a company makes money).
@@ -160,3 +189,4 @@ Plastilinn supports the validation of your business model by offering structured
 ## Document Generation
 
 With Plastilinn, you can effortlessly generate a variety of documents, including business plans, pitch decks, and employee guides, using the data stored within your business plan document. This eliminates the need to manually transfer data between tools, providing a seamless experience from ideation to presentation.
+ </div>
