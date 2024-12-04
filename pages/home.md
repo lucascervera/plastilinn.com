@@ -13,14 +13,15 @@
 }
 </style>
 
+<h1>+🧠 -📜 => 💡 = 🚀</h1>
 <h1 class="home text-gradient max-w-4xl text-2xl font-bold leading-none tracking-tighter text-neutral-600 md:text-5xl lg:text-6xl lg:max-w-7xl">
     Evolve your business.</br>
     Focus on thinking, not writing.
 </h1>
 
 <p class="text-xl md:text-2xl text-gray-600 mb-12">
-    Our AI-assisted business plan software frees up your time from writing 
-    so you can focus on designing, analyzing, validating, and improving your business.
+    Our 🤖 AI powered business plan software frees up your time from writing 
+    so you can focus on 🧠 designing, 📊 analyzing, ✅ validating, and 🚀 improving your business.
 </p>
 
 
