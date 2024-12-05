@@ -47,8 +47,6 @@
 
 Plastilinn is an AI-driven tool designed to simplify and supercharge your business modeling process. It guides you step-by-step through market analysis, defining promotion channels, evaluating competitors, etc... all within a familiar Google Doc interface. Its structured, visual approach helps you focus on strategic thinking. With Plastilinn, you’ll spend less time writing and more time refining your ideas, thanks to proven innovation methodologies.
 
-**Why AI is a Game-Changer for Your Business Plan**
-
 - **Save Time**: Plastilinn’s AI can create your business model and draft a plan in hours, not weeks.  
 - **Better Decisions**: Gain insights and recommendations from AI trained on best practices and pitfalls.  
 - **Stay Organized**: Use structured tags and visual elements to make your business model clear and actionable.  
