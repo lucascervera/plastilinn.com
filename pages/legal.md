@@ -1,9 +1,9 @@
 # Plastilinn Google Add-on Documentation
 
-1. **Privacy Policy**  
-2. **Terms of Service**  
-3. **Justification of Requested Scopes** (OAuth Consent Explanation)  
-4. **Support and Contact Information**
+1. [Privacy Policy](#1-privacy-policy)  
+2. [Terms of Service](#2-terms-of-service)  
+3. [Justification of Requested Scopes (OAuth Consent Explanation)](#3-justification-of-requested-scopes-oauth-consent-explanation)  
+4. [Support and Contact Information](#4-support-and-contact-information)
 
 ---
 
@@ -25,7 +25,7 @@ This add-on (“the Service”) is designed to extend Google Docs functionality 
 
 ### Data Retention
 - **Temporary Data:** All data is processed in-memory within the execution context of Google Apps Script and is not persisted after the session ends.  
-- **No External Storage:** We do not maintain separate databases or cloud storages to keep document-related data.
+- **No External Storage:** We do not maintain separate databases or cloud storages to keep document-related data.  
 - **Copy/Paste:** Part of the application's functionality involves copying content from the document to the clipboard and inviting the user to paste it into an external AI assistant separate from this add-on.
 
 ### User Rights
