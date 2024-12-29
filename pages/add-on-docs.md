@@ -1,13 +1,13 @@
 # Plastilinn Google Add-on Documentation
 
-1. [Privacy Policy](#1-privacy-policy)  
-2. [Terms of Service](#2-terms-of-service)  
-3. [Justification of Requested Scopes (OAuth Consent Explanation)](#3-justification-of-requested-scopes-oauth-consent-explanation)  
-4. [Support and Contact Information](#4-support-and-contact-information)
+1. [Privacy Policy](#privacy-policy)  
+2. [Terms of Service](#terms-of-service)  
+3. [Justification of Requested Scopes (OAuth Consent Explanation)](#justification-of-requested-scopes-oauth-consent-explanation)  
+4. [Support and Contact Information](#support-and-contact-information)
 
 ---
 
-## 1. Privacy Policy
+## Privacy Policy
 
 **Effective Date:** 2024-12-28
 
@@ -37,7 +37,7 @@ We may update this policy to reflect changes in our practices or for other opera
 
 ---
 
-## 2. Terms of Service
+## Terms of Service
 
 **Introduction**  
 These Terms of Service (“Terms”) govern your use of the add-on. By installing or using the add-on, you agree to these Terms.
@@ -60,7 +60,7 @@ These Terms of Service (“Terms”) govern your use of the add-on. By installin
 
 ---
 
-## 3. Justification of Requested Scopes (OAuth Consent Explanation)
+## Justification of Requested Scopes (OAuth Consent Explanation)
 
 Our add-on requests the following permissions to function properly:
 
@@ -86,7 +86,7 @@ These scopes are the minimum necessary to provide the functionality of the add-o
 
 ---
 
-## 4. Support and Contact Information
+## Support and Contact Information
 
 - **Email:** [plastilinn@plastilinn.com](mailto:plastilinn@plastilinn.com)  
 - **Issues Tracker:** [GitHub Issues](https://github.com/lucascervera/plastilinn.com/issues)  
