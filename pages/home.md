@@ -27,7 +27,7 @@
 ---
 
 <button style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
-    <a href="https://tally.so/r/mZYMey" target="_blank" style="color: white;"><i class="fa-solid fa-file-arrow-down"></i> Join the waitlist</a>
+    <a href="https://tally.so/r/mZYMey" target="_blank" style="color: white;">Start using plastilinn</a>
 </button>
 
 ## Your Business Plan in a Google Doc
