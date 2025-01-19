@@ -61,7 +61,6 @@ body {
   }
 
   .div-container {
-
     justify-content: center;  /* Centra los elementos horizontalmente */
     text-align: center;       /* Asegura que el texto dentro del div también esté centrado */
   }
