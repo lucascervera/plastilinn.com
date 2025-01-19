@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Plastilinn Business Evolution Framework</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@2
+0..48,100..700,0..1,-50..200" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    /* Add padding between paragraphs */
+    /* Apply padding to all elements inside .prose */
+    .prose * {
+      margin-bottom: 1rem;
+      max-width: 120ch;
+      /* Set max-width to 75 characters */
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    /* Increase header sizes */
+    .prose h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      /* Larger bottom margin for h1 */
+    }
+
+    .prose h2 {
+      font-size: 2rem;
+      margin-bottom: 1.75rem;
+      /* Slightly smaller margin for h2 */
+    }
+
+    .prose h3 {
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      /* Slightly smaller margin for h3 */
+    }
+
+    .prose h4 {
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+      /* Smaller margin for h4 */
+    }
+
+    .prose h5 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      /* Even smaller margin for h5 */
+    }
+
+    .prose h6 {
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+      /* Smallest margin for h6 */
+    }
+  </style>
+</head>
+
+<body>
+  <header class="dark:bg-black w-full py-8 lg:hidden">
+    <button id="open-menu-control"
+      class="menu-control ml-auto mr-12 rounded-xl py-2 px-2 flex flex-row items-center justify-center transition ease hover:bg-gray-100 dark:hover:bg-transparent lg:hidden lg:w-fit">
+      <span class="material-symbols-outlined text-black dark:text-gray-100">menu</span>
+    </button>
+  </header>
+
+  <nav id="navbar"
+    class="dark:bg-black bg-white hidden lg:flex fixed top-0 left-0 h-screen w-screen flex flex-col items-center gap-4 overflow-scroll lg:overflow-hidden lg:flex-row lg:relative lg:w-full lg:h-fit lg:py-8 lg:px-28 lg:mx-auto pb-12 fixed top-0 left-0 w-full z-50"">
+    <div class=" w-full py-8 lg:hidden">
+    <button id="close-menu-control"
+      class="menu-control ml-auto mr-12 dark:hover:bg-transparent rounded-xl py-2 px-2 flex flex-row items-center justify-center transition ease hover:bg-gray-100 lg:w-fit">
+      <span class="material-symbols-outlined text-black dark:text-gray-100">close</span>
+    </button>
+    </div>
+
+    <div
+      class="button-container mt-16 w-full py-4 mx-auto mt-4 rounded-xl flex flex-col items-center lg:flex-row gap-4 lg:mr-auto lg:items-start">
+
+      <button
+        class="button dark:bg-gray-200 hover:bg-gray-200 dark:hover:bg-white bg-gray-100 rounded-xl py-2 px-4 flex flex-row items-center justify-center gap-2 transition ease hover:bg-gray-100 w-9/12 lg:w-fit sm:w-7/12 md:w-5/12">
+        <span class="material-symbols-outlined h-fit">home</span>
+        <span class="font-bold h-fit">Home</span>
+      </button>
+      <button
+        class="button dark:bg-gray-200 hover:bg-gray-200 dark:hover:bg-white bg-gray-100 rounded-xl px-4 py-2 flex items-center justify-center gap-2 transition ease hover:bg-gray-100 w-9/12 lg:w-fit sm:w-7/12 md:w-5/12"
+        onclick="toggleSection('doc-html')">
+        <span class="material-symbols-outlined">category</span>
+        <span class="font-bold">Business Model</span>
+      </button>
+      <!--
+      <button
+        class="button dark:bg-gray-200 hover:bg-gray-200 dark:hover:bg-white bg-gray-100 rounded-xl px-4 py-2 flex items-center justify-center gap-2 transition ease hover:bg-gray-100 w-9/12 lg:w-fit sm:w-7/12 md:w-5/12"
+        onclick="toggleSection('navigator')">
+        <span class="material-symbols-outlined">widgets</span>
+        <span class="font-bold">Navigator</span>
+      </button>
+      -->
+    </div>
+
+    <!--
+    <div class="button-container w-full mx-auto mt-4 rounded-xl flex flex-col items-center lg:flex-row gap-4 lg:w-fit">
+      <button
+        class="button dark:bg-gray-200 hover:bg-gray-200 dark:hover:bg-white bg-gray-100 rounded-xl px-4 py-2 flex items-center justify-center gap-2 transition ease hover:bg-gray-100 w-9/12 lg:w-fit sm:w-7/12 md:w-5/12">
+        <span class="material-symbols-outlined">login</span>
+        <span class="font-bold">Export</span>
+      </button>
+    </div>
+-->
+
+  </nav>
+
+  <main id="main" class="dark:bg-black dark:text-gray-200 text-xl min-w-screen min-h-screen">
+    <article id="main__article" class="w-full py-8 px-8 lg:px-28 mx-auto mt-4 rounded-xl flex flex-col gap-4">
+
+      <main class="container flex-1 p-6">
+        <div id="doc-html" class="content-section">
+          <h2 class="text-2xl font-bold text-gray-700">Document Viewer</h2>
+          <p>Copy / Paste the content to your document editor</p>
+
+          <div class="divider"></div>
+
+          <div id="parsed-document" class="prose">
+          </div>
+        </div>
+        <div id="home" class="content-section">
+          <h2 class="text-2xl font-bold text-gray-700">Home</h2>
+          <h1 class="text-2xl font-bold mb-6">Markdown Document Filter</h1>
+
+          <div class="mb-8">
+            <h3 class="text-lg font-semibold mb-2">Document</h3>
+            <pre id="document" class="bg-gray-100 p-4 rounded-lg border border-gray-300 overflow-x-auto text-sm">
+            </pre>
+          </div>
+        </div>
+
+        <!--
+        <div id="navigator" class="content-section hidden">
+
+          <div id="filters" class="mb-6">
+            <h3 class="text-lg font-semibold mb-2">Filters</h3>
+            <div id="filter-container" class="space-y-2"></div>
+          </div>
+
+          <button id="apply-filters" class="bg-green-500 text-white py-1 px-4 rounded-lg hover:bg-green-600">
+            Apply Filters
+          </button>
+
+          <button id="add-filter" class="bg-blue-500 text-white py-1 px-4 rounded-lg hover:bg-blue-600 mt-2">
+            Add Filter
+          </button>
+
+          <div id="results" class="mt-6">
+            <h3 class="text-lg font-semibold mb-2">Filtered Results</h3>
+            <div id="result-container" class="space-y-4"></div>
+          </div>
+        </div>
+
+
+        <div id="settings" class="content-section hidden">
+          <h2 class="text-2xl font-bold text-gray-700">New Business Model</h2>
+          <style>
+            iframe {
+              width: 100%;
+              height: 100vh;
+              border: none;
+            }
+          </style>
+
+          <iframe src="https://n8n.lucascervera.com/form/7ef7bc81-d341-499b-ae7f-99e27adf34c2"></iframe>
+
+        </div>
+-->
+
+      </main>
+    </article>
+  </main>
+  <!-- partial -->
+  <script>
+
+
+    const markdownDocument = `
+# 📄Business summary
+
+The e-commerce store specializes in selling fun, science-themed t-shirts that appeal to a wide range of customers, including students, educators, and science enthusiasts. The business model leverages the growing trend of wearable science-themed merchandise that combines humor with educational content. By offering unique designs that incorporate scientific concepts, jokes, and graphics, the store caters to a niche market looking for lighthearted ways to express their passion for science.
+
+The store's product offerings include a variety of t-shirt styles, colors, and materials, ensuring something for everyone. Target customers are primarily individuals who appreciate science and wish to showcase their interests in a casual and fun manner. Additionally, the e-commerce format allows for broad reach; customers can access the store online at any time and from anywhere, making shopping convenient and accessible.
+
+Revenue streams come from direct sales of t-shirts, potential collaborations with educational institutions for bulk orders, and partnerships with science-related events or organizations. The store may also explore additional lines of merchandise, like hoodies, mugs, or posters, expanding their offerings to enhance customer engagement and increase sales.
+
+# 🤔Stakeholders
+
+🤔#stakeholder Customers #customer
+
+Individuals interested in science who appreciate unique and humorous t-shirts. They seek high-quality, stylish products that express their interests or promote scientific literacy.
+
+🤔#stakeholder Suppliers and Vendors
+
+Manufacturers and distributors of t-shirts and printing services that provide high-quality materials and printing options necessary to produce the store's products.
+
+🤔#stakeholder Educational Institutions
+
+Schools, colleges, and universities that may acquire products for events, fundraisers, or as part of their merchandise for students and alumni.
+
+🤔#stakeholder Marketing Partners
+
+Companies or influencers that can help promote the store's products through collaborations, social media, or events focused on science and education.
+
+🤔#stakeholder Employees and Management
+
+Staff involved in the day-to-day operations, from product design and marketing to customer service fulfilling a vital role in the store's success.
+
+# 🙋Segments
+
+| 🙋#segment / (info) | Description                                         | Pros                                           | Cons                                        | Type        | Market Size    | Trends                                  | Rating |
+| :----               | :----                                             | :----                                         | :----                                      | :----      | :----          | :----                                  | :----  |
+| 🙋#segment Casual Science Enthusiasts | Individuals who appreciate science and enjoy wearing humorous t-shirts. | Enjoys unique designs; actively seeks out novelty items.| May have limited purchasing frequency.     | B2C        | Moderate       | Growing interest in science education. | 4/5   |
+| 🙋#segment Students            | High school and college students interested in science subjects.      | Engages with trendy products for self-expression. | Price sensitivity due to limited budgets.     | B2C        | Large          | Increasing trend of science merchandising.| 5/5   |
+| 🙋#segment Educators          | Teachers and professors looking for science-themed apparel for themselves or gifts for students. | Likely to purchase in bulk for class outings or events. | Need for specific sizing and style options. | B2B/B2C    | Small to Moderate| Emphasis on STEM and educational outreach. | 3/5   |
+
+## ✂️Segmentation criteria
+
+✂️#segmentation Age (teen, young adult, adult)
+
+✂️#segmentation Interest level (high, moderate, low)
+
+✂️#segmentation Purchase behavior (impulsive, frequent, selective)
+
+✂️#segmentation Professional background (scientists, educators, students)
+
+# 📈Market trends
+
+📈#trend Rise in science interest among the public
+
+Greater public engagement with science topics has spurred interest in related merchandise.
+
+📈#trend Growth in online shopping
+
+The trend of purchasing products online continues, further establishing e-commerce as a primary shopping channel.
+
+📈#trend Increase in STEM promotion
+
+An ongoing global push towards promoting STEM (Science, Technology, Engineering, Mathematics) subjects has sparked demand for science-themed products.
+
+# 📄Market size
+
+Total Addressable Market (TAM)
+
+The TAM for this e-commerce business includes the global market for custom t-shirt printing, estimated to be worth approximately USD 3.64 billion in 2023. A growing interest in science education merchandise contributes to the potential size of this market.
+
+Serviceable Addressable Market (SAM)
+
+The SAM focuses on customers who express interest in science-themed apparel. This comprises:
+
+1. Science enthusiasts
+2. Students involved in STEM fields
+3. Educational institutions looking for bulk purchases
+
+Serviceable Obtainable Market (SOM)
+
+The target SOM in the near term captures the niche interest and demand for science-themed t-shirts, equating to an estimated market of USD 250 million.
+
+# 🏅Competition
+
+🏅#competitor Threadless
+
+An online platform that allows independent artists to create and sell custom-designed t-shirts and apparel, including science-themed merchandise.
+
+🏅#competitor Redbubble
+
+An online marketplace offering artsy products, including a range of science-categorized t-shirts designed by various artists.
+
+🏅#competitor Zazzle
+
+A print-on-demand platform that enables users to create custom products, including science-inspired graphic t-shirts.
+
+# 🎩Roles
+
+🎩#role E-commerce Manager #user
+
+Oversees all aspects of the e-commerce store, from product selection and marketing to performance analysis and customer engagement.
+
+🎩#role Graphic Designer
+
+Responsible for creating unique and engaging t-shirt designs that resonate with the target audience.
+
+🎩#role Marketing Specialist
+
+Handles promotional campaigns, social media engagement, and builds brand awareness to drive traffic and sales.
+
+🎩#role Customer Service Representative
+
+Manages customer inquiries, assists with order issues, and ensures a positive shopping experience for customers.
+
+# 🙎Profiles
+
+🙎‍♂️#profile Science Enthusiast Shopper
+
+* Stakeholder Customers
+* Segment Casual Science Enthusiasts
+* Role E-commerce Buyer
+
+The science enthusiast is typically an adult who enjoys expressing their interest in science through fun apparel.
+
+## ✂️Segmentation
+
+✂️#segmentation Demographic segmentation
+
+* Age: 20-40 years old.
+* Income: Mid to high income.
+* Occupation: Students and professionals in scientific fields.
+
+✂️#segmentation Psychographic segmentation
+
+* Lifestyle: Values education, humor, and social awareness.
+* Attitudes: Pro-science, supportive of STEM education.
+
+✂️#segmentation Behavioral segmentation
+
+* Purchasing behavior: Makes purchases based on interest and humor value in the designs.
+* Product usage: Enjoys wearing t-shirts for casual activities, science-related events, and gifts.
+
+# 📄Persona
+
+**Alex Williams**
+
+![Science Fan](https://example.com/science-fan.jpg) 
+
+Role: stakeholder Customers  
+Segment Casual Science Enthusiasts  
+Role E-commerce Buyer
+
+**Segmentation**
+
+* Age: 30 years.  
+* Income: $75,000 per year.  
+* Occupation: Research Scientist.  
+* Education: Master's degree in Biology.  
+* Location: San Francisco.  
+* Interests: Science, technology, and sustainability.  
+
+**Background and Goals:**
+
+Alex is a passionate science enthusiast who enjoys sharing their love for science in fun ways. They are motivated to find quality science-themed apparel that reflects their personality and interests.
+
+**Motivations and Pain Points:**
+
+Alex wants to wear clothing that sparks conversation about scientific topics and engages their peers. Convenience is crucial – they prefer online shopping with excellent customer service. Their pain points include navigating too many generic t-shirts and not finding enough unique designs that suit their tastes.
+
+**Information and Decision-Making Preferences:**
+
+Alex stays updated on science trends through popular science websites, social media, and community events. They rely on reviews and product quality details when making purchases.
+
+# 😟Problems
+
+😟#problem Limited variety in science-themed apparel #pain
+
+The market has a lack of unique designs and styles related to science, capturing a niche but underserved demographic.
+
+😟#problem Difficulty in finding quality providers #pain
+
+Many e-commerce platforms do not maintain high-quality printing or fabric options. It leads to many disappointing purchases.
+
+😟#problem Price sensitivity among target customers #pain
+
+Budget constraints may limit the frequency and volume of purchases among students and early-career professionals.
+
+😟#problem Need for effective online marketing strategies #pain
+
+Competing against larger brands and platforms requires innovative marketing approaches that engage audiences.
+
+😟#problem Need for easy and efficient shopping experience #pain
+
+Customers have high expectations for user experience when shopping online and require intuitive navigation and checkout processes.
+
+# 💎Value proposition
+
+💎#value Unique and Creative Designs
+
+The store offers one-of-a-kind designs that combine humor and science, attracting customers looking for distinctive apparel. 
+
+💎#value Quality Materials and Printing
+
+Using high-quality fabrics and printing techniques ensures that customers receive durable products that withstand wear over time.
+
+💎#value Targeted Marketing towards Science Enthusiasts
+
+By focusing specifically on science, the store creates a community around its offerings, driving brand loyalty and repeat purchases.
+
+💎#value Educational Component
+
+T-shirts provide an opportunity to introduce scientific concepts in a fun way and promote a love for science among wearers and observers.
+
+# 📣Messages
+
+📣#message Wear Your Passion for Science!
+
+"Explore our unique collection of fun science-themed t-shirts that make you stand out while promoting your love for science!"
+
+📣#message Quality Meets Creativity
+
+"We prioritize quality in our apparel offerings, ensuring you receive designs that last and bring smiles to everyone around you."
+
+📣#message Dress for Inspiration
+
+"Choose t-shirts that not only represent your interests but also spark curiosity and conversation about science wherever you go."
+
+# 🎙️Channels
+
+🎙️#channel E-commerce Website
+
+The primary platform for selling products, offering detailed views, descriptions, and customer reviews.
+
+🎙️#channel Social Media Platforms
+
+Engagement through platforms like Instagram and Facebook for product promotions and community building.
+
+🎙️#channel Email Marketing
+
+Regular updates with promotions, new designs, and relevant content sent to subscribers encouraging repeat and new purchases.
+
+🎙️#channel Collaboration with Influencers
+
+Partnerships with science communicators and influencers to grow audience reach and brand recognition.
+
+🎙️#channel Online Marketplaces
+
+Listing products on platforms like Etsy or Amazon to reach alternative customer bases and improve visibility.
+
+# 👁️Perceptions
+
+👁️#perception Engaging With Fun Science Content #see
+
+The unique offerings allow customers to see science in a more approachable and enjoyable way.
+
+👁️#perception Building a Community Around Science #see
+
+The store encompasses those who love science, making it a space for community, engagement, and shared interests.
+
+👁️#perception Exciting Opportunity for Merchandising #feel
+
+The fun designs create excitement and increase customers' eagerness to showcase their passion in daily life.
+
+👁️#perception The Challenge of Quality Products #hear  
+
+Some customers might express concerns if previous purchased products fall short of expectations regarding print durability or fabric quality.
+
+# 😐Emotions
+
+😐#emotion Curiosity #feel
+
+Customers often feel curious when exploring new science-themed designs that pique their interests.
+
+😐#emotion Excitement #feel
+
+The launch of new t-shirt designs generates excitement and anticipation for customers seeking fresh and fun styles.
+
+😐#emotion Community Pride #feel
+
+Wearing science-themed apparel fosters a sense of belonging to a community passionate about science and learning.
+
+😐#emotion Disappointment #feel
+
+The experience of receiving poorly executed merchandise can lead to feelings of disappointment.
+
+# 🦾Behaviors
+
+🦾#behavior Interaction with posts about science trends 
+
+Engage regularly with social media content that highlights recent science news or discoveries.
+
+🦾#behavior Sharing feedback on designs 
+
+Provide insights and reviews on new products, influencing other customers' purchasing behavior.
+
+🦾#behavior Event participation 
+
+Frequent participation in science fairs, community events, or online discussions about science.
+
+# ✈️Journey
+
+✈️#journey awareness
+
+Individuals discover the e-commerce store through social media, word-of-mouth referrals, or targeted advertisements.
+
+✈️#journey interest
+
+Customers engage with social media content, explore the website for t-shirt designs, and read product descriptions.
+
+✈️#journey consideration
+
+They consider purchasing by reviewing price comparisons, checking for discounts, and reading peer reviews.
+
+✈️#journey decision
+
+Customers decide to make a purchase based on compelling designs and favorable customer feedback.
+
+✈️#journey evangelization
+
+Satisfied customers share their experiences on social media or recommend the store to others, improving brand recognition and loyalty.
+
+# 💊Solutions
+
+💊#solution Fun Science-Themed T-Shirts
+
+A wide selection of unique t-shirts featuring various science concepts and humor.
+
+**Other solutions**
+
+💊#solution Complementary Products
+
+Potential expansion into additional lines of merchandise, such as mugs, hoodies, or posters, featuring similar themes.
+
+💊#solution Custom Orders
+
+Offering personalized or event-exclusive designs for bulk orders from educational institutions or events.
+
+## 🌟Features
+
+🌟#feature High-Quality Printing #benefit  
+
+Ensures that designs remain vibrant and withstand washing and wear, providing long-lasting enjoyment.
+
+🌟#feature Eco-Friendly Options #benefit  
+
+Availability of sustainable materials for t-shirt production aims to attract environmentally conscious consumers.
+
+🌟#feature Customizable Options #benefit  
+
+Enables customers to personalize t-shirts according to their preferences in styles and messages.
+
+🌟#feature Limited Edition Releases #benefit  
+
+Seasonal or topical designs create a sense of urgency and exclusivity, encouraging quick purchases.
+
+## 📄Pricing
+
+Pricing for the t-shirts employs a value-based pricing strategy, reflecting the quality of materials, design uniqueness, and target audience willingness to pay. 
+
+Typical price ranges for the products are:
+
+- Basic t-shirts: $25 - $30
+- Premium t-shirts (using specialty materials): $35 - $40
+- Bulk discount rates for educational institutions or events start at $15 per shirt, depending on order size and design complexity.
+
+## 🛍️Offerings
+
+🛍️#offering Standard T-Shirt Line
+
+A range of basic styles with science-related graphics and humor. Pricing starts from $25 per shirt with options for different colors and fits.
+
+🛍️#offering Limited Edition Collections
+
+Seasonal designs that resonate with current scientific events or topics, priced at $30 each and available for a short time.
+
+🛍️#offering Bulk Orders for Educational Institutions
+
+Custom designs and promotional rates for bulk orders required for educational purposes, starting from $15 per shirt.
+
+## 📄Brochure
+
+Image:
+
+![Fun Science T-Shirts](https://example.com/fun-science-t-shirts.jpg)
+
+Title: "Wear Your Love for Science!"
+
+Subtitle: "Unique, Fun, and Educational T-Shirts That Share a Passion for Science"
+
+Our Mission and Vision: "At our store, we aim to inspire curiosity and love for science through innovative t-shirt designs that spark conversation and celebration."
+
+Product Offerings:
+- Standard T-Shirts: "Explore a variety of fun science-themed t-shirts for every enthusiast."
+- Limited Editions: "Get exclusive designs related to current science topics, available for a limited time only."
+- Educational Bulks: "Discounted rates for institutions seeking to promote science to students."
+
+Call to Action: "Visit our store and discover the joy of wearing science with our unique t-shirt collection!"
+
+Contact Information: "Website: www.sciencetshirts.com | Email: support@sciencetshirts.com | Phone: (123) 456-7890"
+
+# 📂Marketing
+
+The marketing strategy centers around building an engaging online community, leveraging social media platforms, influencer collaborations, and targeted advertisement campaigns to reach the science-themed merchandise audience effectively. Promoting the educational aspect of the products is key, presenting them as both fun and informative.
+
+## 📄Naming
+
+The name of the store creatively reflects its mission, combining "science" and "t-shirts" into a catchy and memorable title. This name resonates with the target audience and directly communicates the store's focus on blending fashion with a love for science.
+
+Product names incorporate scientific themes blended with humor, such as:
+
+- "Periodic Table of Awesome" for chemistry-themed t-shirts.
+- "Einstein’s Wit" capturing playful scientific jokes.
+
+# 📂Business idea
+
+## 📄Opportunity
+
+The opportunity lies in capitalizing on the rising public interest in science and education and the increasing trend of wearing themed apparel to express personal interests. Additionally, the online shopping boom allows flexibility in reaching a comprehensive audience.
+
+## 📄Business status
+
+The e-commerce store is positioned as a unique player in the online apparel industry, focusing on whimsical science-themed clothing. By tapping into a dedicated market segment, it strives to garner a loyal customer base while making science enjoyable and accessible.
+
+# 📄Business objectives
+
+## 📄Mission
+
+To promote the love for science and education by providing creative, quality t-shirts that invoke curiosity and conversation.
+
+## 📄Vision
+
+To become the leading provider of fun and educational science-themed apparel that supports the growing interest in STEM subjects and scientific literacy.
+
+## 🧠Organizational values
+
+🧠#organization_value Creativity
+
+Emphasizing innovative designs that showcase the beauty and humor found in science.
+
+🧠#organization_value Quality
+
+Committed to delivering high-quality materials and printing to ensure customer satisfaction.
+
+🧠#organization_value Education
+
+Encouraging scientific literacy and appreciation through engaging and informative products.
+
+🧠#organization_value Community
+
+Building a thriving community of science enthusiasts who celebrate their passions together.
+
+# 📄Operations
+
+The operations are structured around efficient online processes from design creation, product sourcing, inventory management, order fulfillment, and customer engagement. Implementing strong vendor relationships and employing a streamlined supply chain ensures timely delivery and consistent quality of products.
+
+## ⚙️Activities
+
+⚙️#work Product Design and Development
+
+Focus on creating engaging and educational designs for t-shirts that resonate with target demographics.
+
+⚙️#work Order Fulfillment and Shipping
+
+Efficiently manage orders, ensuring timely shipping and delivery, along with outstanding customer service.
+
+⚙️#work Marketing and Promotion
+
+Develop targeted marketing campaigns to engage potential customers through various online channels.
+
+⚙️#work Customer Service and Support
+
+Providing exceptional customer support, addressing inquiries, potential issues, and engaging with the customer community.
+
+# 📄Project plan
+
+The project plan emphasizes the importance of strategic milestones, including design launches, marketing campaigns, partnership developments, and performance evaluations, thus demonstrating a clear roadmap towards achieving business objectives.
+
+## 🗓️Phases
+
+🗓️#phase 1 Initial Product Launch
+
+Focuses on launching the e-commerce store with an initial collection of t-shirts.
+
+🗓️#phase 2 Marketing and Brand Awareness
+
+Enhancing visibility via social media campaigns and influencer partnerships to drive traffic and sales.
+
+🗓️#phase 3 Expansion of Offerings
+
+Introducing new product lines and limited edition releases based on scientific trends and customer feedback.
+
+## 🏁Milestones
+
+🏁#milestone Launch of E-commerce Platform
+
+The initial launch of the online store with a selected product range and operational website.
+
+🏁#milestone First 100 Orders Received
+
+This signifies a level of market penetration and customer interest, validating the business concept.
+
+🏁#milestone Establish First Influencer Partnership
+
+Beginning collaborations with social media or science influencers to enhance brand exposure and credibility.
+
+🏁#milestone First Successful Bulk Order
+
+Securing a contract with an educational institution, validating the B2B sales potential of the store.
+
+# 📐Metrics
+
+📐#metric Sales Growth Rate
+
+Monitoring monthly sales growth to evaluate customer engagement and marketing effectiveness.
+
+📐#metric Customer Satisfaction Score
+
+Consistently gathering customer feedback to measure satisfaction levels with products and services.
+
+📐#metric Inventory Turnover Rate
+
+Tracking how quickly products sell out to optimize production and inventory management.
+
+📐#metric Conversion Rate
+
+Assessing visitor-to-customer ratios on the e-commerce website to improve user experience and marketing impact.
+
+# 📂Finance
+
+The financial strategy emphasizes sustainable growth with a focus on reinvestment into product development, marketing initiatives, and operational efficiencies that maximize profit margins and customer lifetime value.
+
+## 💰Revenue
+
+💰#revenue T-Shirt Sales
+
+Direct revenue generated from t-shirt sales through the e-commerce store, comprising the primary income stream.
+
+💰#revenue Bulk Orders
+
+Additional income generated by fulfilling bulk orders from institutions and organizations.
+
+💰#revenue Secondary Merchandise
+
+Potential expansion into additional merchandise like mugs or educational kits that align with science themes.
+
+## 📄Life Time Value
+
+Calculating the average customer lifetime value requires estimating the average order value, repeat purchase rates, and customer retention:
+
+1. **Average Order Value (AOV)**: Estimated at $30
+2. **Average Purchase Frequency**: Assuming customers purchase twice each year.
+3. **Average Customer Lifespan**: Assuming active customers for 5 years.
+
+Customer Lifetime Value (LTV) = AOV x Purchase Frequency x Customer Lifespan = $30 x 2 x 5 = $300.
+
+## 💸Costs
+
+💸#cost Product Manufacturing Costs
+
+Costs incurred to produce t-shirts, including materials and labor.
+
+💸#cost Marketing Expenses
+
+Budget dedicated to marketing and advertising campaigns across various platforms.
+
+💸#cost Shipping Costs
+
+Expenses related to shipping products to customers, including packaging and carrier fees.
+
+💸#cost Website Maintenance
+
+Ongoing costs for maintaining the e-commerce platform, including hosting and development.
+
+💸#cost Customer Service Operations
+
+Expenses related to providing quality customer service and support teams.
+
+## 📄Customer Acquisition Cost
+
+Calculating customer acquisition cost (CAC) involves assessing marketing expenses against the number of new customers acquired during a specified timeframe.
+
+**CAC Calculation:**
+- Total Marketing Expenses: $20,000
+- New Customers Acquired: 1,000
+
+CAC = Total Marketing Expenses / Number of New Customers Acquired = $20,000 / 1,000 = $20.
+
+## 📄Unit economics
+
+Unit economics for t-shirt sales involve analyzing the revenue and costs associated with a single t-shirt sold.
+
+**Revenue per T-Shirt**: Estimated at $30 
+
+**Cost per T-Shirt**: Estimated production cost of $15
+
+**Profit per T-Shirt**: $30 - $15 = $15 
+
+**Margin**: Profit / Revenue = $15 / $30 = 50%.
+
+## 💵Funding sources
+
+Funding sources may include personal investment, small business loans, crowdfunding campaigns focused on science-themed projects, and potential base financial contributions from grants promoting educational initiatives.
+
+## 📄Projections
+
+**Basic Revenue Projections (in $ millions)**
+
+| Category                         | Year 1 | Year 2 | Year 3 |
+|----------------------------------|--------|--------|--------|
+| Revenue from T-Shirt Sales       | 0.5    | 1.0    | 1.5    |
+| Revenue from Bulk Orders         | 0.1    | 0.2    | 0.3    |
+| Revenue from Secondary Merchandise| 0.1    | 0.3    | 0.5    |
+| **Total Revenue**                | 0.7    | 1.5    | 2.3    |
+
+**Explanation**
+
+Revenue derived from t-shirt sales and potential expansion into bulk orders and other merchandise illustrates sustainable growth over three years, establishing a pathway for business success.
+
+## 📂Legal
+
+## 📄Legal issues
+
+📜#legal_issue Copyright and Trademark Issues
+
+Need to navigate intellectual property laws relevant to designs and slogans used in products.
+
+📜#legal_issue E-Commerce Regulations
+
+Ensuring compliance with online sales regulations, including consumer rights and data protection laws.
+
+# 📂Communication
+
+The communication approach for the e-commerce store emphasizes clarity, engagement, and a fun tone. Emphasizing science while maintaining an approachable atmosphere enhances customer interaction and retention.
+
+## 📄Pitch
+
+"We offer an exciting selection of science-themed t-shirts that are fun, educational, and of the highest quality! Wear your passion for science loud and proud with our unique designs that make you stand out and spark conversation." 
+
+## 📄Business brochure
+
+[Science-Themed T-Shirts Brochure](https://www.sciencetshirts.com/media/brochure.pdf) 
+
+---
+
+This document captures a comprehensive business model for an e-commerce store selling fun t-shirts related to scientific topics, while adhering to structured formatting guidelines and ensuring clarity in presentation.
+`;
+
+    document.getElementById("document").textContent = markdownDocument;
+
+
+    function toggleSection(sectionId) {
+      // Get all sections
+      const sections = document.querySelectorAll('.content-section');
+
+      // Hide all sections except the one clicked
+      sections.forEach(section => {
+        if (section.id === sectionId) {
+          section.classList.toggle('hidden'); // Toggle visibility
+        } else {
+          section.classList.add('hidden'); // Ensure others are hidden
+        }
+      });
+    }
+
+    const documentText = document.getElementById("document").textContent.trim();
+
+    const filterContainer = document.getElementById("filter-container");
+    const resultContainer = document.getElementById("result-container");
+
+    const parseMarkdown = (text) => {
+      const lines = text.split("\n").map(line => line.trim());
+      const parsedData = [];
+      let currentBlock = null;
+
+      lines.forEach(line => {
+        if (line.startsWith("#")) {
+          if (currentBlock) {
+            parsedData.push(currentBlock);
+          }
+          currentBlock = {
+            header: line,
+            content: "",
+            tags: []
+          };
+        } else if (currentBlock) {
+          currentBlock.content += line + "\n";
+          const tagMatch = line.match(/#(\S+)/g);
+          if (tagMatch) {
+            currentBlock.tags.push(...tagMatch.map(tag => tag.replace("#", "")));
+          }
+        }
+      });
+      if (currentBlock) {
+        parsedData.push(currentBlock);
+      }
+
+      return parsedData;
+    };
+
+    const parsedDocument = parseMarkdown(documentText);
+
+    const getAllTags = (data) => {
+      const tags = new Set();
+      data.forEach(block => block.tags.forEach(tag => tags.add(tag)));
+      return Array.from(tags);
+    };
+
+    const addFilter = () => {
+      const filterDiv = document.createElement("div");
+      filterDiv.className = "filter";
+
+      const select = document.createElement("select");
+      select.className = "border rounded-lg p-2 w-full";
+
+      const optionDefault = document.createElement("option");
+      optionDefault.value = "";
+      optionDefault.textContent = "Select Tag";
+      select.appendChild(optionDefault);
+
+      const tags = getAllTags(parsedDocument);
+      tags.forEach(tag => {
+        const option = document.createElement("option");
+        option.value = tag;
+        option.textContent = tag;
+        select.appendChild(option);
+      });
+
+      filterDiv.appendChild(select);
+      filterContainer.appendChild(filterDiv);
+    };
+
+    const applyFilters = () => {
+      const selectedTags = Array.from(filterContainer.querySelectorAll("select"))
+        .map(select => select.value)
+        .filter(value => value);
+
+      const filteredResults = selectedTags.length === 0
+        ? parsedDocument
+        : parsedDocument.filter(block =>
+          selectedTags.every(tag => block.tags.includes(tag))
+        );
+
+      resultContainer.innerHTML = "";
+
+      if (filteredResults.length === 0) {
+        resultContainer.textContent = "No results match the selected filters.";
+      } else {
+        filteredResults.forEach(block => {
+          const div = document.createElement("div");
+          div.className = "p-4 bg-white border border-gray-300 rounded-lg";
+          div.innerHTML = `
+                <h4 class="font-bold">${block.header}</h4>
+                <pre class="text-sm bg-gray-100 p-2 rounded-lg">${block.content.trim()}</pre>
+            `;
+          resultContainer.appendChild(div);
+        });
+      }
+    };
+
+    const parsedDocumentContainer = document.getElementById("parsed-document");
+    const parsedHTML = marked.parse(markdownDocument);
+    parsedDocumentContainer.innerHTML = parsedHTML;
+
+    document.addEventListener("DOMContentLoaded", () => {
+      parsedDocumentContainer.innerHTML = marked.parse(markdownDocument);
+    });
+
+
+
+    document.getElementById("add-filter").addEventListener("click", addFilter);
+    document.getElementById("apply-filters").addEventListener("click", applyFilters);
+
+    // Initialize with one filter and show all results initially
+    addFilter();
+    applyFilters();
+  </script>
+
+</body>
+
+</html>
