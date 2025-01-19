@@ -24,7 +24,14 @@
     so you can focus on 🧠 designing, 📊 analyzing, ✅ validating, and 🚀 improving your business.
 </p>
 
+
 ---
+
+<button style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+    <a href="/#/pages/one-off-bm" target="_blank" style="color: white;">Get your Business Model Document for 18$</a>
+</button>
+
+<!--
 
 <button style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
     <a href="https://tally.so/r/mZYMey" target="_blank" style="color: white;">Start using plastilinn</a>
@@ -100,3 +107,5 @@ Plastilinn is based on popular innovation methodologies such as Lean Startup, Di
 ## Centralized Information
 
 Plastilinn centralizes your business model information in one place (a single business plan document), avoiding the dispersion of data across multiple files like PowerPoint, PDF, and Excel. By integrating all business model components into a unified system, it becomes easier to update, maintain, and visualize your business model from different perspectives. The platform ensures all data remains coherent and up-to-date.
+
+-->
