@@ -14,13 +14,6 @@ h1.home {
     /* Centra el contenido horizontalmente */
 }
 
-.sidebar>h1 {
-    margin: 0 auto 1rem 15px;
-    font-size: 1.5rem;
-    font-weight: 300;
-    text-align: left;
-}
-
 ul {
     list-style-type: none;
     /* Esto elimina los puntos */
