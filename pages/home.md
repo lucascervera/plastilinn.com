@@ -27,7 +27,7 @@
 
 ---
 
-<button style="background-color: blue; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+<button  class="btn btn-primary">
     <a href="/#/pages/one-off-bm" target="_blank" style="color: white;">Get your Business Model Document for 18$</a>
 </button>
 
