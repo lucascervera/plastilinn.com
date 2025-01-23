@@ -3,6 +3,16 @@
 
 <head>
   <meta charset="UTF-8">
+  <title>Styled wind</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description"
+    content="AI powered business plan software that frees up your time from writing so you can focus on designing, analyzing, validating, and improving your business">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta property="og:image" content="https://styled-wind.netlify.app/logo.jpg">
+  <link rel="icon" type="image/png" href="./favicon.png" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+  <meta charset="UTF-8">
   <title>Plastilinn AI Business Plan</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="description" content="Description">
@@ -55,7 +65,7 @@
 
 </head>
 
-<body class="close">
+<body>
   <!-- Cookie Consent -->
   <script type="module" src="cookieconsent-config.js"></script>
 
@@ -63,23 +73,20 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: 'Plastilinn Business Plan',
-      logo: 'assets/logo.webp',
-      coverpage: false,
+      name: 'styled-wind',
       hideSidebar: true,
       loadNavbar: true,
-      relativePath: false,
+      subMaxLevel: 3,
+      logo: 'assets/logo.webp',
+      auto2top: true,
       loadFooter: '_footer.md',
-      darkMode: false,
       gtag: 'G-JKBGFY0V4L',
     }
   </script>
-
-  <!-- External Scripts -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-wikilink@1"></script>
-  <script src="https://unpkg.com/docsify-betterembed@1.1.1/dist/betterEmbed.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
   <script src="//cdn.jsdelivr.net/npm/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gtag.min.js"></script>
 </body>
 
 </html>
