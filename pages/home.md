@@ -15,7 +15,7 @@
 
 <h1>+🧠 -✍️ => 💡 = 🚀</h1>
 <h1 class="home text-gradient md:text-5xl lg:text-6xl">
-    Evolve your business.</br>
+    Evolve your business with AI</br>
     Focus on thinking, not writing.
 </h1>
 
