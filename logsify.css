@@ -28,6 +28,8 @@ li {
 body {
     font-family: 'Poppins', Helvetica, Arial, sans-serif;
     font-size: 15px;
+    background-color: #ffffff !important; /* Fondo claro */
+    color: #000000 !important;           /* Texto oscuro */
 }
 
 .app-name img {
