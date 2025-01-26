@@ -27,11 +27,43 @@
 
 ---
 
-<button  class="btn btn-primary">
-    <a href="/one-off-bm.html" target="_blank" style="color: white;">Get your Business Model Document for free</a>
+<button class="btn-primary-cta">
+    <a href="/one-off-bm.html" target="_blank">Get your Business Model Document for free</a>
 </button>
 
+<style>
+/* Botón llamativo */
+.btn-primary-cta {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background: linear-gradient(to right, #007BFF, #6610F2);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
 
+/* Enlace dentro del botón */
+.btn-primary-cta a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Efecto hover */
+.btn-primary-cta:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, #6610F2, #007BFF);
+}
+</style>
+
+---
 
 <div class="div-container">
 
