@@ -28,7 +28,7 @@
 ---
 
 <button  class="btn btn-primary">
-    <a href="/one-off-bm.html" target="_blank" style="color: white;">Get your Business Model Document for 18$</a>
+    <a href="/one-off-bm.html" target="_blank" style="color: white;">Get your Business Model Document for free</a>
 </button>
 
 
