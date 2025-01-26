@@ -14,3 +14,10 @@ All you need to do is provide us with a brief description of your business in th
   <iframe src="https://n8n.lucascervera.com/form/f0cabc84-06a0-4f8c-98a2-3e3d457146a8"></iframe>
 
   [Website privacy policy](https://plastilinn.com/#/pages/privacy_policy)
+
+  <!-- Google tag (gtag.js) event -->
+<script>
+  gtag('event', 'ads_conversion_Begin_checkout_Page_loa_1', {
+    // <event_parameters>
+  });
+</script>
