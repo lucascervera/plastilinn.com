@@ -24,6 +24,7 @@
     so you can focus on 🧠 designing, 📊 analyzing, ✅ validating, and 🚀 improving your business.
 </p>
 
+## [Open a Sample Business Model Document](https://plastilinn.com/assets/Plastilinn%20sample%20doc.html)
 
 ---
 
@@ -62,6 +63,27 @@
   background: linear-gradient(to right, #6610F2, #007BFF);
 }
 </style>
+
+<div class="iframe-container">
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/CXTk_gkJpaQ?si=8miltIlhiCxsnoCg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<style>
+/* Contenedor del iframe con un ancho máximo de 600px */
+.iframe-container {
+  max-width: 600px; /* Máximo ancho de 600px */
+  width: 100%; /* Ancho completo del contenedor */
+  margin: 0 auto; /* Centra el div en la página */
+}
+
+/* Hacer que el iframe sea responsivo */
+.responsive-iframe {
+  width: 100%;  /* 100% del contenedor */
+  height: auto;  /* Altura automática para mantener la relación de aspecto */
+  aspect-ratio: 16 / 9;  /* Mantener relación de aspecto 16:9 (común en los videos de YouTube) */
+}
+</style><div class="iframe-container">
+
 
 ---
 
