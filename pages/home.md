@@ -24,7 +24,8 @@
     so you can focus on 🧠 designing, 📊 analyzing, ✅ validating, and 🚀 improving your business.
 </p>
 
-## [Open a Sample Business Model Document](https://plastilinn.com/assets/Plastilinn%20sample%20doc.html)
+<a href="https://plastilinn.com/assets/Plastilinn%20sample%20doc.html" class="border-2 border-blue-500 text-blue-500 py-2 px-4 rounded hover:bg-blue-500 hover:text-white transition-colors" role="button">Open a Sample Business Model Document</a>
+
 
 ---
 
