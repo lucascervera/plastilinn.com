@@ -7,6 +7,16 @@ body {
   background-color: white !important;
 }
 
+a {
+  color: #1a73e8; /* Color azul clásico */
+  text-decoration: none; /* Eliminar subrayado */
+}
+
+a:hover {
+  text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+
 h1.home {
     font-size: clamp(1.4em, 3vw, 3em) !important; /* Establece un tamaño mínimo, preferido y máximo */
     font-weight: 700 !important;
