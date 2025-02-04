@@ -4,16 +4,6 @@
       <div class="relative items-center mx-auto align-middle">
         <div class="text-center">
 
-<style>
-.text-gradient,
-.text-gradient > * {
-  background: linear-gradient(to right, blue, purple);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-</style>
-
-<h1>+🧠 -✍️ => 💡 = 🚀</h1>
 <h1 class="home text-gradient md:text-5xl lg:text-6xl">
     Evolve your business with AI</br>
     Focus on thinking, not writing.
@@ -24,46 +14,14 @@
     so you can focus on 🧠 designing, 📊 analyzing, ✅ validating, and 🚀 improving your business.
 </p>
 
-<a href="https://plastilinn.com/assets/Plastilinn%20sample%20doc.html" class="border-2 border-blue-500 text-blue-500 py-2 px-4 rounded hover:bg-blue-500 hover:text-white transition-colors" role="button">Open a Sample Business Model Document</a>
+<a href="https://plastilinn.com/assets/Plastilinn%20sample%20doc.html" class="border-2 border-blue-500 text-blue-500 py-2 px-4 rounded hover:bg-blue-500 hover:text-white transition-colors" role="button" target="_blank">Open a Sample Business Model Document</a>
 
 
 ---
 
-<button class="btn-primary-cta">
-    <a href="/one-off-bm.html" target="_blank">Get your Business Model Document for free</a>
+<button class="btn btn-primary btn-lg">
+<a href="/one-off-bm.html" target="_blank">Get your Business Model Document for free</a>
 </button>
-
-<style>
-/* Botón llamativo */
-.btn-primary-cta {
-  display: inline-block;
-  padding: 1rem 2rem;
-  font-size: 1.8rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: white;
-  background: linear-gradient(to right, #007BFF, #6610F2);
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: center;
-}
-
-/* Enlace dentro del botón */
-.btn-primary-cta a {
-  text-decoration: none;
-  color: white;
-}
-
-/* Efecto hover */
-.btn-primary-cta:hover {
-  transform: scale(1.1);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(to right, #6610F2, #007BFF);
-}
-</style>
 
 <div class="iframe-container">
   <iframe class="responsive-iframe" src="https://www.youtube.com/embed/CXTk_gkJpaQ?si=8miltIlhiCxsnoCg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
