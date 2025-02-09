@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Plastilinn Business Evolution Framework</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@2
+0..48,100..700,0..1,-50..200" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    /* Add padding between paragraphs */
+    /* Apply padding to all elements inside .prose */
+    .prose * {
+      margin-bottom: 1rem;
+      max-width: 120ch;
+      /* Set max-width to 75 characters */
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    /* Increase header sizes */
+    .prose h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      /* Larger bottom margin for h1 */
+    }
+
+    .prose h2 {
+      font-size: 2rem;
+      margin-bottom: 1.75rem;
+      /* Slightly smaller margin for h2 */
+    }
+
+    .prose h3 {
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      /* Slightly smaller margin for h3 */
+    }
+
+    .prose h4 {
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+      /* Smaller margin for h4 */
+    }
+
+    .prose h5 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      /* Even smaller margin for h5 */
+    }
+
+    .prose h6 {
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+      /* Smallest margin for h6 */
+    }
+  </style>
+</head>
+
+<body>
+  <header class="dark:bg-black w-full py-8 lg:hidden">
+    <button id="open-menu-control"
+      class="menu-control ml-auto mr-12 rounded-xl py-2 px-2 flex flex-row items-center justify-center transition ease hover:bg-gray-100 dark:hover:bg-transparent lg:hidden lg:w-fit">
+      <span class="material-symbols-outlined text-black dark:text-gray-100">menu</span>
+    </button>
+  </header>
+
+  <nav id="navbar"
+    class="dark:bg-black bg-white hidden lg:flex fixed top-0 left-0 h-screen w-screen flex flex-col items-center gap-4 overflow-scroll lg:overflow-hidden lg:flex-row lg:relative lg:w-full lg:h-fit lg:py-8 lg:px-28 lg:mx-auto pb-12 fixed top-0 left-0 w-full z-50"">
+    <div class=" w-full py-8 lg:hidden">
+    <button id="close-menu-control"
+      class="menu-control ml-auto mr-12 dark:hover:bg-transparent rounded-xl py-2 px-2 flex flex-row items-center justify-center transition ease hover:bg-gray-100 lg:w-fit">
+      <span class="material-symbols-outlined text-black dark:text-gray-100">close</span>
+    </button>
+    </div>
+
+    <div
+      class="button-container mt-16 w-full py-4 mx-auto mt-4 rounded-xl flex flex-col items-center lg:flex-row gap-4 lg:mr-auto lg:items-start">
+
+      <button
+        class="button dark:bg-gray-200 hover:bg-gray-200 dark:hover:bg-white bg-gray-100 rounded-xl py-2 px-4 flex flex-row items-center justify-center gap-2 transition ease hover:bg-gray-100 w-9/12 lg:w-fit sm:w-7/12 md:w-5/12">
+        <span class="material-symbols-outlined h-fit">home</span>
+        <span class="font-bold h-fit">Home</span>
+      </button>
+      <button
+        class="button dark:bg-gray-200 hover:bg-gray-200 dark:hover:bg-white bg-gray-100 rounded-xl px-4 py-2 flex items-center justify-center gap-2 transition ease hover:bg-gray-100 w-9/12 lg:w-fit sm:w-7/12 md:w-5/12"
+        onclick="toggleSection('doc-html')">
+        <span class="material-symbols-outlined">category</span>
+        <span class="font-bold">Business Model</span>
+      </button>
+      <!--
+      <button
+        class="button dark:bg-gray-200 hover:bg-gray-200 dark:hover:bg-white bg-gray-100 rounded-xl px-4 py-2 flex items-center justify-center gap-2 transition ease hover:bg-gray-100 w-9/12 lg:w-fit sm:w-7/12 md:w-5/12"
+        onclick="toggleSection('navigator')">
+        <span class="material-symbols-outlined">widgets</span>
+        <span class="font-bold">Navigator</span>
+      </button>
+      -->
+    </div>
+
+    <!--
+    <div class="button-container w-full mx-auto mt-4 rounded-xl flex flex-col items-center lg:flex-row gap-4 lg:w-fit">
+      <button
+        class="button dark:bg-gray-200 hover:bg-gray-200 dark:hover:bg-white bg-gray-100 rounded-xl px-4 py-2 flex items-center justify-center gap-2 transition ease hover:bg-gray-100 w-9/12 lg:w-fit sm:w-7/12 md:w-5/12">
+        <span class="material-symbols-outlined">login</span>
+        <span class="font-bold">Export</span>
+      </button>
+    </div>
+-->
+
+  </nav>
+
+  <main id="main" class="dark:bg-black dark:text-gray-200 text-xl min-w-screen min-h-screen">
+    <article id="main__article" class="w-full py-8 px-8 lg:px-28 mx-auto mt-4 rounded-xl flex flex-col gap-4">
+
+      <main class="container flex-1 p-6">
+        <div id="doc-html" class="content-section">
+          <h2 class="text-2xl font-bold text-gray-700">Document Viewer</h2>
+          <p>Copy / Paste the content to your document editor</p>
+
+          <div class="divider"></div>
+
+          <div id="parsed-document" class="prose">
+          </div>
+        </div>
+        <div id="home" class="content-section">
+          <h2 class="text-2xl font-bold text-gray-700">Home</h2>
+          <h1 class="text-2xl font-bold mb-6">Markdown Document Filter</h1>
+
+          <div class="mb-8">
+            <h3 class="text-lg font-semibold mb-2">Document</h3>
+            <pre id="document" class="bg-gray-100 p-4 rounded-lg border border-gray-300 overflow-x-auto text-sm">
+            </pre>
+          </div>
+        </div>
+
+        <!--
+        <div id="navigator" class="content-section hidden">
+
+          <div id="filters" class="mb-6">
+            <h3 class="text-lg font-semibold mb-2">Filters</h3>
+            <div id="filter-container" class="space-y-2"></div>
+          </div>
+
+          <button id="apply-filters" class="bg-green-500 text-white py-1 px-4 rounded-lg hover:bg-green-600">
+            Apply Filters
+          </button>
+
+          <button id="add-filter" class="bg-blue-500 text-white py-1 px-4 rounded-lg hover:bg-blue-600 mt-2">
+            Add Filter
+          </button>
+
+          <div id="results" class="mt-6">
+            <h3 class="text-lg font-semibold mb-2">Filtered Results</h3>
+            <div id="result-container" class="space-y-4"></div>
+          </div>
+        </div>
+
+
+        <div id="settings" class="content-section hidden">
+          <h2 class="text-2xl font-bold text-gray-700">New Business Model</h2>
+          <style>
+            iframe {
+              width: 100%;
+              height: 100vh;
+              border: none;
+            }
+          </style>
+
+          <iframe src="https://n8n.lucascervera.com/form/7ef7bc81-d341-499b-ae7f-99e27adf34c2"></iframe>
+
+        </div>
+-->
+
+      </main>
+    </article>
+  </main>
+  <!-- partial -->
+  <script>
+
+
+    const markdownDocument = `
+# 📄Business summary
+
+The Ghostbusters business, inspired by the iconic franchise, aims to provide paranormal investigation and cleaning services to both residential and commercial clients. The model is built around offering expert ghost-hunting services, including investigations, exorcisms, and the sale of ghost-repellent products. The company seeks to demystify the supernatural while providing peace of mind to customers who believe they may be experiencing paranormal activity.
+
+The key milestones for the Ghostbusters business include the establishment of a recognizable brand, hiring trained paranormal investigators, and developing a comprehensive range of services. The team utilizes advanced technology and techniques to identify and address supernatural phenomena, ensuring that clients receive thorough and reliable assessments. The business also emphasizes customer engagement through educational workshops on paranormal activity and the science behind it.
+
+Revenue streams for the Ghostbusters business are diversified. They include fees for investigation services, exorcisms, and a range of merchandise such as ghost-repellent sprays, protective charms, and branded apparel. Additionally, the company can explore partnerships with local tourism boards to offer ghost tours, providing an interactive experience while generating additional income.
+
+Strategic partnerships with local businesses, media outlets, and paranormal enthusiasts will be essential for expanding the customer base. The company can leverage social media and community events to raise awareness and build a loyal following. The success of the Ghostbusters business will depend on its ability to balance entertainment with genuine investigations, creating a unique niche in the paranormal service market. As interest in supernatural occurrences continues to grow, the Ghostbusters business is well-positioned to capitalize on this trend while delivering exceptional service and experiences to its customers. 
+
+# 💡Business Goals 
+
+🎯 #goal: Build brand recognition  
+Focus on marketing strategies to establish the Ghostbusters brand in the local community and beyond.
+
+🎯 #goal: Expand service offerings  
+Consider adding workshops, merchandise, and ghost tours to diversify revenue streams.
+
+🎯 #goal: Develop strategic partnerships  
+Collaborate with local businesses and media outlets to enhance visibility and attract new clients.
+
+# 📊Revenue Streams
+
+| Revenue Source                 | Description                                               |
+|--------------------------------|-----------------------------------------------------------|
+| Investigation Services          | Charges for conducting paranormal investigations.         |
+| Exorcisms                      | Fees for spiritual cleansings to remove unwanted spirits. |
+| Merchandise                    | Sales of ghost-repellent products and branded items.     |
+| Ghost Tours                    | Income from guided tours highlighting local ghost stories. |
+
+# 🔍Target Market
+
+🎯 #target_audience: Homeowners  
+Individuals concerned about potential paranormal activity in their homes.
+
+🎯 #target_audience: Business owners  
+Commercial entities seeking to address ghostly occurrences affecting their operations.
+
+🎯 #target_audience: Tourists  
+Visitors interested in local ghost stories and paranormal experiences.
+
+# 🏆Competitive Advantages 
+
+🚀 #advantage: Unique branding  
+The Ghostbusters name and theme offer a fun and recognizable identity in the paranormal sector.
+
+🚀 #advantage: Expertise  
+A team of trained investigators provides credibility and assurance to clients.
+
+🚀 #advantage: Diverse offerings  
+Combining investigations, merchandise, and educational experiences enhances market appeal.
+
+# 📈Marketing Strategy 
+
+🎯 #strategy: Social media engagement  
+Utilize platforms like Instagram, Facebook, and TikTok to showcase investigations and engage with the audience.
+
+🎯 #strategy: Community events  
+Host workshops and local events to educate the public about paranormal phenomena and garner interest.
+
+🎯 #strategy: Content marketing  
+Create engaging blog posts and videos about ghost stories and investigation techniques to attract potential clients.
+
+# 🔗Partnership Opportunities 
+
+🤝 #partnership: Local tourism boards  
+Collaborate to create ghost tours and enhance local tourism experiences.
+
+🤝 #partnership: Media outlets  
+Partner with local TV and radio shows to share ghost stories and promote services.
+
+🤝 #partnership: Paranormal organizations  
+Join forces with other paranormal groups to exchange knowledge and enhance service offerings.
+
+# 🚀Future Growth Plans 
+
+🎯 #plan: Expand geographic reach  
+Explore franchise opportunities or satellite locations in other cities to grow the brand.
+
+🎯 #plan: Develop a mobile app  
+Create an app for booking services, accessing ghost-related content, and engaging with the community.
+
+🎯 #plan: Increase educational offerings  
+Launch online courses and certification programs for aspiring paranormal investigators. 
+
+The Ghostbusters business is set to embark on an exciting journey in the paranormal industry, merging entertainment with genuine service. By focusing on strategic goals, diversifying revenue streams, and engaging with the community, the company can ensure its place as a trusted name in ghost investigation and cleaning services while expanding its reach and influence in the market.
+
+# 📂Market
+
+## 🤔Stakeholders
+
+🤔#stakeholder Ghostbuster Clients #customer  
+Individuals and organizations seeking ghostbusting services to remove paranormal entities from their properties or events. They value reliability and professionalism in addressing their ghost-related concerns.
+
+🤔#stakeholder Strategic Partners and Suppliers  
+Collaborators providing equipment, such as ghost detection devices and protective gear, ensuring that the ghostbusting team is well-equipped to handle various situations.
+
+🤔#stakeholder Local Authorities and Regulatory Bodies  
+Government entities that oversee licensing and regulations for ghostbusting services. Their guidelines ensure that ghostbusters operate within legal parameters and maintain safety standards.
+
+🤔#stakeholder Investors and Financial Partners  
+Individuals or firms providing funding to support the growth of the ghostbusters business. They expect a return on investment through successful service offerings and business expansion.
+
+🤔#stakeholder Employees and Management  
+The team involved in the ghostbusting operations, including ghostbusters, administrative staff, and management. Their skills and dedication are crucial for delivering high-quality services.
+
+🤔#stakeholder Paranormal Enthusiasts  
+Individuals fascinated by the supernatural and interested in ghost-related events, tours, or media. They seek engaging experiences and reliable information about ghost phenomena.
+
+## 🙋Customer segments
+
+| 🙋#segment / (info) | Description | Pros | Cons | Type | Market Size | Trends | Rating |
+| :---- | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
+| 🙋#segment Residential Clients | Homeowners experiencing paranormal activity in their properties. | High demand for services; personal referrals can grow the business. | Emotional stress for clients; requires sensitivity. | B2C | Growing | Increasing awareness of paranormal issues. | 4.5 |
+| 🙋#segment Commercial Clients | Businesses requiring ghostbusting services for their premises. | Larger contracts; repeat business potential. | Higher expectations for professionalism; potential scrutiny. | B2B | Moderate | Rising interest in unique customer experiences. | 4.0 |
+| 🙋#segment Event Organizers | Companies hosting paranormal-themed events or tours. | Opportunities for partnerships; attractive to niche markets. | Dependence on seasonal demand; requires marketing efforts. | B2B | Niche | Growing interest in experiential entertainment. | 3.5 |
+
+### ✂️Segmentation criteria
+
+✂️#segmentation Demographic (age, occupation, income level)  
+✂️#segmentation Geographic (urban vs rural locations)  
+✂️#segmentation Psychographic (interests in the paranormal, lifestyle choices)  
+✂️#segmentation Behavioral (frequency of seeking ghost-related services)
+
+### 📈Market trends
+
+📈#trend Growing interest in paranormal phenomena  
+Public fascination with ghost-related topics is on the rise, fueled by media portrayals and personal experiences shared on social platforms.
+
+📈#trend Increased demand for experiential services  
+Consumers are seeking unique experiences, including ghost tours and paranormal investigations, leading to greater opportunities for ghostbusters.
+
+📈#trend Technological advancements in ghost detection  
+Innovations in detection equipment, such as EMF meters and thermal imaging, enhance the credibility and effectiveness of ghostbusting services.
+
+### 📄Market size
+
+Total Addressable Market (TAM)  
+The ghostbusting industry, including residential and commercial services, is valued at approximately USD 2 billion annually in the United States, encompassing all potential revenue from ghost-related activities.
+
+Serviceable Addressable Market (SAM)  
+The SAM focuses on segments that can realistically engage ghostbusting services, including:
+
+1. Residential ghostbusting services for homeowners.  
+2. Commercial ghostbusting contracts for businesses.  
+3. Event-based services for paranormal-themed attractions.
+
+Serviceable Obtainable Market (SOM)  
+The SOM represents the market that a ghostbusters business can realistically capture considering competition and resources. This includes:
+
+* Aiming for a 10% market share in the residential segment within the first three years.  
+* Establishing partnerships with at least five local businesses for repeat contracts.
+
+### 🏅Competition
+
+🏅#competitor Ghostbusters Inc.  
+A well-established ghostbusting company with a nationwide presence, offering a range of paranormal services including investigations and media productions.
+
+🏅#competitor Paranormal Services Co.  
+Specializes in commercial ghostbusting solutions and event management, targeting the corporate sector for haunted venue services.
+
+🏅#competitor Haunting Solutions  
+Focuses on residential clients, leveraging social media marketing and local community engagement to attract customers.
+
+🏅#competitor Spooky Services  
+Offers unique ghost tours and investigations, appealing to a niche market of paranormal enthusiasts and tourists.
+
+### 🎩Roles
+
+🎩#role Client Coordinator #user  
+Responsible for managing client inquiries, scheduling appointments, and ensuring customer satisfaction throughout the ghostbusting process.
+
+🎩#role Lead Ghostbuster  
+Oversees the ghostbusting team during investigations, ensuring proper techniques are applied and that safety protocols are followed.
+
+🎩#role Marketing Specialist  
+Develops and implements marketing strategies to attract clients, enhance brand visibility, and promote ghostbusting services.
+
+🎩#role Equipment Technician  
+Maintains and upgrades ghost detection equipment, ensuring that all tools are functional and ready for use in the field.
+
+🎩#role Financial Analyst  
+Manages budgets and financial planning, assessing the profitability of services and advising on pricing structures.
+
+## 🙎Customer profiles
+
+🙎‍♂️#profile Homeowner Seeking Help  
+* Stakeholder Ghostbuster Clients  
+* Segment Residential Clients  
+* Role Client Coordinator  
+
+The homeowner is experiencing unexplained disturbances in their home and is seeking professional ghostbusting services to restore peace of mind.
+
+### ✂️Segmentation
+
+✂️#segmentation Demographic segmentation  
+* Age: 30 to 55 years.  
+* Income: Middle to upper-middle class, typically above $75,000 per year.  
+* Occupation: Varied, but often professionals or homeowners with a vested interest in property value.  
+* Education: Generally college-educated.  
+* Location: Predominantly suburban and urban areas with reported paranormal activity.  
+
+✂️#segmentation Psychographic segmentation  
+* Lifestyle: Family-oriented, values home comfort and safety.  
+* Attitudes: Open to the paranormal; motivated by personal experiences or stories from friends.  
+* Personality: Cautious but curious about supernatural phenomena.
+
+✂️#segmentation Behavioral segmentation  
+* Purchasing behavior: Likely to research online before making a decision; values word-of-mouth referrals.  
+* Product usage: Often seek ghostbusting services during stressful or disruptive events.  
+* Brand loyalty: High if satisfied with initial service; likely to recommend to others.
+
+✂️#segmentation Firmographic segmentation  
+* Industry type: N/A (residential).  
+* Company size: N/A (individual clients).  
+* Revenue: N/A (individual clients).
+
+### 📄Persona
+
+**Jane Smith**  
+![Mujer en el Puente del Amante, Tanjung Sepat](https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Woman_at_Lover%27s_Bridge_Tanjung_Sepat_%28cropped%29.jpg/385px-Woman_at_Lover%27s_Bridge_Tanjung_Sepat_%28cropped%29.jpg)
+
+Role: stakeholder Ghostbuster Clients  
+Segment Residential Clients  
+Role Client Coordinator
+
+**Segmentation**  
+* Age: 42 years.  
+* Income: $85,000 per year.  
+* Occupation: Marketing Manager.  
+* Education: Bachelor's degree in Communications.  
+* Location: Suburban area in California.  
+* Technology adoption: Moderate; uses social media and research tools to find services.  
+* Brand loyalty: High if expectations are met.  
+* Industry type: N/A.  
+* Company size: N/A.
+
+**Background and Goals:**  
+Jane Smith is a marketing manager living in a suburban neighborhood. Recently, she has experienced odd occurrences in her home, such as unexplained noises and items moving on their own. Concerned for her family's comfort and safety, Jane's primary goal is to find a reliable ghostbusting service to investigate and resolve the situation.
+
+**Motivations and Pain Points:**  
+Jane is motivated by a desire for a peaceful home environment and the need to protect her family's well-being. Her pain points include the emotional stress caused by the disturbances and the challenge of finding a trustworthy ghostbusting service among many options.
+
+**Information and Decision-Making Preferences:**  
+Jane conducts thorough research online, looking for reputable ghostbusting services with positive customer reviews. She values transparency in pricing and clear communication from service providers.
+
+**Key Challenges:**  
+* Identifying a reliable ghostbusting service with proven success.  
+* Balancing family concerns and the need for resolution without incurring excessive expenses.  
+* Navigating the stigma associated with seeking paranormal services.
+
+**Preferred Solutions:**  
+Jane looks for a ghostbusting service that offers comprehensive evaluations, clear pricing, and a guarantee of discretion and professionalism during the investigation process.
+
+### 😟Problems
+
+😟#problem I need a reliable ghostbusting service #pain  
+Finding a trustworthy provider is essential to ensure that my home is safe and comfortable.
+
+😟#problem I have a limited budget for ghostbusting #pain  
+I need affordable options without compromising on service quality.
+
+😟#problem I’m concerned about the safety of my family during the investigation #gain  
+Ensuring a secure environment is my priority while addressing the paranormal issues.
+
+😟#problem I want clear communication about the process #pain  
+I need to be informed about what to expect during the investigation and any potential findings.
+
+😟#problem Coordinating schedules for the ghostbusting team #pain  
+Aligning my availability with the ghostbusters can be challenging, especially with work commitments.
+
+😟#problem I’m worried about the potential stigma #pain  
+Seeking help for ghost issues can feel embarrassing, and I want to ensure my privacy is respected.
+
+😟#problem I need post-investigation support #gain  
+I want assistance with further steps if any paranormal activity is confirmed.
+
+### 💎Value proposition
+
+💎#value Comprehensive Ghostbusting Services  
+Our ghostbusting business offers thorough evaluations, investigations, and remediation strategies to address paranormal issues effectively. Clients can trust our expertise and commitment to restoring peace in their homes.
+
+💎#value Transparent Pricing and Communication  
+We provide clear and upfront pricing without hidden fees, along with regular updates throughout the process. This transparency builds client trust and ensures satisfaction.
+
+💎#value Professional and Discreet Service  
+Our team is trained to handle sensitive situations with care and discretion. Clients can rely on us to respect their privacy and maintain confidentiality.
+
+💎#value Post-Service Support and Guidance  
+After the investigation, we offer clients additional resources, recommendations, and follow-up services to ensure their concerns are fully addressed.
+
+### 📣Messages
+
+📣#message Experience Peace of Mind with Our Ghostbusting Services  
+"Discover how our expert ghostbusting team can restore your home to a peaceful state. We prioritize professionalism, transparency, and client satisfaction in every investigation."
+
+📣#message Trustworthy Solutions for Your Paranormal Problems  
+"Our dedicated team provides thorough evaluations and effective solutions for your ghost-related concerns. Let us help you reclaim your space with confidence."
+
+📣#message Comprehensive Support Every Step of the Way  
+"From initial consultation to post-investigation guidance, we ensure that you feel supported throughout the entire ghostbusting process."
+
+### 🎙️Channels
+
+🎙️#channel Direct Sales  
+Our team can engage potential clients directly through consultations, service agreements, and personalized follow-ups.
+
+🎙️#channel Online Platforms  
+We utilize our website and social media to provide service information, share testimonials, and facilitate inquiries.
+
+🎙️#channel Partnerships with Real Estate Agents  
+Collaborating with real estate professionals can help us reach clients experiencing paranormal issues during property transactions.
+
+🎙️#channel Community Events and Workshops  
+Participating in local events allows us to educate the community about ghost phenomena and promote our services.
+
+🎙️#channel Customer Referrals and Word-of-Mouth  
+Satisfied clients can refer us to friends and family, expanding our client base organically.
+
+🎙️#channel Customer Support and Communication Channels  
+Establishing efficient communication channels ensures we can address client inquiries and provide ongoing support.
+
+### 🤝Relationship
+
+🤝#relationship Long-term Service Agreements  
+Building sustained relationships with clients through ongoing support and check-ins for any future concerns.
+
+🤝#relationship Community Engagement  
+Participating in local events fosters community relationships and builds trust among potential clients.
+
+🤝#relationship Follow-up and Feedback Mechanisms  
+Offering post-service follow-ups to gather feedback and provide additional support as needed.
+
+### ⭐Assets
+
+⭐#asset Equipment and Tools  
+High-quality ghost detection devices, tools, and protective gear necessary for successful investigations.
+
+⭐#asset Licensing and Certifications  
+Valid licenses and certifications that ensure legal compliance and industry recognition.
+
+⭐#asset Experienced Team  
+A skilled team of ghostbusters with expertise in paranormal investigations and client relations.
+
+⭐#asset Community Relationships  
+Established connections with local authorities, real estate agents, and community leaders can enhance credibility and referrals.
+
+### 🛒Transactions
+
+🛒#transaction Service Agreements  
+We engage in contractual agreements with clients outlining the scope of services, pricing, and expectations.
+
+### 👁️Perceptions
+
+👁️#perception Trustworthy and Professional Service #see  
+Clients see our business as a reputable source for addressing paranormal concerns, emphasizing reliability and professionalism.
+
+👁️#perception Innovative Techniques and Equipment #see  
+Our use of cutting-edge ghost detection technology distinguishes us from competitors and boosts credibility.
+
+👁️#perception Positive Client Testimonials #hear  
+Satisfied clients share their experiences, enhancing our reputation and attracting new customers.
+
+### 😐Emotions
+
+😐#emotion Relief #feel  
+Clients experience relief knowing they have a professional team to address their ghost-related issues.
+
+😐#emotion Confidence #feel  
+Our transparency and expertise instill confidence in clients regarding our services and their effectiveness.
+
+😐#emotion Curiosity #feel  
+Engaging with the paranormal can evoke curiosity and excitement about the investigation process.
+
+😐#emotion Satisfaction #feel  
+Clients feel satisfaction when their paranormal concerns are addressed, leading to a peaceful living environment.
+
+😐#emotion Anxiety #think  
+Clients may initially feel anxious about seeking help for ghost-related issues and worry about potential stigma.
+
+### 🦾Behaviors
+
+🦾#behavior Engaging with Marketing Materials  
+Potential clients may actively engage with brochures, websites, and social media posts about our services.
+
+🦾#behavior Seeking Recommendations  
+Clients often seek referrals from friends or family before selecting a ghostbusting service.
+
+🦾#behavior Researching Competitors  
+Clients may compare our services and pricing with competitors to ensure they are making an informed choice.
+
+🦾#behavior Sharing Experiences  
+After service completion, clients are likely to share their experiences online, influencing others' perceptions.
+
+### ✈️Journey
+
+✈️#journey Awareness  
+The homeowner becomes aware of our ghostbusting services through online research, social media, or word-of-mouth referrals.
+
+✈️#journey Research and Exploration  
+The homeowner investigates our services, reviews testimonials, and compares with competitors to assess options.
+
+✈️#journey Initial Contact  
+The homeowner reaches out for more information, asking questions about the process and pricing.
+
+✈️#journey Requirements Definition  
+The homeowner discusses their specific concerns with our team, providing details about the paranormal activity.
+
+✈️#journey Proposal Evaluation  
+Our team presents a detailed proposal outlining the services, timeline, and costs involved in the investigation.
+
+✈️#journey Negotiation and Contracting  
+The homeowner engages in discussions to finalize the terms of service, addressing any concerns or adjustments needed.
+
+✈️#journey Execution and Delivery  
+Our team conducts the ghostbusting investigation, providing regular updates and communicating findings to the homeowner.
+
+✈️#journey Post-Mission Evaluation  
+After the investigation, the homeowner evaluates our performance and provides feedback, influencing future service improvements.
+
+✈️#journey Relationship Building  
+Over time, the homeowner may decide to maintain contact for future concerns, establishing a long-term relationship with our business.
+
+
+
+# 📂Solutions
+
+## 💊Product
+
+💊#solution Ghostbusters Services  
+Providing paranormal investigation and ghost removal services for residential and commercial properties. Utilizing specialized equipment and trained personnel to ensure safe and effective removal of supernatural entities.
+
+**Other solutions**
+
+💊#solution Haunting Consultations  
+Offering consultations to help clients understand paranormal occurrences and recommend appropriate actions. This includes assessments of the property and guidance on spiritual cleansing methods.
+
+💊#solution Ghost Tours  
+Conducting guided tours in historically haunted locations, sharing stories and experiences of local hauntings. This service combines entertainment with education about local history and folklore.
+
+### 📄Components
+
+- Ghost hunting equipment
+- EMF detectors
+- Spirit boxes
+- Infrared cameras
+- Night vision goggles
+- Audio recording devices
+- Protective gear
+- Cleansing materials (sage, crystals)
+- Transport vehicles for team members
+- Communication devices (walkie-talkies)
+
+### 🌟Features
+
+🌟#feature Experienced Team #benefit  
+A trained and certified team of paranormal investigators experienced in various types of hauntings and supernatural occurrences.
+
+🌟#feature Advanced Equipment #reliever  
+Utilization of the latest ghost hunting technology for effective investigations and accurate readings of paranormal activity.
+
+🌟#feature Customized Services #benefit  
+Tailored ghost removal and consultation services based on the specific needs and concerns of each client.
+
+🌟#feature 24/7 Availability #reliever  
+Emergency ghost removal services available at any time to address urgent paranormal issues.
+
+🌟#feature Educational Workshops #benefit  
+Workshops and training sessions for those interested in learning about ghost hunting techniques and paranormal research.
+
+🌟#feature Community Engagement #benefit  
+Involvement in local events and community outreach to educate the public about paranormal phenomena and promote safe practices.
+
+### 📄Roadmap
+
+📦#release Version 1: Service Launch  
+Initial launch of ghost removal and consultation services, focusing on building brand awareness and establishing a local presence.
+
+📦#release Version 2: Marketing and Outreach  
+Expand marketing efforts through social media, local advertising, and partnerships with real estate agents and community organizations.
+
+📦#release Version 3: Service Expansion  
+Introduce additional services such as ghost tours and workshops based on customer feedback and market demand.
+
+📦#release Version 4: Technology Integration  
+Invest in advanced ghost hunting technology and training for staff to enhance service quality and effectiveness.
+
+📦#release Version 5: Franchise Opportunities  
+Explore franchise models to expand the business into new markets while maintaining service quality and brand integrity.
+
+### 📄Pricing
+
+The ghostbusters business employs a value-based pricing strategy, ensuring that clients receive high-quality services tailored to their specific needs. Pricing is determined based on the complexity of the case, the duration of services required, and any additional equipment or resources utilized.
+
+Basic ghost removal services start at $200 for up to two hours, with additional charges for extended investigations. Haunting consultations are priced at $100 per hour, while ghost tours range from $25 to $50 per person, depending on the location and duration of the tour. Packages and discounts for multiple services or group bookings are available to encourage customer engagement and repeat business.
+
+### 🛍️Offerings
+
+🛍️#offering Paranormal Investigation  
+Comprehensive investigations of reported hauntings using advanced equipment and techniques. Starting at $200 for a standard two-hour investigation.
+
+🛍️#offering Ghost Removal Services  
+Professional removal of unwanted supernatural entities, ensuring a safe and peaceful environment for clients. Pricing based on case complexity.
+
+🛍️#offering Haunting Consultations  
+In-depth consultations to assess paranormal activity and provide tailored recommendations. Priced at $100 per hour.
+
+🛍️#offering Guided Ghost Tours  
+Exciting tours in haunted locations, offering insights into local ghost stories and history. Tickets priced from $25 to $50 per person.
+
+🛍️#offering Workshops on Ghost Hunting  
+Educational sessions designed for those interested in paranormal investigations, covering techniques, safety, and equipment usage. Priced at $75 per participant.
+
+### 📄Brochure
+
+Image:
+
+![ghostbusters](https://upload.wikimedia.org/wikipedia/en/4/40/Ghostbusters_logo.svg)
+
+Title: "Ghostbusters: Your Paranormal Solution"
+
+Subtitle: "Fighting the Unseen with Expertise and Care"
+
+Our Mission and Vision: "At Ghostbusters, our mission is to help individuals and businesses reclaim their spaces from unwanted supernatural entities. We are committed to providing safe, effective, and professional services while educating the public about the paranormal."
+
+Services Offered: "From ghost removal to educational workshops, we tailor our offerings to meet the unique needs of our clients."
+
+Why Choose Us? "With a dedicated team of experienced paranormal investigators and a commitment to customer satisfaction, Ghostbusters stands out as a trusted name in the field."
+
+Call to Action: "Don’t let the unknown haunt you! Contact us today for a consultation or to book a service."
+
+Contact Information: "Website: www.ghostbusters.com | Email: contact@ghostbusters.com | Phone: (123) 456-7890"
+
+## 📂Marketing
+
+Ghostbusters' marketing strategy focuses on building a strong brand presence through community engagement, social media, and partnerships with local businesses. The aim is to position the company as a reliable and knowledgeable resource for paranormal services.
+
+### 📄Naming
+
+The name "Ghostbusters" is instantly recognizable and effectively communicates the core mission of the business—busting ghosts. The name conveys a sense of action and expertise, appealing to those seeking help with supernatural issues.
+
+For services, the naming strategy emphasizes clarity and accessibility, such as:
+- "Paranormal Investigation" for ghost hunting services.
+- "Ghost Removal Services" for the primary offering.
+- "Haunting Consultations" to describe advisory services.
+
+### 📄Branding
+
+Ghostbusters' branding is centered around professionalism, trust, and a touch of humor. This approach differentiates the business from competitors and resonates with a wide audience. Here’s how Ghostbusters has crafted its branding:
+
+- **Iconic Imagery**: Use of recognizable symbols and characters associated with ghost hunting to create a memorable brand identity.
+- **Community-Focused Messaging**: Messaging that emphasizes the importance of community safety and well-being, fostering a sense of trust.
+- **Engagement through Humor**: Lightheartedness in marketing materials to make the paranormal less intimidating and more approachable.
+
+### 📄Visual identity
+
+**Color Scheme**  
+Ghostbusters' visual identity features a bold color palette with primary colors like **green** and **black**, symbolizing the supernatural elements they deal with. These colors evoke feelings of excitement and intrigue.
+
+**Typography**  
+The branding utilizes a playful yet professional typeface, ensuring clarity and readability in all communications. Fonts like **"Arial"** or **"Futura"** are preferred for their modern and clean appearance.
+
+**Imagery**  
+Imagery related to ghosts, haunted environments, and investigative equipment reinforces the brand's focus on paranormal phenomena.
+
+### 📄Logo
+
+![logo](https://upload.wikimedia.org/wikipedia/en/4/40/Ghostbusters_logo.svg)  
+The Ghostbusters logo features a ghost with a prohibition sign, symbolizing the company's mission to capture and remove unwanted spirits. This distinctive design is instantly recognizable and represents the brand's commitment to tackling supernatural challenges.
+
+### 📄Media plan
+
+**Objective:**  
+- To increase awareness and bookings for Ghostbusters services among homeowners, businesses, and event planners.
+
+**Target Audience:**  
+- **Primary Audience:** Homeowners experiencing paranormal activity and businesses seeking to mitigate hauntings.  
+- **Secondary Audience:** Tourists interested in ghost tours and paranormal experiences.
+
+**Key Message:**  
+- "Ghostbusters: Your trusted partner in the battle against the paranormal. Let us help you reclaim your space!"
+
+**Media Channels and Strategy:**  
+
+| **Channel**       | **Tactics**                                                                  | **Budget** |
+|--------------------|----------------------------------------------------------------------------|------------|
+| **Social Media**   | - Regular posts showcasing ghost hunting tips and client testimonials.      <br> - Live Q&A sessions about paranormal investigations. | $30,000    |
+| **Digital Ads**    | - Google Ads targeting keywords like "ghost removal" and "haunted houses." <br> - Sponsored posts on local event pages. | $20,000    |
+| **PR Outreach**    | - Feature stories in local newspapers and magazines about ghost hunting.   <br> - Collaborate with influencers in the paranormal community. | $15,000    |
+| **Community Events**| - Host local ghost hunting workshops and participate in fairs.             <br> - Offer free consultations at community wellness events. | $10,000    |
+
+**Timing and Schedule:**  
+- **Pre-launch (4 weeks):** Build anticipation through teaser posts and PR outreach about upcoming workshops and tours.  
+- **Launch Week:** Intensify social media engagement with countdowns, success stories, and promotional offers.  
+- **Post-launch (2 weeks):** Share highlights from events and encourage feedback to maintain engagement.
+
+**Measurement and KPIs:**  
+- **Social Media:** Track engagement metrics, follower growth, and audience interactions.  
+- **Digital Ads:** Monitor click-through rates and conversions on service bookings.  
+- **PR:** Count the number of published articles and estimate the reach of media mentions.
+
+**Total Budget:**  
+- $75,000
+
+## 📂Communication
+
+Ghostbusters' communication strategy is characterized by openness, approachability, and a commitment to education. The aim is to demystify paranormal activity and provide reassurance to clients.
+
+### 📄Pitch
+
+Ghostbusters is a dedicated team of paranormal investigators committed to helping individuals and businesses address supernatural challenges. We combine advanced technology, expert knowledge, and a compassionate approach to ensure safe and effective ghost removal and consultations. Let us help you reclaim your space from the unknown.
+
+### 📄Business brochure
+
+[Ghostbusters brochure](https://www.ghostbusters.com/media/Capabilities&Services.pdf)
+
+### 📄Web
+
+The Ghostbusters website [Ghostbusters.com](https://www.ghostbusters.com) serves as a comprehensive platform for showcasing services, providing educational resources, and facilitating client engagement.
+
+The website is built using a reliable technology stack, ensuring a seamless user experience. The frontend is developed using HTML, CSS, and JavaScript, with a focus on responsive design. Integration of booking systems and client testimonials enhances the site's functionality.
+
+The primary objectives of the website include:
+
+- **Educating the Public:** Offering insights into paranormal phenomena and services available.
+- **Client Engagement:** Providing a platform for bookings, inquiries, and feedback.
+- **Marketing and Sales:** Highlighting services and promotions to attract new clients.
+- **Community Building:** Fostering a sense of community among paranormal enthusiasts.
+
+[### Ghostbusters](https://www.ghostbusters.com/)
+
+### 📄Storytelling
+
+**Persona: Emily Thompson (Homeowner)**
+
+**Ghostbusters: A Safe Haven from the Unknown**
+
+Emily Thompson had always considered her home a sanctuary until she started experiencing strange occurrences: flickering lights, unexplained noises, and cold drafts. Feeling uneasy and unsure, she sought help.
+
+After discovering Ghostbusters, Emily felt reassured. The team arrived promptly and conducted a thorough investigation. They used advanced equipment and shared insights along the way, making Emily feel involved and informed. They discovered a benign spirit and safely removed it, allowing Emily to feel at peace in her home once again.
+
+Now, Emily can't recommend Ghostbusters enough. She appreciates their professionalism, transparency, and dedication to helping those in need.
+
+### 📄Presentations
+
+**Slide 1: Introduction**  
+- **Ghostbusters: Your Paranormal Solution**  
+- Founded to address ghostly challenges with expertise and care.
+
+**Slide 2: Problem**  
+- **Understanding Paranormal Activity**  
+- Many people experience unexplained phenomena, leading to fear and uncertainty.
+
+**Slide 3: Solution**  
+- **Professional Ghost Removal Services**  
+- Our trained team utilizes advanced technology to effectively address paranormal issues.
+
+**Slide 4: Services Offered**  
+- **Comprehensive Services**  
+- Paranormal investigations, ghost removal, consultations, and educational workshops.
+
+**Slide 5: Unique Selling Proposition**  
+- **Why Choose Ghostbusters?**  
+  - Experienced team with a commitment to safety and client satisfaction.  
+  - Advanced technology for accurate investigations.
+
+**Slide 6: Market Potential**  
+- **Growing Interest in Paranormal Experiences**  
+  - Increasing demand for ghost tours and consultation services.
+
+**Slide 7: Business Model**  
+- **Diverse Revenue Streams**  
+  - Service fees from investigations, consultations, and tours.
+
+**Slide 8: Testimonials**  
+- **Client Success Stories**  
+  - Positive feedback from satisfied clients showcases our effectiveness.
+
+**Slide 9: Financial Projections**  
+- **Sustainable Growth**  
+  - Projected increase in service bookings and community engagement.
+
+**Slide 10: Team**  
+- **Passionate Professionals**  
+  - Dedicated team of investigators with expertise in paranormal research and client engagement.
+
+# 📄Organization
+
+## 📂Business idea
+
+### 📄Inspiration
+
+🦋#inspiration Classic Ghost Stories  
+The rich tradition of ghost stories and folklore has inspired countless adaptations and interpretations, creating a cultural fascination with the supernatural and the unknown.
+
+🦋#inspiration Popular Culture  
+Films like "Ghostbusters" have cemented ghost-hunting as a fun, engaging theme, leading to an increased interest in ghost-related experiences and entertainment.
+
+🦋#inspiration Reality TV Shows  
+The rise of ghost-hunting reality shows has contributed to a growing audience eager to experience paranormal investigations firsthand.
+
+### 📄Opportunity
+
+The opportunity for the ghostbusters business lies in the increasing demand for unique entertainment experiences, particularly those involving ghost tours, paranormal investigations, and themed events. By providing immersive experiences, the business can tap into a niche market that attracts both locals and tourists, capitalizing on the popularity of the supernatural.
+
+### 📄Business status
+
+The ghostbusters business is in its early stages, focused on developing engaging and entertaining ghost-hunting experiences. Initial offerings include guided ghost tours, paranormal investigation workshops, and themed events. The business aims to establish partnerships with local historical societies and venues to enhance credibility and expand service offerings.
+
+### 📄Challenges
+
+🏆#challenge Competition from Established Tours  
+Facing competition from existing ghost tours and paranormal experiences in the area that may already have a loyal customer base.
+
+🏆#challenge Seasonal Demand  
+Managing fluctuations in customer interest, particularly during peak tourist seasons and holidays associated with the supernatural, such as Halloween.
+
+🏆#challenge Marketing and Visibility  
+Developing effective marketing strategies to reach the target audience and raise awareness about the unique offerings of the ghostbusters business.
+
+🏆#challenge Regulatory Compliance  
+Navigating local regulations regarding guided tours, safety standards, and permits required for operating in historical or public sites.
+
+🏆#challenge Engagement and Experience Quality  
+Ensuring that experiences are engaging, entertaining, and informative to encourage positive reviews and repeat customers.
+
+## 📂Business objectives
+
+### 📄Mission
+
+The mission of the ghostbusters business is to provide thrilling and memorable ghost-hunting experiences that educate and entertain guests while fostering an appreciation for local history and folklore.
+
+### 📄Vision
+
+The vision is to become a leading provider of ghost tours and paranormal experiences in the area, recognized for high-quality, engaging, and family-friendly activities that celebrate the supernatural.
+
+### 🧠Organizational values
+
+🧠#organization_value Creativity  
+Embracing innovative ideas to develop unique experiences that captivate customers and enhance their engagement with the supernatural.
+
+🧠#organization_value Authenticity  
+Providing genuine and factual information about local folklore and history to create an informative experience for guests.
+
+🧠#organization_value Customer Experience  
+Prioritizing exceptional customer service and memorable experiences to foster repeat visits and positive word-of-mouth.
+
+🧠#organization_value Community Engagement  
+Building relationships with local historical societies, venues, and communities to promote local history and folklore.
+
+### 🎯Organizational goals
+
+| #goal_organization /  (info) | Description | Units | Value | Term |
+| :---- | :---- | :---- | :---- | :---- |
+|  |  |  |  |  |
+
+| #goal /  (info) | Description | Units | Value | Term |
+| :---- | :---- | :---- | :---- | :---- |
+| 🎯#goal Increase customer base | Attract new customers through effective marketing and partnerships with local businesses. | Visitors | 2,000 | Year 1 |
+| 🎯#goal Host special events | Organize themed events, especially around Halloween, to maximize customer engagement. | Events | 5 | Year 1 |
+| 🎯#goal Develop educational content | Create educational materials about local folklore to enrich the visitor experience. | Materials | 10 | Year 1 |
+| 🎯#goal Achieve high customer satisfaction | Ensure a positive experience for all guests to encourage repeat visits and referrals. | Rating (out of 5) | 4.5 | Ongoing |
+
+## 📄Operations
+
+The ghostbusters business operates by offering a blend of guided tours, workshops, and themed events. The operational model emphasizes the importance of storytelling, customer engagement, and local partnerships. Each tour or event is designed to be interactive and immersive, allowing guests to participate fully in the ghost-hunting experience.
+
+### ⚙️Activities
+
+⚙️#work Guided Ghost Tours  
+Conducting entertaining and informative tours at historical sites known for their ghostly legends and lore.
+
+⚙️#work Paranormal Investigation Workshops  
+Offering workshops that teach guests how to use ghost-hunting tools and techniques during investigations.
+
+⚙️#work Themed Seasonal Events  
+Planning and executing special events, particularly around Halloween, to attract larger crowds and enhance the experience.
+
+⚙️#work Marketing and Promotion  
+Developing marketing strategies to promote tours and events through social media, local partnerships, and community engagement.
+
+⚙️#work Customer Feedback Collection  
+Gathering feedback from customers to continually improve experiences and address any concerns.
+
+### 👔Functions
+
+👔#function Tour Operations  
+Managing the logistics of guided tours, including scheduling, route planning, and tour guide training.
+
+👔#function Customer Service  
+Ensuring a high level of customer service before, during, and after tours to enhance guest satisfaction.
+
+👔#function Marketing and Sales  
+Implementing marketing strategies to attract tourists and locals to the ghostbusters business.
+
+👔#function Educational Content Development  
+Creating educational materials and resources to enrich the ghost-hunting experience.
+
+👔#function Event Planning  
+Organizing themed events and workshops, ensuring they align with the overall mission and customer expectations.
+
+### ⭐Resources
+
+🖥️#resource Tour Guides  
+Trained professionals with knowledge of local history, folklore, and ghost-hunting techniques.
+
+🖥️#resource Marketing Materials  
+Brochures, website content, and social media tools to promote the business.
+
+🖥️#resource Equipment  
+Ghost-hunting tools, such as EMF detectors, spirit boxes, and thermal cameras for guest use during investigations.
+
+🖥️#resource Partnerships  
+Collaborations with local historical societies, venues, and tourism offices to enhance credibility and visibility.
+
+🖥️#resource Customer Database  
+A system to track customer information, preferences, and feedback to improve engagement and service.
+
+## 👤Team
+
+These are the individuals who hold the most important positions in the company.
+
+👤#person Jane Doe #founder  
+As the founder of the ghostbusters business, Jane brings a passion for local history and storytelling, along with an entrepreneurial spirit. Her vision is to create memorable ghost-hunting experiences that connect guests with the supernatural.
+
+👤#person John Smith #tour guide  
+An experienced tour guide with a background in history and folklore, John is responsible for leading ghost tours, engaging guests with captivating stories, and ensuring a fun experience.
+
+👤#person Mary Johnson #marketing manager  
+Mary oversees marketing and promotional strategies, leveraging social media and local partnerships to attract customers and enhance brand visibility.
+
+### 🎯Goals
+
+🎯#goal Expand local partnerships for marketing and visibility.  
+
+🎯#goal Develop a unique brand identity within the ghost-hunting industry.   
+
+🎯#goal Increase the variety of tours offered to cater to different audiences.  
+
+🎯#goal Foster a community of ghost enthusiasts through social media engagement.    
+
+🎯#goal Create an immersive online presence to attract a broader audience.  
+
+### 🔧Skills
+
+🔧#skill Storytelling  
+Ability to narrate engaging and captivating stories that draw in guests and enhance their experience.
+
+🔧#skill Customer Engagement  
+Skills in interacting with guests to ensure a welcoming and enjoyable atmosphere during tours.
+
+🔧#skill Marketing  
+Expertise in developing and implementing effective marketing strategies to promote the business.
+
+🔧#skill Event Planning  
+Capacity to organize and execute successful themed events that attract customers and create memorable experiences.
+
+🔧#skill Historical Knowledge  
+Strong understanding of local history and folklore to provide accurate information and enrich the experience.
+
+### 👔Functions
+
+👔#function Business Development  
+Identifying opportunities for growth and expansion within the ghost-hunting market.
+
+👔#function Quality Control  
+Monitoring and evaluating the quality of tours and experiences to maintain high standards.
+
+👔#function Training and Development  
+Providing ongoing training for tour guides and staff to ensure they are knowledgeable and engaging.
+
+👔#function Community Outreach  
+Building relationships with local communities and organizations to promote cooperation and support.
+
+👔#function Social Media Management  
+Managing social media platforms to engage with the audience and promote upcoming events and tours.
+
+### ➡️Contributions
+
+💵#contribution Unique Tour Experiences  
+Creating memorable and engaging ghost-hunting tours that differentiate the business from competitors.
+
+💵#contribution Local Partnerships  
+Establishing collaborations with historical societies and local businesses to enhance credibility and attract customers.
+
+💵#contribution Community Engagement  
+Building a loyal customer base through effective engagement and outreach efforts.
+
+💵#contribution Educational Value  
+Providing guests with informative content about local history and folklore, enriching their experience.
+
+💵#contribution Brand Promotion  
+Leveraging marketing efforts to raise awareness and visibility of the ghostbusters business.
+
+### ⬅️Compensations
+
+💸#compensation Revenue Share  
+Offering tour guides a percentage of the revenue generated from the tours they lead as an incentive.
+
+💸#compensation Bonuses for Performance  
+Rewarding employees with bonuses based on customer feedback and overall performance metrics.
+
+💸#compensation Professional Development Opportunities  
+Providing training and development resources to enhance staff skills and knowledge.
+
+💸#compensation Flexible Work Hours  
+Ensuring staff have the flexibility to balance work and personal commitments.
+
+### 🪪Positions
+
+🪪#position Tour Guides  
+Responsible for leading tours, telling stories, and ensuring an entertaining experience.
+
+🪪#position Marketing Team  
+Focused on promoting the business through various channels and strategies.
+
+🪪#position Event Coordinators  
+Tasked with planning and executing themed events and workshops.
+
+🪪#position Customer Service Representatives  
+Handling inquiries and ensuring customer satisfaction throughout their experience.
+
+🪪#position Administrative Staff  
+Managing operational tasks and supporting the overall business functions.
+
+## 📄Project plan
+
+The project plan outlines the steps necessary to launch and grow the ghostbusters business successfully.
+
+### 🗓️Phases
+
+🗓️#phase 1 Business Launch  
+Establishing the business structure, marketing strategy, and initial tours.
+
+🗓️#phase 2 Brand Development  
+Enhancing brand visibility through partnerships and community engagement.
+
+🗓️#phase 3 Expansion of Offerings  
+Introducing new tours, seasonal events, and workshops to diversify the experience.
+
+### 🏁Milestones
+
+🏁#milestone Business Formation  
+Completion of business registration and establishment of operational processes.
+
+🏁#milestone First Successful Tour  
+Conducting the first ghost tour with positive customer feedback and engagement.
+
+🏁#milestone Partnership Agreements  
+Securing partnerships with at least three local historical societies or venues.
+
+🏁#milestone Hosting a Major Event  
+Successfully organizing a themed event, such as a Halloween ghost tour.
+
+🏁#milestone Achieving Customer Satisfaction Goals  
+Meeting established customer satisfaction metrics based on feedback and reviews.
+
+## 📐Metrics
+
+📐#metric Customer Growth  
+Tracking the number of new customers each month to gauge marketing effectiveness and business growth.
+
+📐#metric Customer Satisfaction Rate  
+Monitoring customer feedback and ratings to evaluate the quality of tours and experiences.
+
+📐#metric Revenue Growth  
+Analyzing monthly revenue to assess financial health and business performance.
+
+📐#metric Repeat Customer Rate  
+Calculating the percentage of customers who return for additional tours or events.
+
+📐#metric Event Attendance  
+Monitoring attendance numbers for seasonal events to measure engagement and interest.
+
+📐#metric Marketing ROI  
+Calculating the return on investment for marketing campaigns to evaluate their effectiveness.
+
+📐#metric Partnership Impact  
+Assessing the impact of partnerships on customer acquisition and engagement.
+
+## 📂Finance
+
+The financial strategy focuses on reinvesting revenues into marketing, expansion of services, and enhancing customer experiences.
+
+### 💰Revenue
+
+💰#revenue Tour Sales  
+Generating revenue through ticket sales for guided ghost tours.
+
+💰#revenue Workshop Fees  
+Collecting fees for workshops on ghost hunting and paranormal investigation techniques.
+
+💰#revenue Seasonal Event Tickets  
+Earning revenue from ticket sales for special themed events.
+
+💰#revenue Merchandise Sales  
+Offering ghost-hunting merchandise, such as equipment and souvenirs, for additional revenue.
+
+### 📄Life Time Value
+
+Calculating the Lifetime Value (LTV) of a typical customer for the ghostbusters business involves estimating the revenue generated from repeat visits and additional purchases over time.
+
+**Average Revenue per Visit**  
+Assuming an average ticket price of $40 per person and an additional $20 spent on merchandise.
+
+**Annual Visits**  
+Assuming a customer visits the ghostbusters business 2 times per year.
+
+**Customer Lifespan**  
+Assuming an average customer lifespan of 5 years.
+
+**Calculation of LTV**  
+LTV = (Average Revenue per Visit x Annual Visits x Customer Lifespan)  
+LTV = ($40 + $20) x 2 x 5 = $600
+
+### 💸Costs
+
+💸#cost Marketing Expenses  
+Allocating budget for advertising, promotions, and community engagement efforts.
+
+💸#cost Tour Operations  
+Covering costs related to tour logistics, including staff, equipment, and venue fees.
+
+💸#cost Event Planning Expenses  
+Investing in planning and executing seasonal events, including venue rental and supplies.
+
+💸#cost Administrative Costs  
+Managing overhead costs, such as utilities, insurance, and office supplies.
+
+💸#cost Training and Development  
+Providing ongoing training for staff to ensure high-quality experiences.
+
+### 📄Customer Acquisition Cost
+
+To calculate the Customer Acquisition Cost (CAC) for the ghostbusters business, consider the following expenses related to acquiring new customers.
+
+**Scenario**: The business invests in marketing, promotions, and community events to attract customers.
+
+1. **Marketing Campaigns**: $3,000
+2. **Promotional Materials**: $1,500
+3. **Community Event Participation**: $2,000
+4. **Staff Time for Marketing Efforts**: $1,500
+
+**Total Acquisition Cost**: Total Acquisition Cost = $3,000 + $1,500 + $2,000 + $1,500 = $8,000
+
+**Number of New Customers Acquired**: Assuming 200 new customers acquired from these efforts.
+
+**Calculation of CAC**:  
+CAC = Total Acquisition Cost / Number of New Customers Acquired  
+CAC = $8,000 / 200 = $40
+
+### 📄Unit economics
+
+Calculating the unit economics of a typical ghost tour service involves understanding the revenue and costs associated with each tour, highlighting profitability.
+
+**Revenue per Tour**:  
+Assuming an average ticket price of $40 and 15 attendees per tour.  
+Total Revenue per Tour = 15 x $40 = $600
+
+**Cost Breakdown per Tour**:  
+1. **Guide Payment**: $100  
+2. **Equipment Costs**: $50  
+3. **Marketing Cost per Tour**: $30  
+4. **Venue Fees**: $50  
+5. **Miscellaneous Costs**: $20  
+
+**Total Cost per Tour**: $100 + $50 + $30 + $50 + $20 = $250  
+
+**Profit per Tour**:  
+Profit = Revenue - Total Cost  
+Profit = $600 - $250 = $350  
+
+**Margin per Tour**:  
+Margin = Profit / Revenue  
+Margin = $350 / $600 ≈ 58.33%
+
+### 💵Funding sources
+
+The ghostbusters business utilizes a mix of funding sources to support initial operations and growth.
+
+💵#funding Personal Investment  
+The founder's personal investment to cover startup costs and initial marketing efforts.
+
+💵#funding Crowdfunding Campaign  
+Leveraging crowdfunding platforms to raise funds and engage the community in the business concept.
+
+💵#funding Grants for Small Businesses  
+Applying for local or regional grants aimed at supporting small businesses and tourism initiatives.
+
+💵#funding Partnerships  
+Exploring partnerships with local businesses for cross-promotional opportunities and shared marketing costs.
+
+### 💼Shareholders
+
+**Ghostbusters Business Cap Table**
+
+| **Shareholder**      | **Role**                   | **Ownership (%)** | **Shares**  |
+|----------------------|----------------------------|-------------------|-------------|
+| **Jane Doe**         | Founder                     | 70%               | 700,000     |
+| **John Smith**       | Tour Guide                  | 15%               | 150,000     |
+| **Mary Johnson**     | Marketing Manager           | 10%               | 100,000     |
+| **Other Investors**   | Angel Investors             | 5%                | 50,000      |
+| **Total**            |                            | **100%**          | **1,000,000** |
+
+### 📄Projections
+
+**Basic Cash Flow Projections (in $ thousands)**
+
+| Category                          | Year 1 | Year 2 | Year 3 |
+|-----------------------------------|---------|---------|---------|
+| **Cash Inflows**                  |         |         |         |
+| Revenue from Tours                | 120     | 180     | 240     |
+| Revenue from Workshops             | 30      | 45      | 60      |
+| Revenue from Special Events        | 15      | 30      | 50      |
+| **Total Inflows**                 | 165     | 255     | 350     |
+| **Cash Outflows**                 |         |         |         |
+| Marketing Expenses                 | -30     | -40     | -50     |
+| Tour Operations Cost              | -50     | -75     | -100    |
+| Event Planning Expenses            | -10     | -15     | -20     |
+| Administrative Costs               | -20     | -25     | -30     |
+| **Total Outflows**                | -120    | -155    | -200    |
+| **Net Cash Flow**                 | 45      | 100     | 150     |
+| **Cumulative Cash Flow**          | 45      | 145     | 295     |
+
+**Explanation**
+
+**Cash Inflows** represent the revenue generated from tours, workshops, and events, increasing as the business grows and attracts more customers.
+
+**Cash Outflows** include operational costs, marketing expenses, and administrative costs that the business incurs.
+
+**Net Cash Flow** indicates the remaining cash after expenses for each year, showing a positive trend as the business matures.
+
+**Cumulative Cash Flow** tracks the overall financial position over the years, demonstrating growth and profitability.
+
+## 📂Legal
+
+### 📄Legal issues
+
+📜#legal_issue Licensing for Tours  
+Ensuring compliance with local laws and obtaining the necessary permits to operate guided tours.
+
+📜#legal_issue Liability Insurance  
+Securing liability insurance to protect the business against potential claims arising from tours or events.
+
+📜#legal_issue Copyright for Educational Materials  
+Ensuring that any educational materials used or produced do not infringe on copyright laws.
+
+📜#legal_issue Health and Safety Regulations  
+Complying with health and safety regulations to ensure the well-being of guests during tours and events.
+
+### 📄Contracts
+
+1. **Partnership Agreements**: Contracts with local historical societies and venues to facilitate collaborative events and tours.
+2. **Vendor Agreements**: Contracts with vendors for equipment and supplies required for events and tours.
+
+---
+
+This document provides a comprehensive overview of the ghostbusters business model, outlining its organization, operations, objectives, and strategies for success. Feel free to expand on any sections or provide additional details as needed!
+
+# 📂Analysis
+
+## 🔮Assumptions
+
+🔮#assumption Unique service offering  
+The ghostbusters business provides a unique and specialized service that caters to customers seeking paranormal investigation and resolution.
+
+🔮#assumption Growing public interest in paranormal activities  
+There is an increasing fascination and public interest in ghost hunting and paranormal phenomena, leading to a potential customer base.
+
+🔮#assumption Collaboration with local authorities  
+Partnering with local authorities and organizations can enhance credibility and provide access to clients who may require investigations.
+
+🔮#assumption Utilization of technology  
+Utilizing advanced technology and equipment for ghost investigations will improve service effectiveness and customer satisfaction.
+
+## 🚨Risks
+
+🚨#risk Skepticism from potential clients  
+Potential customers may be skeptical about the validity and effectiveness of ghostbusting services, impacting sales.
+
+🚨#risk Legal liabilities  
+There are legal risks associated with entering private properties and conducting investigations, including potential lawsuits.
+
+🚨#risk Competition from other paranormal services  
+The emergence of other ghost hunting services and paranormal investigators may increase competition, affecting market share.
+
+🚨#risk Safety concerns  
+Investigating potentially haunted locations can pose safety risks to staff and clients, requiring proper safety protocols.
+
+🚨#risk Variability in demand  
+The demand for ghostbusting services may fluctuate based on seasons, trends, and public interest, impacting revenue stability.
+
+## 📄Suggestions
+
+- Develop marketing strategies targeting local communities and social media to raise awareness about the services offered.
+- Create partnerships with local tourism boards to promote ghost tours and events.
+- Offer educational workshops about paranormal investigations to engage the community and attract new clients.
+- Consider a subscription model for regular ghostbusting services for businesses or homeowners.
+
+## 📄SWOT
+
+**🚀 Strengths**
+
+🚀#strength Unique service  
+The business offers a specialized service that stands out in the market.
+
+🚀#strength Experienced team  
+A team with expertise in paranormal investigations provides credibility and trust.
+
+🚀#strength Engaging marketing  
+Utilizing engaging marketing strategies can attract a diverse clientele.
+
+**🛠️ Weaknesses**
+
+🛠️#weakness Limited awareness  
+The business may face challenges in building brand awareness in a niche market.
+
+🛠️#weakness Seasonal demand  
+Demand may vary based on trends in paranormal interest or seasonal events.
+
+🛠️#weakness High operational costs  
+Investing in specialized equipment and technology may lead to elevated operational expenses.
+
+**🌍 Opportunities**
+
+🌍#opportunity Expanding market  
+An increase in interest in paranormal activities presents opportunities for growth.
+
+🌍#opportunity Event collaborations  
+Hosting ghost tours or events can create additional revenue streams.
+
+🌍#opportunity Online presence  
+Developing an online platform for bookings and consultations can enhance accessibility.
+
+**⚠️ Threats**
+
+⚠️#threat Public perception  
+Negative public perception regarding paranormal activities could hinder business growth.
+
+⚠️#threat Economic downturns  
+Economic challenges may reduce discretionary spending on ghostbusting services.
+
+⚠️#threat Emerging competitors  
+New ghost investigation services may enter the market, increasing competition.
+
+## 📄Unfair advantage
+
+The ghostbusters business's unfair advantage lies in its unique approach to paranormal investigations, combining traditional techniques with modern technology. This blend not only differentiates the service from competitors but also enhances the credibility and effectiveness of the investigations, appealing to both skeptics and believers alike. Additionally, a strong online presence and engaging marketing strategies can foster a loyal customer base and create a community around the brand.
+
+# 📂Validation
+
+The Ghostbusters business validates its assumptions through a comprehensive strategy that includes rigorous testing of equipment and services, market analysis, customer engagement, proactive compliance with local regulations, and strategic outreach to potential clients.
+
+## 📄Coherence
+
+The business model of the Ghostbusters operates on the premise of providing specialized paranormal investigation and elimination services. It focuses on maintaining a strong brand identity, leveraging technology, and ensuring customer satisfaction through effective service delivery and community engagement.
+
+## 🧪Experiments
+
+🧪#experiment Equipment Efficacy Test
+
+Assumption: The specialized ghost-hunting equipment will be effective in detecting and eliminating paranormal entities.
+
+Experiment: Conduct field tests using various ghost-hunting technologies (e.g., EMF meters, proton packs) in different locations known for paranormal activity to assess their effectiveness.
+
+Metric: Success rate of entity detection and elimination.
+
+🧪#experiment Market Demand Assessment for Ghostbusting Services
+
+Assumption: There is a growing demand for professional ghostbusting services in both residential and commercial sectors.
+
+Experiment: Launch a targeted marketing campaign and conduct surveys in neighborhoods and businesses to gauge interest and measure the volume of service inquiries.
+
+Metric: Number of service inquiries and conversion rates from leads to customers.
+
+🧪#experiment Customer Satisfaction Feedback Loop
+
+Risk: Customer satisfaction is critical for repeat business and referrals in the ghostbusting industry.
+
+Experiment: Implement a post-service feedback system that collects customer reviews and ratings to identify areas for improvement and enhance service quality.
+
+Metric: Average customer satisfaction score and number of repeat customers.
+`;
+
+    document.getElementById("document").textContent = markdownDocument;
+
+
+    function toggleSection(sectionId) {
+      // Get all sections
+      const sections = document.querySelectorAll('.content-section');
+
+      // Hide all sections except the one clicked
+      sections.forEach(section => {
+        if (section.id === sectionId) {
+          section.classList.toggle('hidden'); // Toggle visibility
+        } else {
+          section.classList.add('hidden'); // Ensure others are hidden
+        }
+      });
+    }
+
+    const documentText = document.getElementById("document").textContent.trim();
+
+    const filterContainer = document.getElementById("filter-container");
+    const resultContainer = document.getElementById("result-container");
+
+    const parseMarkdown = (text) => {
+      const lines = text.split("\n").map(line => line.trim());
+      const parsedData = [];
+      let currentBlock = null;
+
+      lines.forEach(line => {
+        if (line.startsWith("#")) {
+          if (currentBlock) {
+            parsedData.push(currentBlock);
+          }
+          currentBlock = {
+            header: line,
+            content: "",
+            tags: []
+          };
+        } else if (currentBlock) {
+          currentBlock.content += line + "\n";
+          const tagMatch = line.match(/#(\S+)/g);
+          if (tagMatch) {
+            currentBlock.tags.push(...tagMatch.map(tag => tag.replace("#", "")));
+          }
+        }
+      });
+      if (currentBlock) {
+        parsedData.push(currentBlock);
+      }
+
+      return parsedData;
+    };
+
+    const parsedDocument = parseMarkdown(documentText);
+
+    const getAllTags = (data) => {
+      const tags = new Set();
+      data.forEach(block => block.tags.forEach(tag => tags.add(tag)));
+      return Array.from(tags);
+    };
+
+    const addFilter = () => {
+      const filterDiv = document.createElement("div");
+      filterDiv.className = "filter";
+
+      const select = document.createElement("select");
+      select.className = "border rounded-lg p-2 w-full";
+
+      const optionDefault = document.createElement("option");
+      optionDefault.value = "";
+      optionDefault.textContent = "Select Tag";
+      select.appendChild(optionDefault);
+
+      const tags = getAllTags(parsedDocument);
+      tags.forEach(tag => {
+        const option = document.createElement("option");
+        option.value = tag;
+        option.textContent = tag;
+        select.appendChild(option);
+      });
+
+      filterDiv.appendChild(select);
+      filterContainer.appendChild(filterDiv);
+    };
+
+    const applyFilters = () => {
+      const selectedTags = Array.from(filterContainer.querySelectorAll("select"))
+        .map(select => select.value)
+        .filter(value => value);
+
+      const filteredResults = selectedTags.length === 0
+        ? parsedDocument
+        : parsedDocument.filter(block =>
+          selectedTags.every(tag => block.tags.includes(tag))
+        );
+
+      resultContainer.innerHTML = "";
+
+      if (filteredResults.length === 0) {
+        resultContainer.textContent = "No results match the selected filters.";
+      } else {
+        filteredResults.forEach(block => {
+          const div = document.createElement("div");
+          div.className = "p-4 bg-white border border-gray-300 rounded-lg";
+          div.innerHTML = `
+                <h4 class="font-bold">${block.header}</h4>
+                <pre class="text-sm bg-gray-100 p-2 rounded-lg">${block.content.trim()}</pre>
+            `;
+          resultContainer.appendChild(div);
+        });
+      }
+    };
+
+    const parsedDocumentContainer = document.getElementById("parsed-document");
+    const parsedHTML = marked.parse(markdownDocument);
+    parsedDocumentContainer.innerHTML = parsedHTML;
+
+    document.addEventListener("DOMContentLoaded", () => {
+      parsedDocumentContainer.innerHTML = marked.parse(markdownDocument);
+    });
+
+
+
+    document.getElementById("add-filter").addEventListener("click", addFilter);
+    document.getElementById("apply-filters").addEventListener("click", applyFilters);
+
+    // Initialize with one filter and show all results initially
+    addFilter();
+    applyFilters();
+  </script>
+
+</body>
+
+</html>
