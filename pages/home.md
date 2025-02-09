@@ -1,10 +1,9 @@
 <!-- Hero Section -->
 <section class="flex flex-col lg:flex-row items-center lg:items-start justify-between py-16 px-4 space-y-8 lg:space-y-0">
     <div class="lg:w-1/2 text-center lg:text-left">
-        <h1 class="text-4xl font-bold">    Evolve your business with AI</br>
-    Focus on thinking, not writing.</h1>
-        <p class="text-gray-600 mt-4">Our 🤖 AI powered business plan software frees up your time from writing 
-    so you can focus on 🧠 designing, 📊 analyzing, ✅ validating, and 🚀 improving your business.S</p>
+        <h1 class="text-4xl font-bold">AI generated business plan that helps you evolve your business</h1>
+        <p class="text-gray-600 mt-4">Focus on thinking, not writing. Our 🤖 AI powered business plan software frees up your time from writing 
+    so you can focus on 🧠 designing, 📊 analyzing, ✅ validating, and 🚀 improving your business.</p>
         <button class="mt-6 px-6 py-3 bg-black text-white rounded text-sm hover:bg-gray-800">
         <a href="/one-off-bm.html" target="_blank">Get your Business Model Document for free</a>
         </button>
