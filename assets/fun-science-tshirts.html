@@ -1,0 +1,1668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Plastilinn Business Evolution Framework</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@2
+0..48,100..700,0..1,-50..200" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    /* Add padding between paragraphs */
+    /* Apply padding to all elements inside .prose */
+    .prose * {
+      margin-bottom: 1rem;
+      max-width: 120ch;
+      /* Set max-width to 75 characters */
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    /* Increase header sizes */
+    .prose h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      /* Larger bottom margin for h1 */
+    }
+
+    .prose h2 {
+      font-size: 2rem;
+      margin-bottom: 1.75rem;
+      /* Slightly smaller margin for h2 */
+    }
+
+    .prose h3 {
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      /* Slightly smaller margin for h3 */
+    }
+
+    .prose h4 {
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+      /* Smaller margin for h4 */
+    }
+
+    .prose h5 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      /* Even smaller margin for h5 */
+    }
+
+    .prose h6 {
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+      /* Smallest margin for h6 */
+    }
+  </style>
+</head>
+
+<body>
+  <header class="dark:bg-black w-full py-8 lg:hidden">
+    <button id="open-menu-control"
+      class="menu-control ml-auto mr-12 rounded-xl py-2 px-2 flex flex-row items-center justify-center transition ease hover:bg-gray-100 dark:hover:bg-transparent lg:hidden lg:w-fit">
+      <span class="material-symbols-outlined text-black dark:text-gray-100">menu</span>
+    </button>
+  </header>
+
+  <nav id="navbar"
+    class="dark:bg-black bg-white hidden lg:flex fixed top-0 left-0 h-screen w-screen flex flex-col items-center gap-4 overflow-scroll lg:overflow-hidden lg:flex-row lg:relative lg:w-full lg:h-fit lg:py-8 lg:px-28 lg:mx-auto pb-12 fixed top-0 left-0 w-full z-50"">
+    <div class=" w-full py-8 lg:hidden">
+    <button id="close-menu-control"
+      class="menu-control ml-auto mr-12 dark:hover:bg-transparent rounded-xl py-2 px-2 flex flex-row items-center justify-center transition ease hover:bg-gray-100 lg:w-fit">
+      <span class="material-symbols-outlined text-black dark:text-gray-100">close</span>
+    </button>
+    </div>
+
+    <div
+      class="button-container mt-16 w-full py-4 mx-auto mt-4 rounded-xl flex flex-col items-center lg:flex-row gap-4 lg:mr-auto lg:items-start">
+
+      <button
+        class="button dark:bg-gray-200 hover:bg-gray-200 dark:hover:bg-white bg-gray-100 rounded-xl py-2 px-4 flex flex-row items-center justify-center gap-2 transition ease hover:bg-gray-100 w-9/12 lg:w-fit sm:w-7/12 md:w-5/12">
+        <span class="material-symbols-outlined h-fit">home</span>
+        <span class="font-bold h-fit">Home</span>
+      </button>
+      <button
+        class="button dark:bg-gray-200 hover:bg-gray-200 dark:hover:bg-white bg-gray-100 rounded-xl px-4 py-2 flex items-center justify-center gap-2 transition ease hover:bg-gray-100 w-9/12 lg:w-fit sm:w-7/12 md:w-5/12"
+        onclick="toggleSection('doc-html')">
+        <span class="material-symbols-outlined">category</span>
+        <span class="font-bold">Business Model</span>
+      </button>
+      <!--
+      <button
+        class="button dark:bg-gray-200 hover:bg-gray-200 dark:hover:bg-white bg-gray-100 rounded-xl px-4 py-2 flex items-center justify-center gap-2 transition ease hover:bg-gray-100 w-9/12 lg:w-fit sm:w-7/12 md:w-5/12"
+        onclick="toggleSection('navigator')">
+        <span class="material-symbols-outlined">widgets</span>
+        <span class="font-bold">Navigator</span>
+      </button>
+      -->
+    </div>
+
+    <!--
+    <div class="button-container w-full mx-auto mt-4 rounded-xl flex flex-col items-center lg:flex-row gap-4 lg:w-fit">
+      <button
+        class="button dark:bg-gray-200 hover:bg-gray-200 dark:hover:bg-white bg-gray-100 rounded-xl px-4 py-2 flex items-center justify-center gap-2 transition ease hover:bg-gray-100 w-9/12 lg:w-fit sm:w-7/12 md:w-5/12">
+        <span class="material-symbols-outlined">login</span>
+        <span class="font-bold">Export</span>
+      </button>
+    </div>
+-->
+
+  </nav>
+
+  <main id="main" class="dark:bg-black dark:text-gray-200 text-xl min-w-screen min-h-screen">
+    <article id="main__article" class="w-full py-8 px-8 lg:px-28 mx-auto mt-4 rounded-xl flex flex-col gap-4">
+
+      <main class="container flex-1 p-6">
+        <div id="doc-html" class="content-section">
+          <h2 class="text-2xl font-bold text-gray-700">Document Viewer</h2>
+          <p>Copy / Paste the content to your document editor</p>
+
+          <div class="divider"></div>
+
+          <div id="parsed-document" class="prose">
+          </div>
+        </div>
+        <div id="home" class="content-section">
+          <h2 class="text-2xl font-bold text-gray-700">Home</h2>
+          <h1 class="text-2xl font-bold mb-6">Markdown Document Filter</h1>
+
+          <div class="mb-8">
+            <h3 class="text-lg font-semibold mb-2">Document</h3>
+            <pre id="document" class="bg-gray-100 p-4 rounded-lg border border-gray-300 overflow-x-auto text-sm">
+            </pre>
+          </div>
+        </div>
+
+        <!--
+        <div id="navigator" class="content-section hidden">
+
+          <div id="filters" class="mb-6">
+            <h3 class="text-lg font-semibold mb-2">Filters</h3>
+            <div id="filter-container" class="space-y-2"></div>
+          </div>
+
+          <button id="apply-filters" class="bg-green-500 text-white py-1 px-4 rounded-lg hover:bg-green-600">
+            Apply Filters
+          </button>
+
+          <button id="add-filter" class="bg-blue-500 text-white py-1 px-4 rounded-lg hover:bg-blue-600 mt-2">
+            Add Filter
+          </button>
+
+          <div id="results" class="mt-6">
+            <h3 class="text-lg font-semibold mb-2">Filtered Results</h3>
+            <div id="result-container" class="space-y-4"></div>
+          </div>
+        </div>
+
+
+        <div id="settings" class="content-section hidden">
+          <h2 class="text-2xl font-bold text-gray-700">New Business Model</h2>
+          <style>
+            iframe {
+              width: 100%;
+              height: 100vh;
+              border: none;
+            }
+          </style>
+
+          <iframe src="https://n8n.lucascervera.com/form/7ef7bc81-d341-499b-ae7f-99e27adf34c2"></iframe>
+
+        </div>
+-->
+
+      </main>
+    </article>
+  </main>
+  <!-- partial -->
+  <script>
+
+
+    const markdownDocument = `
+# 📄 Business summary
+
+An e-commerce store specializing in fun t-shirts related to scientific topics aims to combine education and entertainment through unique apparel. The business model focuses on creating a niche market for science enthusiasts, educators, and students who appreciate humorous and thought-provoking designs. By leveraging the growing interest in science and education, the store intends to provide high-quality, creatively designed t-shirts that spark conversations and promote scientific literacy.
+
+The revenue streams for the business include direct sales through the online store, partnerships with educational institutions for bulk orders, and collaborations with science influencers to reach a broader audience. Additionally, the store plans to introduce seasonal collections and limited-edition designs, which can drive urgency and encourage repeat purchases.
+
+The marketing strategy will utilize social media platforms, targeted ads, and content marketing to engage the audience and build a community around science appreciation. By creating shareable content and leveraging user-generated posts featuring customers wearing the t-shirts, the brand aims to increase its visibility and customer loyalty.
+
+The e-commerce store will also explore opportunities for expansion, such as offering accessories or merchandise related to other aspects of science, including posters, mugs, and educational kits. As the business grows, potential collaborations with science museums, educational programs, and events can further enhance its reach and credibility.
+
+In summary, this e-commerce store is poised to tap into a unique market segment by merging science with fashion, offering products that resonate with a community passionate about scientific topics. Its success will depend on effective marketing, product quality, and the ability to adapt to customer preferences.
+
+# 💡 Business model components
+
+## 1. Value Proposition
+🎨 #unique_designs: Offering creatively designed t-shirts that make science fun and relatable.  
+The store aims to attract an audience looking for educational yet entertaining apparel.
+
+## 2. Customer Segments
+👩‍🎓 #students: Targeting university and high school students interested in science.  
+👨‍🏫 #educators: Selling to teachers looking for engaging ways to promote science in the classroom.  
+👨‍🔬 #science_enthusiasts: Focusing on individuals passionate about science, including professionals and hobbyists.
+
+## 3. Revenue Streams
+💰 #direct_sales: Generating revenue through online sales of t-shirts.  
+🤝 #bulk_orders: Partnering with educational institutions for bulk purchases.  
+📈 #collaborations: Working with influencers and science content creators to expand reach.
+
+## 4. Marketing Strategy
+📱 #social_media: Utilizing platforms like Instagram and Facebook for promotions and customer engagement.  
+✍️ #content_marketing: Creating educational blog posts and videos to attract traffic to the online store.  
+📦 #limited_editions: Offering exclusive designs to create urgency and encourage purchases.
+
+## 5. Key Partnerships
+🏫 #educational_institutions: Collaborating with schools and universities to provide bulk orders.  
+🌐 #science_organizations: Partnering with relevant organizations for promotional opportunities.  
+👩‍🏫 #influencers: Working with science influencers to reach a wider audience.
+
+## 6. Cost Structure
+💵 #production_costs: Expenses related to t-shirt manufacturing and design.  
+📦 #shipping: Costs associated with shipping products to customers.  
+🛠️ #marketing: Budget allocated for online advertising and promotional activities.
+
+# 📊 Financial Projections
+
+| Year       | Revenue       | Expenses      | Profit        |
+|------------|---------------|---------------|---------------|
+| Year 1    | $50,000       | $30,000       | $20,000       |
+| Year 2    | $100,000      | $60,000       | $40,000       |
+| Year 3    | $150,000      | $90,000       | $60,000       |
+
+In conclusion, the e-commerce store selling fun t-shirts related to scientific topics is structured to take advantage of the growing interest in science and education. By focusing on unique value propositions, understanding customer segments, diversifying revenue streams, and implementing a robust marketing strategy, the business is well-positioned for growth and success in the niche market.
+
+# 📂Market
+
+## 🤔Stakeholders
+
+🤔#stakeholder Customers #customer  
+Individuals who are interested in purchasing fun and educational t-shirts that relate to various scientific topics. They seek unique designs that reflect their interests and passions in science.
+
+🤔#stakeholder Suppliers #supplier  
+Manufacturers and distributors who provide the materials and services needed to produce the t-shirts. Their reliability and quality directly impact the product offerings of the e-commerce store.
+
+🤔#stakeholder Marketing Partners #partner  
+Companies or individuals who help promote the e-commerce store through various channels, including social media, email marketing, and influencer collaborations. Their efforts are crucial for increasing brand visibility.
+
+🤔#stakeholder E-commerce Platform Providers  
+Providers of the online storefront and payment processing solutions that facilitate the shopping experience for customers. Their technology and support impact the user experience and operational efficiency.
+
+🤔#stakeholder Designers #creator  
+Creative individuals who design the t-shirts, translating scientific themes into visually appealing graphics. Their ability to create engaging designs is vital for attracting customers.
+
+## 🙋Customer segments
+
+| 🙋#segment / (info)           | Description                                                 | Pros                                         | Cons                                      | Type                | Market Size    | Trends                                   | Rating |
+|-------------------------------|-------------------------------------------------------------|---------------------------------------------|-------------------------------------------|---------------------|----------------|------------------------------------------|--------|
+| **Science Enthusiasts**       | Customers who have a passion for science and want to express it through apparel. | High engagement and brand loyalty.          | May be a niche market.                    | Target Segment      | Moderate       | Growing interest in science-related products. | 4.5    |
+| **Students**                  | Students studying science-related subjects looking for fun, themed clothing. | Potential for bulk purchases.                | Price sensitivity due to limited budgets. | Target Segment      | Large          | Increasing enrollment in STEM programs.     | 4.0    |
+| **Parents and Gift Buyers**   | Individuals purchasing gifts for science-loving children or friends. | Emotional purchasing decisions.              | Quality expectations for gifts.            | Target Segment      | Large          | Rise in personalized and unique gifts.     | 4.3    |
+
+### ✂️Segmentation criteria
+
+✂️#segmentation Age (children, teens, adults)  
+✂️#segmentation Interests (science fields like physics, biology, chemistry)  
+✂️#segmentation Shopping behavior (impulse buyers, planned purchases)  
+✂️#segmentation Geographic location (urban, suburban, rural)
+
+### 📈Market trends
+
+📈#trend Increased focus on STEM education  
+There is a growing emphasis on promoting science, technology, engineering, and math education, leading to increased interest in related products.
+
+📈#trend Rising popularity of niche e-commerce  
+More consumers are turning to specialized online stores for unique and themed products, including apparel.
+
+📈#trend Sustainability in fashion  
+Customers are becoming more conscious of environmental impacts, leading to a demand for eco-friendly and sustainably produced clothing.
+
+### 📄Market size
+
+Total Addressable Market (TAM)  
+The global market for themed apparel is substantial, with an estimated value of $30 billion in 2023, including various niches like science-themed clothing.
+
+Serviceable Addressable Market (SAM)  
+The specific market for science-themed t-shirts is estimated to be worth $3 billion, focused primarily on consumers interested in science and education.
+
+Serviceable Obtainable Market (SOM)  
+The practical market share the e-commerce store can target within its first few years is around $300 million, focusing on dedicated marketing to science enthusiasts and students.
+
+### 🏅Competition
+
+🏅#competitor Threadless  
+An online platform that allows artists to submit t-shirt designs, with a wide array of science-themed options available.
+
+🏅#competitor Teespring  
+A custom apparel platform that enables users to create and sell their designs, including science-related shirts.
+
+🏅#competitor Redbubble  
+A marketplace for independent artists to sell their designs on various products, including t-shirts with scientific themes.
+
+🏅#competitor Zazzle  
+An online marketplace that offers customizable products, including a selection of science-themed apparel.
+
+🏅#competitor Amazon Merch  
+A print-on-demand service that allows people to create designs for t-shirts, including a category for science-themed apparel.
+
+### 🎩Roles
+
+🎩#role E-commerce Manager #user  
+Responsible for overseeing the online store's operations, including inventory management, customer service, and marketing strategies.
+
+🎩#role Marketing Specialist  
+Focuses on promoting the e-commerce store through social media, online advertising, and partnerships with influencers to drive sales.
+
+🎩#role Designer  
+Creates unique and visually appealing t-shirt designs that resonate with science enthusiasts and reflect current trends.
+
+🎩#role Customer Service Representative  
+Handles inquiries, complaints, and feedback from customers to ensure a high level of satisfaction and retention.
+
+🎩#role Supplier Liaison  
+Manages relationships with suppliers to ensure quality materials and timely delivery of t-shirt products.
+
+## 🙎Customer profiles
+
+🙎‍♂️#profile Science Enthusiast  
+* Stakeholder Customers  
+* Segment Science Enthusiasts  
+* Role Customer
+
+The science enthusiast is passionate about various scientific topics and enjoys showcasing their interest through unique t-shirt designs.
+
+### ✂️Segmentation
+
+✂️#segmentation Demographic segmentation  
+* Age: 18 to 40 years.  
+* Income: Middle to high income, generally above $50,000 per year.  
+* Occupation: Students, professionals in science-related fields, educators.  
+* Education: Typically possess at least a bachelor's degree in science or related fields.  
+* Location: Primarily urban areas with access to educational institutions.  
+* Technology adoption: Familiar with e-commerce and social media platforms.
+
+✂️#segmentation Psychographic segmentation  
+* Lifestyle: Engaged in scientific communities, often attending science fairs or educational events.  
+* Attitudes: Value education and knowledge-sharing, and appreciate humor and creativity in science.  
+* Personality: Curious, creative, and often involved in academic or social advocacy for science-related issues.
+
+✂️#segmentation Behavioral segmentation  
+* Purchasing behavior: Frequently buy themed apparel and gifts, especially during holidays or special occasions.  
+* Product usage: Wear t-shirts as casual outfits or conversation starters.  
+* Brand loyalty: High, often prefer brands that align with their interests and values in education and science.
+
+✂️#segmentation Firmographic segmentation  
+* Industry type: Education, scientific research, and general consumer goods.  
+* Company size: Not applicable as this segment consists of individuals.
+
+### 📄Persona
+
+**Alex Thompson**
+
+![Alex Thompson](https://upload.wikimedia.org/wikipedia/en/a/a9/Sacrumi.gif)
+
+Role: stakeholder Customers  
+Segment Science Enthusiasts  
+Role Customer
+
+**Segmentation**  
+* Age: 29 years.  
+* Income: $60,000 per year.  
+* Occupation: Biology teacher at a high school.  
+* Education: Master's degree in biology.  
+* Location: San Francisco, CA.  
+* Technology adoption: Highly tech-savvy, frequently shops online.  
+* Brand loyalty: High; prefers eco-friendly and unique brands.  
+* Industry type: Education.  
+* Company size: Not applicable.
+
+**Background and Goals:**  
+Alex is passionate about science and enjoys sharing that enthusiasm with students and peers.  
+She often seeks unique t-shirts that reflect her love for biology and can serve as conversation starters in her classroom.  
+Alex aims to find affordable yet stylish apparel that aligns with her values of sustainability and education.
+
+**Motivations and Pain Points:**  
+Alex is motivated by a desire to promote science awareness and education.  
+She seeks unique designs that resonate with her interests and spark curiosity.  
+Her pain points include finding quality apparel that is eco-friendly and ensuring a reliable shopping experience.
+
+**Information and Decision-Making Preferences:**  
+Alex stays informed about new products and trends through social media and science blogs.  
+She values customer reviews and looks for transparent pricing and quality guarantees.  
+Alex appreciates brands that engage with their audience and share educational content.
+
+**Key Challenges:**  
+Identifying brands that consistently offer high-quality, science-themed apparel.  
+Balancing her budget with the desire for unique and sustainable products.  
+Navigating the online shopping experience efficiently to find what she desires.
+
+**Preferred Solutions:**  
+Alex looks for brands that prioritize sustainability and creativity in their designs.  
+She prefers shopping from e-commerce stores that offer a variety of choices and transparent policies on returns and exchanges.  
+Additionally, she appreciates brands that engage their audience with educational content related to science.
+
+### 😟Problems
+
+😟#problem I need unique t-shirt designs that reflect scientific themes #pain  
+I want to showcase my interests in science through fun and creative apparel.
+
+😟#problem I have budget constraints for purchasing clothing #pain  
+Finding affordable yet quality t-shirts is essential for my shopping experience.
+
+😟#problem I’m concerned about the environmental impact of my purchases #gain  
+I want to support brands that prioritize sustainability and ethical production practices.
+
+😟#problem I need a reliable online shopping experience #pain  
+Navigating websites and receiving timely deliveries are crucial for my satisfaction.
+
+😟#problem I prefer to support small businesses rather than large corporations #pain  
+I want to contribute to smaller brands that share my passion for science and creativity.
+
+😟#problem I’m struggling to find a brand that resonates with my values #pain  
+It’s important for me to connect with brands that align with my interests in science and education.
+
+😟#problem I need clear information about sizing and product quality #pain  
+I want to ensure that I’m getting a product that fits well and meets my expectations.
+
+😟#problem I want to engage with brands that share educational content #gain  
+I appreciate when brands provide value beyond just selling products, such as educational insights.
+
+### 💎Value proposition
+
+💎#value Unique and Fun Designs  
+The e-commerce store offers a wide range of creative t-shirt designs that blend humor and science, allowing customers to express their passion for scientific topics in a fun way.
+
+💎#value Affordable Pricing  
+The store provides competitive pricing options, making it accessible for students and science enthusiasts to purchase unique apparel without breaking the bank.
+
+💎#value Eco-Friendly Options  
+Sourcing materials from sustainable suppliers ensures that the t-shirts are produced with minimal environmental impact, appealing to environmentally conscious consumers.
+
+💎#value Engaging Customer Experience  
+The store provides an interactive shopping experience, with educational content related to science themes and promotions that encourage customer engagement.
+
+### 📣Messages
+
+📣#message Express Your Love for Science with Unique Apparel  
+"Show off your passion for science with our fun and creative t-shirt designs that make learning enjoyable and stylish!"
+
+📣#message Affordable and Sustainable Science Fashion  
+"Explore our collection of eco-friendly t-shirts at great prices, making it easy to wear your love for science while caring for the planet."
+
+📣#message Join Our Community of Science Enthusiasts  
+"Become part of a growing community that celebrates science, shares knowledge, and enjoys engaging conversations through our unique apparel!"
+
+### 🎙️Channels
+
+🎙️#channel E-commerce website  
+The primary platform for showcasing products, processing orders, and managing customer interactions.
+
+🎙️#channel Social media platforms  
+Utilizing platforms like Instagram and Facebook to engage with customers, share designs, and promote special offers.
+
+🎙️#channel Email marketing  
+Sending newsletters and promotional emails to keep customers informed about new product launches and discounts.
+
+🎙️#channel Influencer partnerships  
+Collaborating with science influencers and educators to expand brand reach and credibility within the target market.
+
+🎙️#channel Online marketplaces  
+Utilizing platforms like Etsy or Amazon to increase visibility and reach a broader audience interested in themed apparel.
+
+🎙️#channel Science events and fairs  
+Participating in science fairs and educational events to showcase products and engage directly with potential customers.
+
+### 🤝Relationship
+
+🤝#relationship Community Engagement  
+Building strong connections with customers by fostering a community around science and education through social media interactions and events.
+
+🤝#relationship Customer Feedback and Support  
+Encouraging customer feedback to improve products and providing excellent support to enhance the shopping experience.
+
+🤝#relationship Loyalty Programs  
+Implementing loyalty programs that reward repeat customers with discounts, exclusive designs, and early access to new products.
+
+### ⭐Assets
+
+⭐#asset Unique Product Designs  
+A portfolio of creative t-shirt designs that are aligned with various scientific themes, appealing to a wide audience.
+
+⭐#asset Strong Online Presence  
+An established e-commerce website and active social media profiles that promote engagement and visibility.
+
+⭐#asset Supplier Relationships  
+Strong partnerships with reliable suppliers who provide eco-friendly materials for t-shirt production.
+
+⭐#asset Customer Database  
+A growing list of engaged customers that can be targeted for marketing campaigns and special promotions.
+
+### 🛒Transactions
+
+🛒#transaction Online Sales  
+The primary mode of transaction, where customers browse, select, and purchase products through the e-commerce website.
+
+### 👁️Perceptions
+
+👁️#perception Creative and Unique Designs #see  
+Customers recognize the brand for its innovative and fun t-shirt designs that stand out in the market.
+
+👁️#perception Commitment to Sustainability #see  
+The brand is perceived as environmentally responsible, appealing to consumers who prioritize eco-friendly practices.
+
+👁️#perception Engaging Community and Educational Focus #hear  
+Customers appreciate the brand’s efforts to create a community around science and education, enhancing brand loyalty.
+
+### 😐Emotions
+
+😐#emotion Excitement #feel  
+The thrill of discovering new t-shirt designs that resonate with personal interests in science and education.
+
+😐#emotion Pride #feel  
+Wearing apparel that reflects one’s passion for science and supports a brand that values sustainability and creativity.
+
+😐#emotion Curiosity #feel  
+An eagerness to explore the stories or themes behind each design, fostering a deeper connection with the brand.
+
+😐#emotion Satisfaction #feel  
+A positive feeling associated with receiving quality products that meet expectations for design and sustainability.
+
+### 🦾Behaviors
+
+🦾#behavior Sharing designs on social media  
+Customers often share their favorite designs on social media platforms, increasing brand visibility and engagement.
+
+🦾#behavior Participating in brand events  
+Engaging with the brand during science fairs or events, showcasing their enthusiasm for science and education.
+
+🦾#behavior Seeking recommendations  
+Customers frequently ask for recommendations on designs or brands that align with their interests in science.
+
+🦾#behavior Providing feedback  
+Customers leave reviews and feedback on their purchases, helping the brand improve and adapt to consumer needs.
+
+### ✈️Journey
+
+✈️#journey Awareness  
+The customer becomes aware of the e-commerce store through social media ads, influencer promotions, or word-of-mouth.
+
+✈️#journey Research and Exploration  
+The customer visits the e-commerce website and explores the available t-shirt designs, reading product descriptions and reviews.
+
+✈️#journey Initial Contact  
+The customer signs up for the newsletter to receive updates on new designs and promotional offers.
+
+✈️#journey Purchase Decision  
+After browsing and comparing options, the customer decides to purchase a t-shirt that resonates with their scientific interests.
+
+✈️#journey Post-Purchase Engagement  
+The customer receives a thank-you email with information about the product and encourages sharing their purchase on social media.
+
+✈️#journey Repeat Purchase  
+Satisfied with their initial purchase, the customer returns to the website for more unique designs, joining the loyalty program for discounts.
+
+# 📂Solutions
+
+## 💊Product
+
+💊#solution Fun Science T-Shirts
+
+An e-commerce store offering a diverse range of t-shirts that feature fun and creative designs related to various scientific topics. The collection includes physics, chemistry, biology, and space-themed shirts that cater to science enthusiasts of all ages.
+
+**Other solutions**
+
+💊#solution Customizable T-Shirts
+
+Customers can personalize their t-shirts with custom designs, text, or colors, allowing for a unique expression of their scientific interests.
+
+💊#solution Educational Collaborations
+
+Partnering with educational institutions to create special edition t-shirts that promote science literacy and awareness among students and teachers.
+
+
+### 📄Components
+
+- T-shirt materials (cotton, blends)
+- Printing technology (screen printing, digital printing)
+- E-commerce platform (website)
+- Design software
+- Inventory management system
+- Shipping and logistics
+- Customer service software
+- Payment processing system
+- Marketing tools (social media, email campaigns)
+
+
+### 🌟Features
+
+🌟#feature Unique Designs #benefit  
+Innovative and eye-catching designs that appeal to science lovers, making a statement while promoting scientific knowledge.
+
+🌟#feature High-Quality Materials #benefit  
+T-shirts made from soft, durable fabrics that ensure comfort and longevity, suitable for daily wear.
+
+🌟#feature Eco-Friendly Options #reliever  
+Offering t-shirts made from organic cotton or recycled materials to promote sustainability and environmental awareness.
+
+🌟#feature User-Friendly Online Store #benefit  
+An intuitive e-commerce platform that allows customers to easily browse, select, and purchase their favorite t-shirts.
+
+🌟#feature Size and Fit Variety #benefit  
+A wide range of sizes and fits to accommodate different body types, ensuring everyone can find their perfect shirt.
+
+🌟#feature Custom Design Tool #reliever  
+An online tool that lets customers create their own designs, fostering creativity and personalized shopping experiences.
+
+🌟#feature Frequent Promotions #benefit  
+Regular discounts, seasonal sales, and special offers to encourage customer engagement and drive sales.
+
+🌟#feature Community Engagement #benefit  
+Building a community of science enthusiasts through social media interactions, contests, and events.
+
+
+### 📄Roadmap
+
+📦#release Version 1: Online Store Launch  
+Establish the e-commerce platform with a curated selection of t-shirts and basic functionality for customer purchases.
+
+📦#release Version 2: Marketing and Outreach  
+Implement marketing strategies to reach target audiences, including social media advertising, influencer partnerships, and email campaigns.
+
+📦#release Version 3: Product Expansion  
+Introduce new designs and categories, including seasonal themes and collaborations with artists or scientists.
+
+📦#release Version 4: Customization Features  
+Launch the custom design tool that allows customers to create personalized t-shirt designs.
+
+📦#release Version 5: Community Building  
+Develop an online community through blogs, newsletters, and social media, fostering a connection among science enthusiasts.
+
+📦#release Version 6: Sustainability Initiatives  
+Introduce eco-friendly product lines and practices, focusing on sustainable sourcing and packaging.
+
+
+### 📄Pricing
+
+The e-commerce store adopts a value-based pricing strategy, ensuring that the prices reflect the quality of materials and uniqueness of designs while remaining competitive within the market. 
+
+The average price for a standard t-shirt is set around $25, with customized t-shirts starting at $30. Limited edition or collaborative designs may be priced higher, around $35-$50, depending on exclusivity and production costs.
+
+Promotional pricing strategies include discounts for bulk purchases, seasonal sales events, and loyalty rewards for repeat customers. Additionally, shipping costs are calculated based on location, ensuring transparency and affordability.
+
+
+### 🛍️Offerings
+
+🛍️#offering Standard T-Shirts  
+A variety of fun designs related to different scientific topics available in multiple sizes and colors. Priced at $25 each, with bulk purchase discounts available.
+
+🛍️#offering Custom T-Shirts  
+Personalized t-shirts where customers can upload their designs or choose from templates. Starting at $30 per shirt, with additional fees for complex designs.
+
+🛍️#offering Limited Edition T-Shirts  
+Exclusive designs created in collaboration with artists or scientists, priced between $35 and $50. Available for a limited time to encourage urgency.
+
+🛍️#offering Seasonal Collections  
+Special themed collections launched during holidays or significant scientific events, priced at $25-$40 depending on the design and materials.
+
+
+### 📄Brochure
+
+Image:  
+![fun-science-tshirts](https://example.com/fun-science-tshirts.jpg)
+
+Title: "Fun Science T-Shirts: Wear Your Passion for Science"
+
+Subtitle: "Explore the Universe of Scientific Knowledge through Fashion"
+
+Our Mission and Vision: "At Fun Science T-Shirts, our mission is to make science engaging and accessible through creative apparel. We believe that science can be fun and fashionable, inspiring curiosity and conversation."
+
+Our Products: "Discover a diverse range of t-shirts that celebrate scientific concepts, from physics to biology, designed for everyone who loves science."
+
+Customization: "Bring your ideas to life with our custom design tool, allowing you to create a t-shirt that reflects your unique scientific interests."
+
+Community Impact: "Join a community of science lovers and educators dedicated to promoting science literacy through fun and engaging apparel."
+
+Why Choose Us?  
+- Unique designs that spark conversation  
+- High-quality, comfortable materials  
+- Sustainable options to care for our planet  
+- A passionate community of science enthusiasts
+
+Call to Action: "Explore our collection today and wear your passion for science! Visit us at www.funsciencetshirts.com"
+
+Contact Information: "Email: support@funsciencetshirts.com | Phone: (123) 456-7890"
+
+
+## 📂Marketing
+
+The marketing strategy for the e-commerce store focuses on leveraging digital channels to connect with science enthusiasts and promote the unique t-shirt offerings. 
+
+### 📄Naming
+
+The store name "Fun Science T-Shirts" encapsulates the core mission of blending educational themes with enjoyable fashion. The playful use of "fun" conveys an approachable and engaging brand identity, making it appealing to both children and adults.
+
+### 📄Branding
+
+Branding efforts revolve around creativity, fun, and educational value. Key elements include:
+
+- **Visual Identity**: A vibrant and playful logo featuring scientific icons like atoms, test tubes, and planets, reflecting the store's focus on science.
+- **Color Palette**: Bright and cheerful colors that evoke excitement and curiosity, designed to attract a diverse audience.
+- **Tone of Voice**: Friendly, informative, and approachable, resonating with the target audience and making science relatable.
+
+### 📄Visual identity
+
+Color Scheme  
+The visual identity is characterized by a bright and engaging color palette, including **blue (#007BFF)**, **green (#28A745)**, and **yellow (#FFC107)**. These colors represent creativity, knowledge, and optimism.
+
+Typography  
+A modern, sans-serif font like **"Montserrat"** is used for branding materials, providing clarity and a contemporary feel, enhancing readability.
+
+Imagery  
+Imagery often incorporates playful graphics related to science, such as illustrations of atoms, planets, and laboratory equipment. This reinforces the brand's focus on making science fun and engaging.
+
+### 📄Media plan
+
+**Objective:**  
+- Increase brand awareness and drive traffic to the online store among science enthusiasts and educators.
+
+**Target Audience:**  
+- **Primary Audience:** Science enthusiasts, students, and educators seeking creative apparel.  
+- **Secondary Audience:** Parents looking for educational and fun clothing options for their children.
+
+**Key Message:**  
+- "Celebrate your love for science with our fun and unique t-shirts! Wear your passion and inspire others."
+
+**Media Channels and Strategy:**  
+
+| **Channel**       | **Tactics**                                                                 | **Budget** |
+|--------------------|-----------------------------------------------------------------------------|------------|
+| **Social Media**   | - Regular posts showcasing new designs and user-generated content.         <br> - Run targeted ads on Facebook and Instagram to reach science enthusiasts. | $30,000    |
+| **Influencer Marketing** | - Collaborate with science influencers and educators to promote products. <br> - Host giveaways to increase engagement and brand visibility. | $20,000    |
+| **Content Marketing** | - Create blog posts and videos about science topics related to t-shirt designs. <br> - Share educational content on platforms like YouTube. | $15,000    |
+| **Email Marketing**  | - Build a subscriber list and send regular newsletters featuring new products and promotions. | $10,000    |
+
+**Timing and Schedule:**  
+- **Month 1:** Launch social media campaigns and influencer partnerships to build initial awareness.  
+- **Month 2:** Begin email marketing campaigns and share educational content to engage the audience.  
+- **Month 3:** Run seasonal promotions and contests to drive traffic and sales.
+
+**Measurement and KPIs:**  
+- **Social Media:** Track engagement rates, follower growth, and hashtag usage (#FunScienceTShirts).  
+- **Influencer Marketing:** Measure reach and engagement from influencer posts and track referral traffic to the website.  
+- **Email Marketing:** Monitor open rates, click-through rates, and conversions from email campaigns.
+
+**Total Budget:**  
+- $75,000
+
+
+## 📂Communication
+
+The communication style of the e-commerce store emphasizes openness, creativity, and engagement with customers. The brand aims to foster a community where science enthusiasts can connect and share their passion.
+
+### 📄Pitch
+
+Fun Science T-Shirts is an innovative e-commerce store dedicated to making science fun and accessible through creative apparel. Our unique t-shirt designs celebrate scientific topics, engaging customers and encouraging curiosity. We believe that fashion can be a medium for education, sparking conversations and inspiring the next generation of scientists.
+
+### 📄Business brochure
+
+[Fun Science T-Shirts brochure](https://www.funsctiencetshirts.com/media/brochure.pdf)
+
+### 📄Web
+
+The Fun Science T-Shirts website [funsctiencetshirts.com](https://www.funsctiencetshirts.com) serves as a central hub for showcasing our creative t-shirt designs and engaging with customers.
+
+The website features a user-friendly interface built on a robust e-commerce platform, allowing easy navigation and seamless shopping experiences. It incorporates high-quality visuals of products, detailed descriptions, and customer reviews to enhance confidence in purchasing.
+
+The primary objectives of the website include:
+
+- **Showcasing Products**: Presenting the diverse range of t-shirts and highlighting their unique designs.
+- **Educating Customers**: Providing information about scientific topics related to the designs, enhancing the educational value of the apparel.
+- **Facilitating Sales**: Streamlining the purchase process with secure payment options and efficient checkout procedures.
+- **Community Engagement**: Encouraging customers to share their t-shirt experiences on social media and participate in brand-related events.
+
+### 📄Storytelling
+
+Persona Jamie Green (Science Teacher)
+
+**Fun Science T-Shirts: Bringing Science to Life in the Classroom**
+
+Jamie Green is a passionate science teacher who seeks innovative ways to engage her students. She struggles with making complex scientific concepts relatable and fun for her class.
+
+When she discovered Fun Science T-Shirts, she found the perfect solution. The unique and colorful t-shirts featuring scientific designs not only resonate with her students but also spark their curiosity about science. Jamie uses the shirts as conversation starters, encouraging discussions about the science behind the designs.
+
+Now, Jamie proudly wears her Fun Science T-Shirts in class, inspiring her students to embrace science with enthusiasm and creativity.
+
+### 📄Presentations
+
+**Slide 1: Introduction**  
+- **Fun Science T-Shirts: Making Science Fashionable**  
+- Founded to merge science education with fun apparel, appealing to enthusiasts of all ages.
+
+**Slide 2: Problem**  
+- **Limited Interest in Science**  
+- Many people find science intimidating or boring, leading to a lack of engagement.
+
+**Slide 3: Solution**  
+- **Engaging T-Shirt Designs**  
+- Fun designs that simplify complex scientific concepts and promote interest in science.
+
+**Slide 4: Product**  
+- **Versatile T-Shirt Collection**  
+- A wide variety of t-shirts covering topics from chemistry to astronomy, suitable for different audiences.
+
+**Slide 5: Competitive Advantages**  
+- **Unique Offerings**  
+  - Customization options for personalized apparel.  
+  - Commitment to quality and sustainability in production.  
+
+**Slide 6: Market Potential**  
+- **Growing Interest in Science Education**  
+  - Increasing demand for educational products that promote science literacy.
+
+**Slide 7: Business Model**  
+- **Diverse Revenue Streams**  
+  - Direct sales through the e-commerce platform, collaborations with schools, and community events.
+
+**Slide 8: Milestones Achieved**  
+- **Successful Launch and Initial Sales**  
+  - Positive customer feedback and engagement on social media platforms.
+
+**Slide 9: Financial Projections**  
+- **Sustainable Growth**  
+  - Projected increase in sales through marketing efforts and product expansion.
+
+**Slide 10: Team**  
+- **Dedicated Team with a Passion for Science**  
+  - A team comprising educators, designers, and marketing professionals committed to promoting science through apparel.
+
+# 📄Organization
+
+## 📂Business idea
+
+### 📄Inspiration
+
+🦋#inspiration Popular Science Communication
+
+The engaging styles of science communicators like Neil deGrasse Tyson and Bill Nye inspire the design and themes of the t-shirts, aiming to make science approachable and fun.
+
+🦋#inspiration Scientific Themes in Popular Culture
+
+Movies, TV shows, and books that incorporate scientific themes, such as "The Big Bang Theory" and "Interstellar," highlight the intersection of science and entertainment, serving as great inspiration for merchandise.
+
+🦋#inspiration Educational Initiatives
+
+Collaborations with educational initiatives and organizations that promote science literacy inspire designs that not only entertain but also educate the public about scientific concepts.
+
+### 📄Opportunity
+
+The opportunity for the e-commerce store lies in the growing trend of personalized and niche merchandise, particularly in the realm of science and education. By offering a diverse range of fun t-shirts that celebrate scientific achievements, theories, and humor, the store aims to capture the attention of both science enthusiasts and casual customers looking for unique clothing options.
+
+### 📄Business status
+
+The e-commerce store, established in 2023, has quickly gained traction in the niche market of science-themed apparel. The business utilizes an online platform to reach customers, showcasing a variety of t-shirt designs that blend humor with educational content. Initial sales have been promising, driven by a strong social media presence and partnerships with science influencers.
+
+### 📄Challenges
+
+🏆#challenge Market Competition
+
+Navigating a competitive landscape filled with other niche apparel brands and e-commerce stores that also target science enthusiasts.
+
+🏆#challenge Production and Sourcing
+
+Finding reliable suppliers and manufacturers that can produce high-quality t-shirts at competitive prices while maintaining ethical sourcing practices.
+
+🏆#challenge Brand Recognition
+
+Building brand recognition in a crowded marketplace, particularly among consumers who may not be aware of the store's unique offerings.
+
+🏆#challenge Inventory Management
+
+Managing inventory levels effectively to avoid overstocking or stockouts, particularly as trends in apparel can change rapidly.
+
+🏆#challenge Marketing Reach
+
+Developing effective marketing strategies to reach the target audience, including leveraging social media platforms and influencers to maximize visibility.
+
+## 📂Business objectives
+
+### 📄Mission
+
+The mission of the e-commerce store is to make science fun and accessible through creative t-shirt designs that inspire curiosity and promote scientific literacy.
+
+### 📄Vision
+
+The vision is to become the leading online destination for science-themed apparel, fostering a community of science enthusiasts while promoting education and awareness of scientific topics.
+
+### 🧠Organizational values
+
+🧠#organization_value Creativity
+
+Encouraging innovative and original designs that capture the essence of scientific concepts in an engaging manner.
+
+🧠#organization_value Quality
+
+Commitment to providing high-quality products that customers can wear with pride, ensuring durability and comfort.
+
+🧠#organization_value Education
+
+Promoting scientific literacy and awareness through apparel that sparks conversations and encourages learning.
+
+🧠#organization_value Community
+
+Fostering a sense of community among science enthusiasts and supporters by engaging with customers and collaborating with educational initiatives.
+
+### 🎯Organizational goals
+
+| #goal_organization /  (info) | Description | Units | Value | Term |
+| :---- | :---- | :---- | :---- | :---- |
+|  |  |  |  |  |
+
+| #goal /  (info) | Description | Units | Value | Term |
+| :---- | :---- | :---- | :---- | :---- |
+| 🎯#goal Increase sales revenue | Aim to increase overall sales revenue by expanding product lines and marketing efforts. | $ | 100,000 | Yearly |
+| 🎯#goal Grow customer base | Expand the customer base through targeted marketing campaigns and partnerships with educational institutions. | customers | 5,000 | Yearly |
+| 🎯#goal Enhance brand visibility | Increase brand visibility through social media engagement, influencer collaborations, and content marketing strategies. | followers | 50,000 | Yearly |
+| 🎯#goal Achieve customer satisfaction | Maintain high levels of customer satisfaction by ensuring quality products and excellent customer service. | % | 90% | Ongoing |
+
+## 📄Operations
+
+The e-commerce store operates through a streamlined online platform, focusing on user-friendly navigation and an engaging customer experience. The operations involve designing t-shirts, sourcing materials, managing inventory, processing orders, and handling customer service. Emphasis is placed on utilizing print-on-demand services to minimize upfront costs and reduce waste.
+
+### ⚙️Activities
+
+⚙️#work T-shirt design and development
+
+Creating unique and engaging designs that resonate with the target audience and reflect scientific themes.
+
+⚙️#work Supplier and manufacturer management
+
+Sourcing reliable suppliers for materials and managing relationships with print-on-demand manufacturers to ensure quality production.
+
+⚙️#work Order processing and fulfillment
+
+Handling order processing, ensuring timely fulfillment, and managing shipping logistics to deliver products to customers efficiently.
+
+⚙️#work Marketing and promotion
+
+Implementing marketing strategies, including social media campaigns and collaborations with influencers to reach potential customers.
+
+⚙️#work Customer service and support
+
+Providing excellent customer service to address inquiries, manage returns, and ensure customer satisfaction.
+
+### 👔Functions
+
+👔#function Design and creativity
+
+Responsible for creating innovative t-shirt designs that combine fun with educational elements to engage customers.
+
+👔#function E-commerce management
+
+Overseeing the online store's operations, ensuring a smooth user experience and efficient order processing.
+
+👔#function Marketing and outreach
+
+Developing and executing marketing strategies to promote the brand and attract customers through various channels.
+
+👔#function Customer engagement
+
+Building and maintaining relationships with customers through social media, newsletters, and community engagement initiatives.
+
+👔#function Financial management
+
+Managing the financial aspects of the business, including budgeting, pricing strategies, and expense tracking.
+
+### ⭐Resources
+
+🖥️#resource Design software
+
+Utilizing graphic design software and tools to create unique t-shirt designs and marketing materials.
+
+🖥️#resource E-commerce platform
+
+Employing a reliable e-commerce platform to facilitate online sales, order management, and customer interactions.
+
+🖥️#resource Marketing tools
+
+Leveraging digital marketing tools and analytics to track campaign performance and optimize outreach strategies.
+
+🖥️#resource Supplier network
+
+Establishing a network of suppliers and manufacturers to ensure quality materials and production capabilities.
+
+🖥️#resource Customer relationship management software
+
+Using CRM software to manage customer interactions, track sales, and analyze customer data for better engagement.
+
+## 👤Team
+
+These are the individuals who hold the most important positions in the company.
+
+👤#person Founder/Owner #visionary
+
+The founder and creative force behind the e-commerce store, responsible for overseeing operations, design, and strategic direction.
+
+👤#person Marketing Manager #strategist
+
+The marketing manager is responsible for developing and executing marketing strategies, managing social media, and engaging with customers.
+
+👤#person Customer Service Representative #support
+
+The customer service representative handles inquiries, manages returns, and ensures customer satisfaction.
+
+### 🎯Goals
+
+🎯#goal Grow personal skills in e-commerce management.
+
+🎯#goal Build a personal brand in the science communication community.
+
+🎯#goal Achieve work-life balance while managing the business.
+
+🎯#goal Leave a positive impact on science literacy through creative merchandising.
+
+🎯#goal Establish a network of partnerships with educational organizations.
+
+### 🔧Skills
+
+🔧#skill Graphic Design
+
+The ability to create visually appealing designs that resonate with the target audience and reflect scientific themes.
+
+🔧#skill Marketing Strategy
+
+Knowledge of digital marketing strategies to effectively promote products and engage customers.
+
+🔧#skill Customer Relations
+
+Strong interpersonal skills to provide excellent customer service and build lasting relationships with clients.
+
+🔧#skill E-commerce Management
+
+Understanding of e-commerce platforms and processes for managing online sales and order fulfillment.
+
+🔧#skill Project Management
+
+Ability to oversee multiple projects, from design to marketing, while ensuring timely execution and quality.
+
+### 👔Functions
+
+👔#function Design development
+
+Creating new t-shirt designs and promotional materials to align with the brand's mission.
+
+👔#function Marketing and promotion
+
+Developing marketing campaigns and strategies to reach the target audience effectively.
+
+👔#function Customer support
+
+Managing customer inquiries and issues, ensuring a positive shopping experience.
+
+👔#function Inventory management
+
+Overseeing inventory levels and coordinating with suppliers for timely production and fulfillment.
+
+👔#function Financial oversight
+
+Tracking financial performance and managing budgets for the business.
+
+### ➡️Contributions
+
+💵#contribution Creative Vision
+
+The founder's creative vision drives the development of unique t-shirt designs that resonate with science enthusiasts.
+
+💵#contribution Marketing Efforts
+
+Implementing effective marketing strategies to promote the brand and increase customer engagement.
+
+💵#contribution Customer Loyalty
+
+Building strong relationships with customers through exceptional service and quality products, leading to repeat business.
+
+💵#contribution Community Engagement
+
+Engaging with the science community and educational organizations to promote science literacy and awareness.
+
+💵#contribution Innovation in Merchandise
+
+Continuously innovating and expanding the product line to meet consumer interests and trends.
+
+### ⬅️Compensations
+
+💸#compensation Revenue from Sales
+
+The primary compensation for the founder and team comes from the revenue generated through t-shirt sales.
+
+💸#compensation Bonuses for Performance
+
+Potential bonuses tied to sales milestones and customer satisfaction metrics.
+
+💸#compensation Brand Equity
+
+Building brand equity over time as the business grows and gains recognition in the niche market.
+
+💸#compensation Opportunities for Expansion
+
+Future compensation may come from expanding product lines or entering new markets.
+
+### 🪪Positions
+
+🪪#position Graphic Designers
+
+Responsible for creating unique t-shirt designs and promotional materials.
+
+🪪#position Marketing Specialists
+
+Focus on developing and executing marketing strategies to promote the brand and reach target audiences.
+
+🪪#position Customer Service Representatives
+
+Handle customer inquiries, manage returns, and ensure customer satisfaction.
+
+🪪#position E-commerce Managers
+
+Oversee the online store's operations and ensure a seamless shopping experience for customers.
+
+🪪#position Finance Managers
+
+Manage the financial aspects of the business, including budgeting, pricing strategies, and expense tracking.
+
+## 📄Project plan
+
+The project strategy is designed to establish a strong online presence, build a loyal customer base, and expand product offerings over key milestones.
+
+### 🗓️Phases
+
+🗓️#phase 1 Launch Phase
+
+Establish the online store, create initial designs, and implement marketing strategies to drive awareness.
+
+🗓️#phase 2 Growth Phase
+
+Expand product lines, increase marketing efforts, and engage with the community to boost sales.
+
+🗓️#phase 3 Sustainability Phase
+
+Focus on building brand loyalty, optimizing operations, and exploring new markets for growth.
+
+### 🏁Milestones
+
+🏁#milestone Launch of E-commerce Website
+
+Successfully launching the online store and offering the first collection of t-shirts to customers.
+
+🏁#milestone First 1,000 Sales
+
+Reaching the milestone of 1,000 t-shirts sold, demonstrating market interest and demand.
+
+🏁#milestone Establishing Social Media Presence
+
+Achieving significant follower growth on social media platforms and engaging with the community.
+
+🏁#milestone Collaborations with Educational Organizations
+
+Securing partnerships with educational organizations to promote science literacy and expand reach.
+
+🏁#milestone Achieving Positive Customer Reviews
+
+Receiving positive feedback and reviews from customers, reflecting satisfaction with products and service.
+
+## 📐Metrics
+
+📐#metric Revenue Growth
+
+Monitoring the overall revenue growth of the business over time to assess performance.
+
+📐#metric Customer Acquisition Cost
+
+Calculating the cost of acquiring new customers through marketing efforts.
+
+📐#metric Customer Retention Rate
+
+Tracking the percentage of repeat customers to gauge satisfaction and loyalty.
+
+📐#metric Social Media Engagement
+
+Analyzing engagement metrics on social media platforms to assess marketing effectiveness.
+
+📐#metric Inventory Turnover Rate
+
+Evaluating how quickly inventory is sold and replaced to manage stock effectively.
+
+📐#metric Net Promoter Score
+
+Measuring customer satisfaction and likelihood of recommending the brand to others.
+
+📐#metric Website Traffic
+
+Monitoring the number of visitors to the e-commerce website to assess marketing impact.
+
+📐#metric Return on Investment
+
+Calculating the ROI for marketing campaigns to evaluate their effectiveness and profitability.
+
+📐#metric Brand Recognition
+
+Assessing the growth of brand recognition through surveys and market research.
+
+## 📂Finance
+
+The financial strategy focuses on reinvesting revenue into growth initiatives, optimizing operations, and managing costs effectively.
+
+### 💰Revenue
+
+💰#revenue T-shirt Sales
+
+The primary revenue stream comes from the sale of fun science-themed t-shirts through the e-commerce platform.
+
+💰#revenue Collaborations and Sponsorships
+
+Generating additional revenue through collaborations with educational organizations and sponsorship opportunities.
+
+💰#revenue Merchandise Licensing
+
+Potential revenue from licensing designs to other companies or organizations interested in science-themed merchandise.
+
+### 📄Life Time Value
+
+Calculating the Lifetime Value (LTV) for a typical customer involves estimating the average revenue generated from a customer over their relationship with the store.
+
+**1. Average Purchase Value (APV)**  
+Assuming an average purchase value of $30 per t-shirt.
+
+**2. Purchase Frequency**  
+Estimating that a typical customer makes 2 purchases per year.
+
+**3. Customer Lifespan**  
+Assuming an average customer lifespan of 5 years.
+
+**4. Calculate LTV**  
+\[ \text{LTV} = \text{APV} \times \text{Purchase Frequency} \times \text{Customer Lifespan} \]  
+\[ \text{LTV} = 30 \times 2 \times 5 = 300 \]  
+
+The estimated LTV for a typical customer would be $300, indicating the potential revenue generated from a loyal customer over their relationship with the store.
+
+### 💸Costs
+
+💸#cost Production Costs
+
+Costs associated with producing t-shirts, including materials, printing, and labor.
+
+💸#cost Marketing Costs
+
+Expenses incurred for marketing and advertising efforts to promote the brand and attract customers.
+
+💸#cost Operational Costs
+
+Costs related to running the e-commerce platform, including hosting, payment processing, and customer service.
+
+💸#cost Shipping and Fulfillment Costs
+
+Expenses associated with shipping products to customers and managing order fulfillment.
+
+💸#cost Inventory Costs
+
+Costs related to managing inventory levels and potential storage costs for unsold products.
+
+💸#cost Returns and Refunds
+
+Managing costs associated with product returns and refunds.
+
+### 📄Customer Acquisition Cost
+
+To calculate the Customer Acquisition Cost (CAC) for acquiring a new customer, we consider the various marketing efforts involved.
+
+**Scenario**  
+Assuming the e-commerce store spends on digital marketing campaigns, social media promotions, and influencer collaborations.
+
+**Costs**  
+1. **Marketing Campaigns**: $5,000  
+2. **Influencer Collaborations**: $2,000  
+3. **Social Media Advertising**: $3,000  
+4. **Email Marketing**: $1,000  
+
+**Total Acquisition Cost**:  
+Total Acquisition Cost = $5,000 + $2,000 + $3,000 + $1,000 = $11,000
+
+**Number of New Customers Acquired**  
+Assuming the marketing efforts successfully acquire 500 new customers.
+
+**Calculation of CAC**  
+CAC = Total Acquisition Cost / Number of New Customers Acquired  
+CAC = $11,000 / 500 = $22
+
+The estimated CAC for acquiring a new customer is $22, representing the cost of marketing efforts to attract a single customer.
+
+### 📄Unit economics
+
+Calculating the unit economics of a t-shirt sale helps in understanding profitability.
+
+**Revenue per T-shirt**  
+Assuming an average sale price of $30 per t-shirt.
+
+**Cost per T-shirt**  
+1. **Production Cost**: $10  
+2. **Shipping Cost**: $5  
+3. **Marketing Cost Allocation**: $2  
+
+**Total Cost per T-shirt**:  
+Total Cost = Production Cost + Shipping Cost + Marketing Cost Allocation  
+Total Cost = $10 + $5 + $2 = $17
+
+**Profit per T-shirt**:  
+Profit = Revenue - Total Cost  
+Profit = $30 - $17 = $13
+
+**Margin per T-shirt**:  
+Margin = Profit / Revenue  
+Margin = $13 / $30 = 43.33%
+
+The unit economics indicate that each t-shirt sale generates a profit of approximately $13, with a profit margin of around 43.33%.
+
+### 💵Funding sources
+
+The e-commerce store has utilized various funding sources to establish and grow its business:
+
+💵#funding Personal Investment
+
+The founder has invested personal savings into the business to cover initial startup costs and inventory purchases.
+
+💵#funding Crowdfunding Campaigns
+
+Exploring crowdfunding platforms to raise awareness and funds for product development and marketing initiatives.
+
+💵#funding Grants for Small Businesses
+
+Applying for grants aimed at supporting small businesses and startups, particularly those focused on education and community engagement.
+
+💵#funding Partnerships with Educational Organizations
+
+Seeking partnerships with educational organizations that may provide funding or sponsorship in exchange for collaborative efforts.
+
+💵#funding Revenue Reinvestment
+
+Reinvesting profits generated from sales back into the business for further growth and expansion.
+
+### 💼Shareholders
+
+**E-commerce Store Cap Table**
+
+| **Shareholder**       | **Role**             | **Ownership (%)** | **Shares**  |
+|-----------------------|----------------------|-------------------|-------------|
+| **Founder**           | Owner                 | 70%               | 7,000       |
+| **Early Investors**   | Angel Investors       | 20%               | 2,000       |
+| **Marketing Manager**  | Key Employee         | 5%                | 500         |
+| **Other Employees**   | Team Members          | 5%                | 500         |
+| **Total**             |                      | **100%**          | **10,000**  |
+
+### 📄Projections
+
+**Basic Cash Flow Projections (in $ thousands)**
+
+| Category                        | Phase 1 | Phase 2 | Phase 3 |
+|---------------------------------|---------|---------|---------|
+| **Cash Inflows**                |         |         |         |
+| Revenue from T-shirt Sales      | 150     | 300     | 500     |
+| Revenue from Collaborations      | 0       | 50      | 100     |
+| **Total Inflows**               | 150     | 350     | 600     |
+| **Cash Outflows**               |         |         |         |
+| Production Costs                | -50     | -100    | -150    |
+| Marketing Expenses               | -30     | -60     | -100    |
+| Operational Costs               | -20     | -30     | -40     |
+| Shipping and Fulfillment Costs   | -10     | -20     | -30     |
+| **Total Outflows**              | -110    | -210    | -320    |
+| **Net Cash Flow**               | 40      | 140     | 280     |
+| **Cumulative Cash Flow**        | 40      | 180     | 460     |
+
+**Explanation**  
+The cash inflows represent the revenue generated from t-shirt sales and collaborations, increasing as the business grows. The cash outflows include production, marketing, operational, and shipping costs. The net cash flow indicates the surplus generated each phase, contributing to the cumulative cash flow.
+
+## 📂Legal
+
+### 📄Legal issues
+
+📜#legal_issue Copyright and Trademark
+
+Ensuring that all t-shirt designs and branding comply with copyright and trademark regulations to avoid legal disputes.
+
+📜#legal_issue E-commerce Regulations
+
+Adhering to e-commerce regulations, including consumer protection laws, data privacy, and payment security standards.
+
+📜#legal_issue Sales Tax Compliance
+
+Understanding and complying with sales tax regulations across different states and jurisdictions where products are sold.
+
+📜#legal_issue Shipping Regulations
+
+Navigating shipping regulations and restrictions, particularly for international sales and customs compliance.
+
+📜#legal_issue Labor Laws
+
+Ensuring compliance with labor laws if hiring employees or contractors for various functions within the business.
+
+# 📂Analysis
+
+## 🔮Assumptions
+
+🔮#assumption Target market engagement  
+The target market for fun scientific t-shirts includes students, educators, and science enthusiasts who appreciate humor and education.
+
+🔮#assumption Trend towards casual wear  
+There is a growing trend of casual and comfortable clothing, with consumers increasingly seeking unique and themed apparel.
+
+🔮#assumption Online shopping preference  
+Consumers prefer online shopping for convenience, especially during and after the pandemic, leading to increased sales in e-commerce.
+
+🔮#assumption Social media influence  
+Social media platforms significantly influence purchasing decisions, especially among younger demographics who share and promote unique apparel.
+
+## 🚨Risks
+
+🚨#risk Market saturation  
+The t-shirt market is highly saturated, leading to intense competition and challenges in standing out.
+
+🚨#risk Supply chain disruptions  
+Disruptions in the supply chain can affect the availability of materials and timely delivery of products.
+
+🚨#risk Changing consumer preferences  
+Consumer preferences can change quickly, and failing to adapt designs and offerings may lead to decreased sales.
+
+🚨#risk Pricing pressures  
+Competitive pricing in the e-commerce market may force the business to reduce prices, impacting profitability.
+
+🚨#risk Brand reputation  
+Negative customer experiences or reviews can significantly harm brand reputation and affect future sales.
+
+## 📄Suggestions
+
+- **Enhance online presence**: Invest in SEO and targeted social media advertising to reach the target audience effectively.
+- **Collaborate with influencers**: Partner with science influencers and educators to promote the t-shirts and increase visibility.
+- **Diversify product offerings**: Consider expanding the product line to include other apparel or accessories related to scientific themes.
+- **Engage in community events**: Participate in science fairs or educational events to directly engage with the target market and promote products.
+
+## 📄SWOT
+
+**🚀 Strengths**
+
+🚀#strength Unique designs  
+Creative and humorous designs that appeal to science enthusiasts and students.
+
+🚀#strength Niche market  
+Focuses on a specific niche that may have less direct competition compared to general apparel.
+
+🚀#strength E-commerce model  
+Convenient online shopping experience that caters to a broader audience.
+
+**🛠️ Weaknesses**
+
+🛠️#weakness Limited brand recognition  
+As a new entrant in the market, the brand may struggle with recognition and trust among consumers.
+
+🛠️#weakness Dependence on trends  
+Reliance on current trends and fads can lead to volatility in sales.
+
+🛠️#weakness Inventory management  
+Challenges in managing inventory levels, especially with seasonal designs.
+
+**🌍 Opportunities**
+
+🌍#opportunity Educational partnerships  
+Collaborating with schools and educational institutions for bulk orders or custom designs.
+
+🌍#opportunity Expansion into international markets  
+Growing demand for unique apparel in international markets presents expansion opportunities.
+
+🌍#opportunity Eco-friendly options  
+Introducing eco-friendly or sustainably sourced materials could attract environmentally conscious consumers.
+
+**⚠️ Threats**
+
+⚠️#threat Intense competition  
+Numerous competitors in the t-shirt and apparel space, including established brands and new entrants.
+
+⚠️#threat Economic downturns  
+Economic challenges may lead consumers to cut discretionary spending on apparel.
+
+⚠️#threat Intellectual property issues  
+Potential risks related to copyright or trademark infringements with designs.
+
+## 📄Unfair advantage
+
+The e-commerce store's "unfair advantage" lies in its ability to combine fun and educational elements in its t-shirt designs, tapping into a niche market that values both humor and science. Additionally, the agile nature of an online business allows for rapid adaptation to trends, enabling the store to quickly introduce new designs that resonate with the target audience while minimizing overhead costs associated with physical retail spaces.
+
+# 📂Validation
+
+The e-commerce store validates the assumptions of its business model through a comprehensive strategy that includes market analysis, customer engagement, iterative product testing, proactive marketing campaigns, and strategic partnerships.
+
+## 📄Coherence
+
+The business model is coherent as it integrates various elements, including product offerings, target audience, marketing strategies, and sales channels. It aligns with the overall mission of promoting scientific knowledge and enthusiasm through fun and engaging t-shirt designs. 
+
+## 🧪Experiments
+
+🧪#experiment Product Design Validation
+
+Assumption: Fun and scientifically themed t-shirts will attract a specific audience interested in science.
+
+Experiment: Conduct surveys and focus groups to gather feedback on t-shirt designs and themes before launching products.
+
+Metric: Customer feedback scores and design preference rankings.
+
+🧪#experiment Market Demand Assessment
+
+Assumption: There is a growing demand for unique, science-themed apparel.
+
+Experiment: Run a limited-time marketing campaign on social media platforms to gauge interest and track sales of initial product offerings.
+
+Metric: Sales volume and engagement metrics from social media campaigns.
+
+🧪#experiment Customer Retention Strategy
+
+Risk: Retaining customers in the competitive e-commerce market is challenging.
+
+Experiment: Implement a loyalty program and track customer purchase frequency and retention rates over a six-month period.
+
+Metric: Customer retention rate and average order value from repeat customers.
+`;
+
+    document.getElementById("document").textContent = markdownDocument;
+
+
+    function toggleSection(sectionId) {
+      // Get all sections
+      const sections = document.querySelectorAll('.content-section');
+
+      // Hide all sections except the one clicked
+      sections.forEach(section => {
+        if (section.id === sectionId) {
+          section.classList.toggle('hidden'); // Toggle visibility
+        } else {
+          section.classList.add('hidden'); // Ensure others are hidden
+        }
+      });
+    }
+
+    const documentText = document.getElementById("document").textContent.trim();
+
+    const filterContainer = document.getElementById("filter-container");
+    const resultContainer = document.getElementById("result-container");
+
+    const parseMarkdown = (text) => {
+      const lines = text.split("\n").map(line => line.trim());
+      const parsedData = [];
+      let currentBlock = null;
+
+      lines.forEach(line => {
+        if (line.startsWith("#")) {
+          if (currentBlock) {
+            parsedData.push(currentBlock);
+          }
+          currentBlock = {
+            header: line,
+            content: "",
+            tags: []
+          };
+        } else if (currentBlock) {
+          currentBlock.content += line + "\n";
+          const tagMatch = line.match(/#(\S+)/g);
+          if (tagMatch) {
+            currentBlock.tags.push(...tagMatch.map(tag => tag.replace("#", "")));
+          }
+        }
+      });
+      if (currentBlock) {
+        parsedData.push(currentBlock);
+      }
+
+      return parsedData;
+    };
+
+    const parsedDocument = parseMarkdown(documentText);
+
+    const getAllTags = (data) => {
+      const tags = new Set();
+      data.forEach(block => block.tags.forEach(tag => tags.add(tag)));
+      return Array.from(tags);
+    };
+
+    const addFilter = () => {
+      const filterDiv = document.createElement("div");
+      filterDiv.className = "filter";
+
+      const select = document.createElement("select");
+      select.className = "border rounded-lg p-2 w-full";
+
+      const optionDefault = document.createElement("option");
+      optionDefault.value = "";
+      optionDefault.textContent = "Select Tag";
+      select.appendChild(optionDefault);
+
+      const tags = getAllTags(parsedDocument);
+      tags.forEach(tag => {
+        const option = document.createElement("option");
+        option.value = tag;
+        option.textContent = tag;
+        select.appendChild(option);
+      });
+
+      filterDiv.appendChild(select);
+      filterContainer.appendChild(filterDiv);
+    };
+
+    const applyFilters = () => {
+      const selectedTags = Array.from(filterContainer.querySelectorAll("select"))
+        .map(select => select.value)
+        .filter(value => value);
+
+      const filteredResults = selectedTags.length === 0
+        ? parsedDocument
+        : parsedDocument.filter(block =>
+          selectedTags.every(tag => block.tags.includes(tag))
+        );
+
+      resultContainer.innerHTML = "";
+
+      if (filteredResults.length === 0) {
+        resultContainer.textContent = "No results match the selected filters.";
+      } else {
+        filteredResults.forEach(block => {
+          const div = document.createElement("div");
+          div.className = "p-4 bg-white border border-gray-300 rounded-lg";
+          div.innerHTML = `
+                <h4 class="font-bold">${block.header}</h4>
+                <pre class="text-sm bg-gray-100 p-2 rounded-lg">${block.content.trim()}</pre>
+            `;
+          resultContainer.appendChild(div);
+        });
+      }
+    };
+
+    const parsedDocumentContainer = document.getElementById("parsed-document");
+    const parsedHTML = marked.parse(markdownDocument);
+    parsedDocumentContainer.innerHTML = parsedHTML;
+
+    document.addEventListener("DOMContentLoaded", () => {
+      parsedDocumentContainer.innerHTML = marked.parse(markdownDocument);
+    });
+
+
+
+    document.getElementById("add-filter").addEventListener("click", addFilter);
+    document.getElementById("apply-filters").addEventListener("click", applyFilters);
+
+    // Initialize with one filter and show all results initially
+    addFilter();
+    applyFilters();
+  </script>
+
+</body>
+
+</html>
