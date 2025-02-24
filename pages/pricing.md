@@ -1,15 +1,13 @@
 <!-- Hero Section -->
 <section class="flex flex-col lg:flex-row items-center lg:items-start justify-between py-16 px-4 space-y-8 lg:space-y-0">
     <div class="lg:w-1/2 text-center lg:text-left">
-        <!-- Hero Section -->
-    <section class="">
-        <h1 class="text-4xl font-bold text-gray-900 dark:text-gray-100">
-            <strong>AI generated business plan that helps you evolve your business</strong>
-        </h1>
-    </section>
-    <p class="text-gray-600 mt-4">Focus on thinking, not writing. Our 🤖 AI powered business plan software frees up your time from writing 
-    so you can focus on 🧠 designing, 📊 analyzing, ✅ validating, and 🚀 improving your business.</p>
-    <p class="text-gray-600 mt-4">Write a brief description of your business an Plastilinn will generate a comprehensive Business Plan document tailored to your project</p>
+        <h1 class="text-4xl font-bold">    Evolve your business with AI</br>
+    Focus on thinking, not writing.</h1>
+        <p class="text-gray-600 mt-4">Our 🤖 AI powered business plan software frees up your time from writing 
+    so you can focus on 🧠 designing, 📊 analyzing, ✅ validating, and 🚀 improving your business.S</p>
+        <button class="mt-6 px-6 py-3 bg-black text-white rounded text-sm hover:bg-gray-800">
+        <a href="/one-off-bm.html" target="_blank">Get your Business Model Document for free</a>
+        </button>
     </div>
     <div class="lg:w-1/2">
         <div class="iframe-container">
@@ -18,75 +16,13 @@
     </div>
 </section>
 
-<button class="mt-6 w-full px-8 py-4 bg-black text-white rounded-lg text-lg font-bold hover:bg-gray-800 transition">
-  <a href="/one-off-bm.html" target="_blank" class="block w-full h-full">Get your Business Model Document for free</a>
-</button>
-
-
+<!-- Trusted Companies -->
 <section class="text-center py-8 bg-gray-50">
 <h3 class="text-sm text-gray-500">Sample business plans</h3>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
-  
-  <!-- SpaceX Card -->
-  <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-    <img src="assets/use-cases/spacex/image.png" alt="SpaceX" class="w-full h-48 object-cover">
-    <div class="p-4">
-      <a href="assets/use-cases/spacex/doc.html" target="_blank" class="mt-4 block w-full px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition text-center">
-        View document
-      </a>
-      <h2 class="text-lg font-semibold">Space X</h2>
-      <p class="text-gray-600">Example of how it can be used by a large company to analyze and improve its business model.</p>
-      <div class="mt-2">
-        <span class="text-sm font-bold">Prompt:</span>
-        <p class="text-gray-800">Space X</p>
-      </div>
-      <div class="mt-2 flex flex-wrap gap-1">
-        <span class="bg-blue-200 text-blue-800 text-xs font-semibold px-2 py-1 rounded">corporate</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Fun Science T-Shirts Card -->
-  <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-    <img src="assets/use-cases/tshirts/image.png" alt="Fun Science T-Shirts" class="w-full h-48 object-cover">
-    <div class="p-4">
-      <a href="assets/use-cases/tshirts/doc.html" target="_blank" class="mt-4 block w-full px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition text-center">
-        View document
-      </a>
-      <h2 class="text-lg font-semibold">Fun Science T-Shirts</h2>
-      <p class="text-gray-600">Example of how it can be used by an entrepreneur launching an e-commerce startup.</p>
-      <div class="mt-2">
-        <span class="text-sm font-bold">Prompt:</span>
-        <p class="text-gray-800">A business that sells fun science-themed t-shirts</p>
-      </div>
-      <div class="mt-2 flex flex-wrap gap-1">
-        <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-1 rounded">startup</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Ghostbusters Card -->
-  <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-    <img src="assets/use-cases/ghostbusters/image.png" alt="Ghostbusters" class="w-full h-48 object-cover">
-    <div class="p-4">
-      <a href="assets/use-cases/ghostbusters/doc.html" target="_blank" class="mt-4 block w-full px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition text-center">
-        View document
-      </a>
-      <h2 class="text-lg font-semibold">Ghostbusters</h2>
-      <p class="text-gray-600">Example of how it can be used by an educator to explain how a business works.</p>
-      <div class="mt-2">
-        <span class="text-sm font-bold">Prompt:</span>
-        <p class="text-gray-800">A ghostbusters agency</p>
-      </div>
-      <div class="mt-2 flex flex-wrap gap-1">
-        <span class="bg-purple-200 text-purple-800 text-xs font-semibold px-2 py-1 rounded">traditional</span>
-      </div>
-    </div>
-  </div>
-
+<div class="flex justify-center space-x-8 mt-4">
+<a href="https://plastilinn.com/assets/Plastilinn%20sample%20doc.html" role="button" target="_blank">Open a Sample Business Model Document</a>
 </div>
 </section>
-
 
 <style>
 /* Contenedor del iframe con un ancho máximo de 600px */
@@ -107,10 +43,8 @@
 
 ---
 
-
 <div class="div-container">
 
-# How it works
 
 ## **1, Provide us with a brief description of your business**
 

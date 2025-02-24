@@ -83,3 +83,9 @@ body {
     max-width: 100%;  /* Asegura que las imágenes no se salgan del contenedor */
     height: auto;     /* Mantiene la relación de aspecto */
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Outfit Variable, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+    --tw-text-opacity: 1;
+    color: rgb(51 65 85 / var(--tw-text-opacity));
+}
